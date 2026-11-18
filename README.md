@@ -36,8 +36,6 @@
 
 <img src="assets/en/skills.svg" width="100%" alt="Programming: JavaScript, Python, SQL. Web: React, Vite, Node.js, Express, Prisma, REST APIs. Data: PostgreSQL, MySQL, SQLite. ML and NLP: PyTorch, Transformers, scikit-learn, pandas. Delivery: Docker, Nginx, Railway, Git, Playwright, pytest. Hobbies: graphic design, video editing. Languages: English, Arabic, Turkish. Deepening: applied NLP, biomedical models, speech, evaluation design."/>
 
-<img src="assets/en/b-snake.svg" width="100%" alt="Contribution snake: my GitHub activity as a snake eating the contribution graph"/>
-
 <img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="Contribution snake: my GitHub activity as a snake eating the contribution graph"/>
 
 <img src="assets/en/b-contact.svg" width="100%" alt="Contact"/>

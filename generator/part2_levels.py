@@ -373,7 +373,6 @@ def skills(lang):
 for lang in ("en", "tr", "ar"):
     skills(lang)
     banner(lang, "b-skills", SK[lang]["banner"], GREEN)
-    banner(lang, "b-snake", SK[lang]["snake"], YELLOW)
 
 
 # ---------------------------------------------------------------- contact buttons
