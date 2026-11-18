@@ -1,61 +1,42 @@
+<img src="assets/hero.svg" alt="Ranim: software engineer, video editor and graphic designer" width="100%"/>
+
+<img src="assets/sheet.svg" width="100%" alt="Ranim: software engineer and video editor and graphic designer. Final-year software engineering student at Istinye University, Istanbul. Speaks English, Arabic and Turkish. 6 projects."/>
+
+<img src="assets/b-built.svg" width="100%" alt="What I've built"/>
+
+<a href="https://github.com/RanimAlyaseen/Orcha-App"><img src="assets/case-01.svg" width="100%" alt="Orcha: AI agent control plane. Multi-tenant, JWT auth, role-based access, live on Railway, 7 Playwright end-to-end specs. React, Node, Prisma, PostgreSQL, Docker."/></a>
+<div align="right"><sub><a href="https://orcha-official.up.railway.app">Open the live demo</a> · <a href="https://github.com/RanimAlyaseen/Orcha-App">Source</a></sub></div>
+
+<a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification"><img src="assets/case-02.svg" width="100%" alt="Medical abstract classifier, team project. My role: model training, BiomedBERT fine-tuning, evaluation. 0.8603 macro F1 on a locked test set. Found 988 train/test overlaps and rebuilt the splits."/></a>
+<div align="right"><sub><a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification">Source and report</a></sub></div>
+
+<a href="https://github.com/RanimAlyaseen/tourism-crm-dbms"><img src="assets/case-03.svg" width="100%" alt="Tourism CRM database, university project. MySQL with 9 tables, 3 views, 2 functions and 6 triggers; blocks overpayment; SQL and concurrency tests."/></a>
+<div align="right"><sub><a href="https://github.com/RanimAlyaseen/tourism-crm-dbms">Source</a></sub></div>
+
+<img src="assets/b-more.svg" width="100%" alt="More work"/>
+
+<a href="https://github.com/RanimAlyaseen/casie-event-argument-extraction"><img src="assets/more-04.svg" width="100%" alt="CASIE event extraction, team NLP project. 0.6196 Arg-C F1."/></a>
+<a href="https://github.com/RanimAlyaseen/icelandic-asr-project3"><img src="assets/more-05.svg" width="100%" alt="Icelandic ASR data preparation, team project. 20 hours of Samromur audio, zero shared speakers across splits."/></a>
+<a href="https://github.com/RanimAlyaseen/book-rating-prediction"><img src="assets/more-06.svg" width="100%" alt="Book rating prediction. Reproducible ML experiment; no edge over the baseline."/></a>
+
+<img src="assets/b-know.svg" width="100%" alt="What I know"/>
+
+<img src="assets/skills.svg" width="100%" alt="Programming: JavaScript, Python, SQL. Web: React, Vite, Node, Express, Prisma, REST APIs. Data: PostgreSQL, MySQL, SQLite. ML and NLP: PyTorch, Transformers, scikit-learn, pandas. Delivery: Docker, Nginx, Railway, Git, Playwright, pytest. Creative: graphic design, video editing. Spoken: English, Arabic, Turkish."/>
+
+<img src="assets/b-contact.svg" width="100%" alt="Contact"/>
+
 <div align="center">
-
-<img src="assets/hero.svg" alt="Ranim: software engineer, video editor and graphic designer, pixel art at a desk" width="100%"/>
-
-<a href="https://github.com/RanimAlyaseen?tab=repositories"><img src="assets/btn-github.svg" height="56" alt="GitHub repositories"/></a>
 <a href="https://www.linkedin.com/in/ranim-alyaseen-846522373"><img src="assets/btn-linkedin.svg" height="56" alt="LinkedIn"/></a>
-<a href="https://orcha-official.up.railway.app"><img src="assets/btn-demo.svg" height="56" alt="Orcha live demo"/></a>
+<a href="https://github.com/RanimAlyaseen?tab=repositories"><img src="assets/btn-github.svg" height="56" alt="GitHub repositories"/></a>
 <a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/btn-research.svg" height="56" alt="Research"/></a>
-
 </div>
-
-**Software Engineering · Full-stack systems · Applied ML/NLP · Video editing and graphic design**
-
-I am a final-year Software Engineering student building full-stack applications, backend services, and relational data systems, and extending that foundation into applied machine learning and NLP through reproducible experiments and careful evaluation. I work in English, Arabic, and Turkish.
-
-<img src="assets/b-sheet.svg" width="100%" alt="character sheet"/>
-
-<img src="assets/sheet.svg" width="100%" alt="Character sheet: software engineer, video editor and graphic designer, final-year student, Team Ultron. Languages: English, Arabic, Turkish. 6 projects, best F1 0.86"/>
-
-<img src="assets/b-quests.svg" width="100%" alt="quest log"/>
-
-<div align="center">
-<table>
-<tr>
-<td width="50%"><a href="https://github.com/RanimAlyaseen/Orcha-App"><img src="assets/quest-01.svg" width="100%" alt="Orcha: AI agent management platform"/></a></td>
-<td width="50%"><a href="https://github.com/RanimAlyaseen/tourism-crm-dbms"><img src="assets/quest-02.svg" width="100%" alt="Tourism CRM DBMS"/></a></td>
-</tr>
-<tr>
-<td width="50%"><a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification"><img src="assets/quest-03.svg" width="100%" alt="Medical abstract classification"/></a></td>
-<td width="50%"><a href="https://github.com/RanimAlyaseen/casie-event-argument-extraction"><img src="assets/quest-04.svg" width="100%" alt="CASIE event argument extraction"/></a></td>
-</tr>
-<tr>
-<td width="50%"><a href="https://github.com/RanimAlyaseen/icelandic-asr-project3"><img src="assets/quest-05.svg" width="100%" alt="Icelandic ASR dataset preparation"/></a></td>
-<td width="50%"><a href="https://github.com/RanimAlyaseen/book-rating-prediction"><img src="assets/quest-06.svg" width="100%" alt="Book high-rating prediction"/></a></td>
-</tr>
-</table>
-</div>
-
-<img src="assets/b-tree.svg" width="100%" alt="skill tree"/>
-
-<img src="assets/tree.svg" width="100%" alt="Skill tree. Build: React, Vite, Node and Express, Prisma, Recharts. Data: PostgreSQL, MySQL, SQLite, SQL triggers, schema design. ML and NLP: Python, PyTorch, Transformers, scikit-learn, pandas. Ship and test: Docker and Nginx, Railway, Playwright, pytest, Git and LFS"/>
-
-<img src="assets/b-ach.svg" width="100%" alt="achievements"/>
-
-<img src="assets/ach.svg" width="100%" alt="Achievements: 0.8603 macro F1 on a locked test set; 988 train-test leaks found in the original corpus; 26 event roles in CASIE; 0 shared speakers across Icelandic splits; 7 Playwright specs; 6 database triggers"/>
-
-<img src="assets/b-tips.svg" width="100%" alt="loading tips"/>
-
-<img src="assets/tips.svg" width="100%" alt="How I work: start with the system boundary, make results reproducible, separate measured from assumed, document limits as results"/>
-
-<img src="assets/next.svg" width="100%" alt="Next level: speech, biomedical NLP and evaluation design"/>
 
 <details>
 <summary><b>Full written details</b> (projects, research, technical foundation)</summary>
 
 ### Featured engineering work
 
-### [Orcha — AI Agent Management Platform](https://github.com/RanimAlyaseen/Orcha-App)
+#### [Orcha — AI Agent Management Platform](https://github.com/RanimAlyaseen/Orcha-App)
 
 Orcha brings AI agents, tasks, customer records, activity, and human-review workflows into one management dashboard.
 
@@ -63,7 +44,7 @@ Orcha brings AI agents, tasks, customer records, activity, and human-review work
 
 **Stack:** React, Vite, Node.js, Express, Prisma, PostgreSQL, Docker.
 
-### [Tourism CRM DBMS](https://github.com/RanimAlyaseen/tourism-crm-dbms)
+#### [Tourism CRM DBMS](https://github.com/RanimAlyaseen/tourism-crm-dbms)
 
 A MySQL data layer for a tourism CRM, covering customers, packages, bookings, payments, reviews, agents, and reporting.
 
@@ -71,7 +52,7 @@ A MySQL data layer for a tourism CRM, covering customers, packages, bookings, pa
 
 **Stack:** MySQL 8, SQL, InnoDB transactions, PowerShell test runners.
 
-### [Medical Abstract Disease Classification](https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification)
+#### [Medical Abstract Disease Classification](https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification)
 
 A Team Ultron course project that classifies medical abstracts into five disease categories and compares classical, neural, and transformer models.
 
@@ -79,7 +60,7 @@ A Team Ultron course project that classifies medical abstracts into five disease
 
 **Stack:** Python, pandas, scikit-learn, PyTorch, Transformers.
 
-### [Book High-Rating Prediction](https://github.com/RanimAlyaseen/book-rating-prediction)
+#### [Book High-Rating Prediction](https://github.com/RanimAlyaseen/book-rating-prediction)
 
 A binary-classification experiment that predicts whether a book belongs to the high-rating class, defined as a rating of at least 4.6.
 
@@ -89,7 +70,7 @@ A binary-classification experiment that predicts whether a book belongs to the h
 
 ### Research & technical studies
 
-### [AI-Assisted Pulmonary Nodule Detection in Chest CT](https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing)
+#### [AI-Assisted Pulmonary Nodule Detection in Chest CT](https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing)
 
 **Research & Pre-Prototype System Design** — literature synthesis, a proposed AI pipeline, evaluation methodology, clinical workflow design, and safety and regulatory considerations. This work does not claim a trained model, diagnostic results, clinical validation, or deployment.
 
