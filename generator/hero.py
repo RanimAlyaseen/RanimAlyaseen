@@ -82,7 +82,7 @@ def build():
         o.append(frame(bx2, 262, w, 44, NIGHT, col))
         o.append(ptext(bx2 + 14, 276, label, 3, col))
         bx2 += w + 12
-    o.append(f'<g class="blink">{ptext(64, 322, "> PRESS START", 3, CREAM, shadow=INK)}</g>')
+    o.append(ptext(64, 322, "> EN / AR / TR", 3, CREAM, shadow=INK))
 
     # ---------------- desk scene
     deskx, deskt = 790, 316
