@@ -1,16 +1,51 @@
 <div align="center">
-  <img src="assets/hero-banner.png" alt="Connected software architecture, application, and machine-learning systems" width="100%" />
-</div>
 
-# Ranim Alyaseen
+<img src="assets/hero.svg" alt="Ranim Alyaseen: software engineer, designer and video editor, pixel art at a desk" width="100%"/>
+
+<a href="https://github.com/RanimAlyaseen?tab=repositories"><img src="assets/btn-github.svg" height="56" alt="GitHub repositories"/></a>
+<a href="https://www.linkedin.com/in/ranim-alyaseen-846522373"><img src="assets/btn-linkedin.svg" height="56" alt="LinkedIn"/></a>
+<a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/btn-research.svg" height="56" alt="Research"/></a>
+
+</div>
 
 **Software Engineering · Full-stack systems · Applied ML/NLP**
 
 I am a final-year Software Engineering student building full-stack applications, backend services, and relational data systems. I am extending this engineering foundation into applied machine learning and NLP through reproducible experiments and careful evaluation.
 
+<img src="assets/b-sheet.svg" width="100%" alt="character sheet"/>
+
+<img src="assets/sheet.svg" width="100%" alt="Character sheet: Ranim Alyaseen, software engineer, designer and video editor"/>
+
+<img src="assets/b-quests.svg" width="100%" alt="quest log"/>
+
 <div align="center">
-  <img src="assets/trajectory.svg" alt="Software engineering foundations progress to full-stack systems and applied machine learning and NLP" width="720" />
+<table>
+<tr>
+<td width="50%"><a href="https://github.com/RanimAlyaseen/Orcha-App"><img src="assets/quest-01.svg" width="100%" alt="Quest 01: Orcha"/></a></td>
+<td width="50%"><a href="https://github.com/RanimAlyaseen/tourism-crm-dbms"><img src="assets/quest-02.svg" width="100%" alt="Quest 02: Tourism CRM DBMS"/></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification"><img src="assets/quest-03.svg" width="100%" alt="Quest 03: Medical abstract classification"/></a></td>
+<td width="50%"><a href="https://www.linkedin.com/in/ranim-alyaseen-846522373"><img src="assets/quest-04.svg" width="100%" alt="Quest 04: your project here"/></a></td>
+</tr>
+</table>
 </div>
+
+<img src="assets/b-inv.svg" width="100%" alt="inventory"/>
+
+<img src="assets/inventory.svg" width="100%" alt="Inventory: code, design, video, systems, ML and NLP, Arabic and English"/>
+
+<img src="assets/b-map.svg" width="100%" alt="world map"/>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/github-snake-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/github-snake.svg"/>
+    <img alt="contribution snake" src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/github-snake.svg"/>
+  </picture>
+</div>
+
+---
 
 ## Featured engineering work
 
@@ -82,5 +117,7 @@ A binary-classification experiment that predicts whether a book belongs to the h
 ## Connect
 
 [GitHub](https://github.com/RanimAlyaseen) · [LinkedIn](https://www.linkedin.com/in/ranim-alyaseen-846522373)
+
+<img src="assets/footer.svg" width="100%" alt=""/>
 
 <sub>Team and university projects are identified as such in their repositories. Contribution claims above follow the published attribution records.</sub>
