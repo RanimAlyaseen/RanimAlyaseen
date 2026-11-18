@@ -49,7 +49,7 @@ def build():
             for c in range(c0, c0 + 3): g[r][c] = 'C'
         for r in (10, 11, 12): g[r][c0 + 1] = 'c'
     # neck + choker
-    put(17, 10, "dsss"); put(18, 9, "TTLTTT")
+    put(17, 10, "dsss"); put(18, 9, "ssssss")
     # body: shoulders, bare arms, sleeveless dress
     put(19, 8, "sssssss"); put(19, 5, "ss"); put(19, 15, "ss")
     for r in range(20, 28):
