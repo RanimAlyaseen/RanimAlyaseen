@@ -101,7 +101,7 @@ def scene_orcha(ox, oy):
         o.append(f'<g class="run" style="animation-delay:-{i*.7:.1f}s">{rect(ox + 56, yy + 12, 6, 6, col)}</g>')
     o.append(rect(ox + 214, oy + 88, 6, 100, AMBER))                       # review gate
     o.append(rect(ox + 208, oy + 82, 18, 8, AMBER) + rect(ox + 208, oy + 186, 18, 6, AMBER))
-    o.append(sprite(PLAYER[:11], PLAYER_LEG, ox + 238, oy + 142, 3))
+    o.append(sprite(CHIBI[:19], CHIBI_LEG, ox + 230, oy + 137, 2))
     o.append(rect(ox + 240, oy + 172, 28, 20, TEAL))
     o.append(sprite(CHECK, {"#": GREEN}, ox + 246, oy + 114, 4, 'class="bob"'))
     return "".join(o)

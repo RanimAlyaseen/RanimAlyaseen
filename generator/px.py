@@ -212,3 +212,5 @@ def txt(x, y, s, sc, color, anchor="start", shadow=None, extra=""):
         o, w, h = apix(s, 5 * sc + 1 if sc >= 3 else 10, max(1, round(sc * 2 / 3)) if sc >= 3 else 2, color, x, y, anchor, shadow)
         return o, w
     return ptext(x, y, s, sc, color, shadow, anchor, extra), tw(s.upper(), sc)
+
+from chibi import CHIBI, CHIBI_LEG
