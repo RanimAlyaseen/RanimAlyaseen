@@ -173,25 +173,25 @@ PLAYER_OLD = [
 ]
 
 
-# ---------------------------------------------------------------- dark diva character (same 22x25 grid as before)
-PLAYER_LEG = {'h': '#0e0714', 's': '#e9a97b', 'd': '#c98259', 'p': '#2ec4b6', 'P': '#05020a', 'o': '#1a1228', 'O': '#5a3399', 'n': '#2d3a6b', 'N': '#1f2850', 'w': '#ffffff', 'k': '#1b1033', 'b': '#1b1033', 'c': '#4a4f78', 'C': '#363a5c', 'y': '#f2c94c', 'H': '#7a45c9', 'l': '#7a0f3f', 'S': '#d7d3f0', 'V': '#b05cff', 'v': '#6a3aa8'}
+# ---------------------------------------------------------------- diva character, pink / black / purple (same 22x25 grid as before)
+PLAYER_LEG = {'h': '#0b0610', 's': '#e9a97b', 'd': '#c98259', 'p': '#2ec4b6', 'P': '#05020a', 'o': '#ff3d94', 'O': '#7b3fd0', 'n': '#2d3a6b', 'N': '#1f2850', 'w': '#ffffff', 'k': '#1b1033', 'b': '#1b1033', 'c': '#4a4f78', 'C': '#363a5c', 'y': '#f2c94c', 'H': '#9a4fe8', 'l': '#e0197d', 'S': '#ff7bbd', 'V': '#b05cff', 'v': '#8a4fe0', 'f': '#ff3d94'}
 
 PLAYER = [
 ".....S.S.S.S..........",
 "....SSSSVSSSS.........",
 "....hHhhhhhhhh........",
-"...Hhhhhhhhhsvkkv.....",
+"...Hhhfhhhhhsvkkv.....",
 "...hhhhhHhhhsskskk....",
-".hHhhhhhhhhhsssssd....",
-".hhhhhHhhhhhsssss.....",
+".hHhhhhfhhhhsssssd....",
+".hfhhhHhhhhhsssss.....",
 ".hhHhhhhhhhssslld.....",
-".hhhhhhhhhSssssd......",
+".hhfhhhhhhSssssd......",
 ".hHhhhhhhVsssss.......",
-".hhhhhhsSSVSs.........",
+".hfhhhhsSSVSs.........",
 ".hHhhSOOOOOOOO........",
-".hhhhOoooooooooO......",
+".hfhhOoooooooooO......",
 ".hHh.oooooooooooo.....",
-".hhh.ooooooooooOOOss..",
+".hfh.ooooooooooOOOss..",
 ".hHh.oooooooooooooss..",
 ".hhh.ooooooooooo......",
 "..cc.ooooooooooo......",

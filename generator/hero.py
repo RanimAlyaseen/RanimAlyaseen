@@ -170,7 +170,7 @@ def build(lang='en'):
     o.append(f'<g class="bob">{sprite(PLAYER, PLAYER_LEG, 690, 222, 6)}</g>')
     # diva sparkles
     STAR = ["..#..", "..#..", "#####", "..#..", "..#.."]
-    for k, (sx, sy, sc_, col) in enumerate(((664, 206, 4, "#b05cff"), (830, 196, 3, "#d7d3f0"), (748, 168, 3, "#ffffff"), (672, 262, 3, "#ffffff"))):
+    for k, (sx, sy, sc_, col) in enumerate(((664, 206, 4, "#ff5fa8"), (830, 196, 3, "#ff9ad0"), (748, 168, 3, "#ffffff"), (672, 262, 3, "#ffffff"))):
         o.append(sprite(STAR, {"#": col}, sx, sy, sc_, f'class="pulse" style="animation-delay:-{k*0.4}s"'))
     scene = o[scene_start:]; del o[scene_start:]
     if RTL:
