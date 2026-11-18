@@ -27,4 +27,9 @@
 <td width="33%"><a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification"><img src="assets/ar/side-04.svg" width="100%" alt="مصنّف الملخصات الطبية، مشروع فريق. دوري: النماذج وBiomedBERT والتقييم. 0.8603 ماكرو F1 على اختبار مقفل."/></a></td>
 </tr></table>
 
+<img src="assets/ar/b-research.svg" width="100%" alt="الأبحاث"/>
+
+<a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/ar/research.svg" width="100%" alt="كشف عقيدات الرئة في الأشعة المقطعية. بحث وتصميم نظام ما قبل النموذج الأولي: الأدبيات، مسار الذكاء الاصطناعي، التقييم، سير العمل السريري، السلامة. بلا نموذج مدرَّب وبلا ادعاءات سريرية."/></a>
+<div align="left"><sub><a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing">افتح مجلد الأبحاث</a></sub></div>
+
 <div align="center"><sub>الأقسام التالية قيد الإعداد.</sub></div>

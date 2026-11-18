@@ -27,6 +27,11 @@
 <td width="33%"><a href="https://github.com/RanimAlyaseen/book-rating-prediction"><img src="assets/en/side-06.svg" width="100%" alt="Book rating prediction. Reproducible ML experiment. ROC-AUC 0.433, no edge over the baseline."/></a></td>
 </tr></table>
 
+<img src="assets/en/b-research.svg" width="100%" alt="Research"/>
+
+<a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/en/research.svg" width="100%" alt="Pulmonary nodule detection in chest CT. Research and pre-prototype system design: literature, AI pipeline, evaluation, clinical workflow, safety. No trained model and no clinical claims."/></a>
+<div align="right"><sub><a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing">Open the research folder</a></sub></div>
+
 <img src="assets/b-know.svg" width="100%" alt="What I know"/>
 
 <img src="assets/skills.svg" width="100%" alt="Programming: JavaScript, Python, SQL. Web: React, Vite, Node, Express, Prisma, REST APIs. Data: PostgreSQL, MySQL, SQLite. ML and NLP: PyTorch, Transformers, scikit-learn, pandas. Delivery: Docker, Nginx, Railway, Git, Playwright, pytest. Creative: graphic design, video editing. Spoken: English, Arabic, Turkish."/>

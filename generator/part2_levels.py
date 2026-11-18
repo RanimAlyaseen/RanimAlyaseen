@@ -243,4 +243,86 @@ for lang in ("en", "tr", "ar"):
         card(lang, i); side(lang, i)
     banner(lang, "b-levels", L[lang]["banner1"], AMBER)
     banner(lang, "b-side", L[lang]["banner2"], BLUE)
+
+# ---------------------------------------------------------------- research card (pulmonary nodule design study)
+RS = {
+"en": dict(banner="> RESEARCH", lvl="RESEARCH", status="DESIGN STUDY", title="PULMONARY NODULE DETECTION (CT)",
+           rows=[("WHAT", "AI PIPELINE FOR CHEST CT NODULES"), ("TYPE", "RESEARCH + PRE-PROTOTYPE DESIGN"), ("COVERS", "LITERATURE, PIPELINE, EVALUATION"), ("LIMITS", "NO TRAINED MODEL, NO CLINICAL CLAIMS")],
+           tags=["LITERATURE", "CLINICAL WORKFLOW", "SAFETY", "REGULATORY"]),
+"tr": dict(banner="> ARAŞTIRMA", lvl="ARAŞTIRMA", status="TASARIM ÇALIŞMASI", title="AKCİĞER NODÜLÜ TESPİTİ (BT)",
+           rows=[("NE", "BT'DE NODÜL İÇİN YAPAY ZEKÂ HATTI"), ("TÜR", "ARAŞTIRMA + ÖN PROTOTİP TASARIMI"), ("KAPSAM", "LİTERATÜR, BORU HATTI, DEĞERLENDİRME"), ("SINIR", "EĞİTİLMİŞ MODEL / KLİNİK İDDİA YOK")],
+           tags=["LİTERATÜR", "KLİNİK AKIŞ", "GÜVENLİK", "MEVZUAT"]),
+"ar": dict(banner="الأبحاث", lvl="بحث", status="دراسة تصميم", title="كشف عقيدات الرئة في الأشعة المقطعية",
+           rows=[("ما هو", "مسار ذكاء اصطناعي لعقيدات الأشعة المقطعية"), ("النوع", "بحث وتصميم ما قبل النموذج الأولي"), ("المحتوى", "مراجعة الأدبيات والمسار وتصميم التقييم"), ("الحدود", "لا نموذج مدرَّب ولا ادعاءات سريرية")],
+           tags=["الأدبيات", "سير العمل السريري", "السلامة", "الأنظمة التنظيمية"]),
+}
+
+def scene_ct(ox, oy):
+    import math
+    o = panel(ox, oy, 300, 240, "#0a0a14", "#10101e", "#14142a", "#1a1a34")
+    S2 = 6
+    def ell(cx, cy, rx, ry, col):
+        out = []
+        for yy in range(-ry, ry + 1, S2):
+            hw = int(rx * math.sqrt(max(1 - (yy / ry) ** 2, 0)) // S2) * S2
+            if hw > 0:
+                out.append(rect(ox + cx - hw, oy + cy + yy, hw * 2, S2, col))
+        return "".join(out)
+    o.append(ell(150, 118, 126, 96, "#3a3d52"))          # body
+    o.append(ell(150, 118, 114, 86, "#23253a"))
+    o.append(ell(104, 118, 44, 66, "#05060c"))           # lungs
+    o.append(ell(196, 118, 44, 66, "#05060c"))
+    o.append(rect(ox + 144, oy + 84, 12, 72, "#6a6e8a"))  # spine
+    o.append(rect(ox + 138, oy + 150, 24, 18, "#6a6e8a"))
+    for k in range(5):                                    # vessels
+        o.append(rect(ox + 70 + k * 10, oy + 100 + (k % 2) * 12, 6, 6, "#2a2d46"))
+        o.append(rect(ox + 190 + k * 10, oy + 96 + (k % 2) * 14, 6, 6, "#2a2d46"))
+    o.append(rect(ox + 206, oy + 104, 12, 12, CREAM))      # nodule
+    r_ = f'<g class="blink">'
+    for dx, dy, w_, h_ in [(-8, -8, 12, 4), (-8, -8, 4, 12), (22, -8, 12, 4), (30, -8, 4, 12), (-8, 28, 12, 4), (-8, 20, 4, 12), (22, 28, 12, 4), (30, 20, 4, 12)]:
+        r_ += rect(ox + 206 + dx, oy + 104 + dy, w_, h_, AMBER)
+    o.append(r_ + "</g>")
+    return "".join(o)
+
+def research_card(lang):
+    d = RS[lang]; R = lang == "ar"
+    CW, CH, col = W, 300, ROSE
+    M = lambda x, w=0: (CW - x - w) if R else x
+    o = [frame(0, 0, CW, CH, NIGHT, col, hi="#ffffff22")]
+    sx = M(28, 300)
+    o.append(f'<clipPath id="cr"><rect x="{sx}" y="30" width="300" height="240"/></clipPath>')
+    o.append(f'<g clip-path="url(#cr)">{scene_ct(sx, 30)}</g>')
+    o.append(rect(sx - 4, 26, 308, 4, col) + rect(sx - 4, 270, 308, 4, col) + rect(sx - 4, 26, 4, 248, col) + rect(sx + 300, 26, 4, 248, col))
+    tx0 = 28 + 300 + 30
+    right = CW - tx0 if R else tx0
+    anc = "end" if R else "start"
+    avail = CW - tx0 - 28
+    o.append(T(right, 24, d["lvl"], 3, col, anc))
+    sw = txt(0, 0, d["status"], 2, INK)[1] + 24
+    sbx = (28 if R else CW - 28 - sw)
+    o.append(rect(sbx, 22, sw, 28, col) + T(sbx + sw // 2, 29 if not AR_RE.search(d["status"]) else 24, d["status"], 2, INK, "middle"))
+    ar_t = R and AR_RE.search(d["title"])
+    o.append(T(right, 64 if ar_t else 60, d["title"], 3 if ar_t else 4, CREAM, anc, maxw=avail, shadow=PURPLE))
+    o.append(rect(M(tx0, avail), 108, avail, 4, PURPLE))
+    for r_, (k, v) in enumerate(d["rows"]):
+        y = 128 + r_ * 32
+        if R:
+            o.append(T(right, y + 3, k, 2, MUTED, "end"))
+            o.append(T(right - 120, y + 1, v, 2, CREAM, "end", maxw=avail - 120))
+        else:
+            o.append(T(right, y + 3, k, 2, MUTED))
+            o.append(T(right + 130, y, v, 3, CREAM, maxw=avail - 130))
+    x = right
+    for t in d["tags"]:
+        w = (txt(0, 0, t, 2, INK)[1] if AR_RE.search(t) else tw(t.upper(), 2)) + 20
+        bx = x - w if R else x
+        yb, hb = (252, 34) if AR_RE.search(t) else (256, 26)
+        o.append(rect(bx, yb, w, hb, col) + rect(bx + 2, yb + 2, w - 4, hb - 4, INK) + T(bx + w // 2, yb + 8 if AR_RE.search(t) else 263, t, 2, col, "middle"))
+        x = bx - 8 if R else x + w + 8
+    save(f"{OUT}/{lang}/research.svg", CW, CH, "".join(o))
+
+for lang in ("en", "tr", "ar"):
+    research_card(lang)
+    banner(lang, "b-research", RS[lang]["banner"], ROSE)
+
 print("ok")
