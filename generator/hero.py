@@ -124,10 +124,16 @@ def build(lang='en'):
 
     # ---------------- desk scene
     scene_start = len(o)
-    deskx, deskt = 790, 316
+    deskx, deskt = 670, 316
+    # character, drawn BEFORE the desk so the desk hides her lower body (she sits behind it)
+    o.append(f'<g class="bob">{sprite(CHIBI[:25], CHIBI_LEG, 700, 190, 5)}</g>')
+    STAR = ["..#..", "..#..", "#####", "..#..", "..#.."]
+    for k, (sx, sy, sc_, col) in enumerate(((664, 214, 3, "#ff5fa8"), (822, 204, 3, "#b05cff"), (668, 290, 3, "#ffffff"), (824, 296, 3, "#ff9ad0"))):
+        o.append(sprite(STAR, {"#": col}, sx, sy, sc_, f'class="pulse" style="animation-delay:-{k*0.4}s"'))
     # desk
-    o.append(rect(deskx, deskt, 380, 12, "#8a4b2d") + rect(deskx, deskt + 12, 380, 6, "#5e311c"))
-    o.append(rect(deskx + 14, deskt + 18, 12, 38, "#5e311c") + rect(deskx + 354, deskt + 18, 12, 38, "#5e311c"))
+    o.append(rect(deskx, deskt, 500, 12, "#8a4b2d") + rect(deskx, deskt + 12, 500, 6, "#5e311c"))
+    o.append(rect(deskx + 14, deskt + 18, 12, 38, "#5e311c") + rect(deskx + 474, deskt + 18, 12, 38, "#5e311c"))
+    o.append(rect(deskx + 26, deskt + 18, 448, 34, "#6e3b22") + rect(deskx + 26, deskt + 18, 448, 4, "#4a2615") + rect(deskx + 120, deskt + 28, 60, 8, "#4a2615") + rect(deskx + 320, deskt + 28, 60, 8, "#4a2615"))   # front panel with two drawers
     # monitor
     o.append(rect(960, 296, 24, 20, "#2b2d4e") + rect(930, 310, 84, 8, "#2b2d4e"))
     o.append(rect(876, 148, 262, 150, "#2b2d4e") + rect(880, 152, 254, 142, INK))
@@ -160,18 +166,13 @@ def build(lang='en'):
             o.append(rect(sx + a, ty + i * 16, wd, 12, c))
     o.append(f'<g class="play"><rect x="{sx + 4}" y="{ty - 6}" width="3" height="44" fill="{RED}"/><rect x="{sx + 1}" y="{ty - 8}" width="9" height="5" fill="{RED}"/></g>')
     # keyboard
-    o.append(rect(deskx + 10, deskt - 6, 84, 6, "#cfd3e8") + rect(deskx + 10, deskt - 2, 84, 2, "#8c90b0"))
+    o.append(rect(deskx + 60, deskt - 6, 84, 6, "#cfd3e8") + rect(deskx + 60, deskt - 2, 84, 2, "#8c90b0"))
+    o.append(rect(deskx + 72, deskt - 12, 14, 8, "#f7e1d3") + rect(deskx + 118, deskt - 12, 14, 8, "#f7e1d3"))   # hands on the keyboard
     # mug + steam
     o.append(rect(1100, deskt - 24, 24, 24, CREAM) + rect(1124, deskt - 18, 8, 12, CREAM) + rect(1127, deskt - 15, 3, 6, "#0e0720"))
     o.append(rect(1100, deskt - 24, 24, 6, "#6b4226"))
     for i, dx in enumerate((1104, 1112, 1118)):
         o.append(rect(dx, deskt - 36, 4, 8, "#ffffff88", f'class="steam" style="animation-delay:-{i*0.5}s"'))
-    # character (bob = tiny head nod)
-    # character (bob = tiny head nod)
-    o.append(f'<g class="bob">{sprite(CHIBI, CHIBI_LEG, 690, 192, 5)}</g>')
-    STAR = ["..#..", "..#..", "#####", "..#..", "..#.."]
-    for k, (sx, sy, sc_, col) in enumerate(((664, 214, 3, "#ff5fa8"), (822, 204, 3, "#b05cff"), (668, 290, 3, "#ffffff"), (824, 296, 3, "#ff9ad0"))):
-        o.append(sprite(STAR, {"#": col}, sx, sy, sc_, f'class="pulse" style="animation-delay:-{k*0.4}s"'))
     scene = o[scene_start:]; del o[scene_start:]
     if RTL:
         o.append('<g transform="translate(1200,0) scale(-1,1)">' + "".join(scene) + '</g>')
