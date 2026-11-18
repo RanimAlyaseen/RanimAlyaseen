@@ -378,9 +378,9 @@ for lang in ("en", "tr", "ar"):
 
 # ---------------------------------------------------------------- contact buttons
 CT = {
-"en": dict(banner="> CONTACT", labels=["LINKEDIN", "REPOSITORIES", "RESEARCH"]),
-"tr": dict(banner="> İLETİŞİM", labels=["LINKEDIN", "DEPOLAR", "ARAŞTIRMA"]),
-"ar": dict(banner="تواصل", labels=["LINKEDIN", "المستودعات", "الأبحاث"]),
+"en": dict(banner="> CONTACT", labels=["LINKEDIN", "REPO", "RESEARCH"]),
+"tr": dict(banner="> İLETİŞİM", labels=["LINKEDIN", "REPO", "ARAŞTIRMA"]),
+"ar": dict(banner="تواصل", labels=["LINKEDIN", "REPO", "الأبحاث"]),
 }
 BTN = [("linkedin", BLUE), ("github", YELLOW), ("research", ROSE)]
 
