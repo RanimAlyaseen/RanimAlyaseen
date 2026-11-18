@@ -167,9 +167,12 @@ def build(lang='en'):
     for i, dx in enumerate((1104, 1112, 1118)):
         o.append(rect(dx, deskt - 36, 4, 8, "#ffffff88", f'class="steam" style="animation-delay:-{i*0.5}s"'))
     # character (bob = tiny head nod)
-    o.append(f'<g class="bob">{sprite(CHIBI, CHIBI_LEG, 648, 192, 5)}</g>')
+    # chair, then the character seated on it (bob = tiny head nod)
+    o.append(rect(706, 282, 88, 66, "#4a4f78") + rect(706, 282, 88, 6, "#363a5c"))      # chair back
+    o.append(rect(706, 343, 88, 9, "#2d3a6b") + rect(742, 352, 16, 14, "#363a5c") + rect(716, 366, 68, 6, "#363a5c"))  # seat, post, base
+    o.append(f'<g class="bob">{sprite(CHIBI, CHIBI_LEG, 690, 192, 5)}</g>')
     STAR = ["..#..", "..#..", "#####", "..#..", "..#.."]
-    for k, (sx, sy, sc_, col) in enumerate(((624, 216, 3, "#ff5fa8"), (780, 208, 3, "#b05cff"), (630, 292, 3, "#ffffff"), (776, 284, 3, "#ff9ad0"))):
+    for k, (sx, sy, sc_, col) in enumerate(((664, 214, 3, "#ff5fa8"), (822, 204, 3, "#b05cff"), (668, 290, 3, "#ffffff"), (824, 296, 3, "#ff9ad0"))):
         o.append(sprite(STAR, {"#": col}, sx, sy, sc_, f'class="pulse" style="animation-delay:-{k*0.4}s"'))
     scene = o[scene_start:]; del o[scene_start:]
     if RTL:
