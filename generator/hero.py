@@ -82,11 +82,12 @@ def build():
         bx += w + random.choice([0, 6, 12])
     # tall needle tower
     pass
-    # billboard building with a neon RANIM sign
+    # billboard building with a neon code + play sign
     o.append(rect(470, 312, 190, 60, sky))
     o.append(rect(500, 284, 10, 30, sky) + rect(620, 284, 10, 30, sky))
     o.append(rect(450, 236, 230, 52, AMBER) + rect(456, 242, 218, 40, INK))
-    o.append(ptext(565, 249, "RANIM", 6, TEAL, anchor="middle", shadow=PURPLE, extra='class="tw" style="animation-duration:3.2s"'))
+    o.append(ptext(520, 249, "</>", 6, TEAL, anchor="middle", shadow=PURPLE, extra='class="tw" style="animation-duration:3.2s"'))
+    o.append(f'<g class="tw" style="animation-duration:2.6s">{sprite(["#.....", "###...", "#####.", "######", "#####.", "###...", "#....."], {"#": ORANGE}, 600, 248, 5)}</g>')
     for lx in range(458, 676, 24):
         o.append(rect(lx, 238, 6, 4, YELLOW, 'class="tw"') + rect(lx + 12, 282, 6, 4, YELLOW, 'class="tw"'))
     o.append("".join(wins))
