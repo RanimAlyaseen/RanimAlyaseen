@@ -4,9 +4,9 @@
 <a href="README.tr.md"><img src="assets/lang-tr-on.svg" height="48" alt="Türkçe"/></a>
 </div>
 
-<img src="assets/tr/hero-tech.svg" alt="Ranim: yazılım, yapay zeka ve NLP ile tasarım alanlarında çalışan yazılım mühendisi, masasında. Aşağıdaki sokakta bir piksel robot yürüyüp merhaba diyor." width="100%"/>
+<img src="assets/tr/hero-crop.svg" alt="Ranim: yazılım, yapay zeka ve NLP ile tasarım alanlarında çalışan yazılım mühendisi, masasında. Aşağıdaki sokakta bir piksel robot yürüyüp merhaba diyor." width="100%"/>
 
-<img src="assets/tr/sheet.svg" width="100%" alt="Karakter kartı: İstinye Üniversitesi'nde yazılım mühendisliği öğrencisi, İstanbul. İngilizce, Arapça, Türkçe. 6 proje."/>
+<img src="assets/tr/sheet-crop.svg" width="100%" alt="Karakter kartı: İstinye Üniversitesi'nde yazılım mühendisliği öğrencisi, İstanbul. İngilizce, Arapça, Türkçe. 6 proje."/>
 
 <img src="assets/tr/b-levels.svg" width="100%" alt="Bölümler"/>
 

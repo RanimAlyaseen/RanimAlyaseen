@@ -56,7 +56,9 @@ def build():
         put(r, 5, "ss"); put(r, 17, "ss")
     put(20, 7, "DDsssDDD"[:0] + "DD" + "ssss" + "DD")
     put(21, 7, "DDDDDDDDDD")
-    for r in range(22, 25): put(r, 7, "DDEDDDDEDD")
+    put(22, 7, "LLLLLLLLLL")                      # crop-top hem (purple trim)
+    put(23, 7, "ssssssssss")                      # bare midriff
+    put(24, 7, "ssssdsssss")                      # (tiny navel)
     put(25, 7, "RRRRRRRRRR")
     for r, (c0, c1) in {26: (6, 17), 27: (5, 18), 28: (5, 18), 29: (4, 19), 30: (4, 19)}.items():
         for c in range(c0, c1 + 1): g[r][c] = 'D'
@@ -74,6 +76,13 @@ def build():
                        (18,5,'k'),(18,6,'k'),(18,7,'k'),(18,8,'k'),(18,15,'k'),(18,16,'k'),(18,17,'k'),(18,18,'k'),
                        (19,4,'k'),(19,7,'s'),(19,17,'s'),(19,18,'s'),(19,19,'k')):
         g[r][c] = ch
+    # cropped tee: short sleeves + round neckline, purple hem, short bare midriff above the pink belt
+    put(19, 5, "DDDD"); put(19, 9, "ssssss"); put(19, 15, "DDDD")
+    put(20, 5, "DDDDDDDDDDDDDD")
+    put(21, 5, "DDEDDDDDDEDDDD")
+    put(22, 5, "ss"); put(22, 7, "LLLLLLLLLL"); put(22, 17, "ss")
+    put(23, 7, "ssssssssss")
+    put(24, 7, "sssdssssss")
     return ["".join(r) for r in g]
 CHIBI = build()
 if __name__ == "__main__":

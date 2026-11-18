@@ -47,8 +47,8 @@ def sheet(lang):
     px_ = M(30, 300)
     o.append(frame(px_, 30, 300, 340, INK, TEAL))
     for i, c in enumerate(["#321a58", "#6b2a72", "#b8426a", "#ee7a4b"]):
-        o.append(rect(px_ + 12, 42 + i * 52, 276, 52, c))
-    spr = sprite(CHIBI[:24], CHIBI_LEG, px_ + 42, 91, 9)
+        o.append(rect(px_ + 12, 42 + i * 62, 276, 62, c))
+    spr = sprite(CHIBI[:25], CHIBI_LEG, px_ + 54, 84, 8)
     o.append(f'<g transform="translate({2*(px_+150)},0) scale(-1,1)">{spr}</g>' if R else spr)
     o.append(rect(px_ + 12, 290, 276, 68, INK))
     if R:
