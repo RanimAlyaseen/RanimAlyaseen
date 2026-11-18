@@ -36,4 +36,16 @@
 
 <img src="assets/ar/skills.svg" width="100%" alt="البرمجة: JavaScript وPython وSQL. الويب: React وVite وNode.js وExpress وPrisma وREST APIs. البيانات: PostgreSQL وMySQL وSQLite. ML وNLP: PyTorch وTransformers وscikit-learn وpandas. النشر: Docker وNginx وRailway وGit وPlaywright وpytest. هوايات: التصميم الجرافيكي ومونتاج الفيديو. اللغات: الإنجليزية والعربية والتركية. أتعمق في: معالجة اللغة التطبيقية والنماذج الطبية الحيوية والكلام وتصميم التقييم."/>
 
-<div align="center"><sub>الأقسام التالية قيد الإعداد.</sub></div>
+<img src="assets/ar/b-snake.svg" width="100%" alt="ثعبان المساهمات: نشاطي على GitHub على شكل ثعبان يأكل مخطط المساهمات"/>
+
+<img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="ثعبان المساهمات: نشاطي على GitHub على شكل ثعبان يأكل مخطط المساهمات"/>
+
+<img src="assets/ar/b-contact.svg" width="100%" alt="تواصل"/>
+
+<div align="center">
+<a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/ar/btn-research.svg" height="56" alt="الأبحاث"/></a>
+<a href="https://github.com/RanimAlyaseen?tab=repositories"><img src="assets/ar/btn-github.svg" height="56" alt="مستودعات GitHub"/></a>
+<a href="https://www.linkedin.com/in/ranim-alyaseen-846522373"><img src="assets/ar/btn-linkedin.svg" height="56" alt="LinkedIn"/></a>
+</div>
+
+<div align="center"><sub>مشاريع الفريق والجامعة موضّحة كذلك في مستودعاتها. وتستند ادعاءات المساهمة أعلاه إلى سجلات الإسناد المنشورة.</sub></div>

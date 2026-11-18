@@ -36,4 +36,16 @@
 
 <img src="assets/tr/skills.svg" width="100%" alt="Programlama: JavaScript, Python, SQL. Web: React, Vite, Node.js, Express, Prisma, REST API. Veri: PostgreSQL, MySQL, SQLite. ML ve NLP: PyTorch, Transformers, scikit-learn, pandas. Teslimat: Docker, Nginx, Railway, Git, Playwright, pytest. Hobiler: grafik tasarım, video kurgu. Diller: İngilizce, Arapça, Türkçe. Öğreniyor: uygulamalı NLP, biyomedikal modeller, konuşma, değerlendirme tasarımı."/>
 
-<div align="center"><sub>Sonraki bölümler hazırlanıyor.</sub></div>
+<img src="assets/tr/b-snake.svg" width="100%" alt="Katkı yılanı: GitHub etkinliğim, katkı grafiğini yiyen bir yılan olarak"/>
+
+<img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="Katkı yılanı: GitHub etkinliğim, katkı grafiğini yiyen bir yılan olarak"/>
+
+<img src="assets/tr/b-contact.svg" width="100%" alt="İletişim"/>
+
+<div align="center">
+<a href="https://www.linkedin.com/in/ranim-alyaseen-846522373"><img src="assets/tr/btn-linkedin.svg" height="56" alt="LinkedIn"/></a>
+<a href="https://github.com/RanimAlyaseen?tab=repositories"><img src="assets/tr/btn-github.svg" height="56" alt="GitHub depoları"/></a>
+<a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/tr/btn-research.svg" height="56" alt="Araştırma"/></a>
+</div>
+
+<div align="center"><sub>Ekip ve üniversite projeleri, depolarında bu şekilde belirtilmiştir. Yukarıdaki katkı beyanları yayımlanmış atıf kayıtlarına dayanır.</sub></div>
