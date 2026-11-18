@@ -26,37 +26,37 @@ L = {
 "en": dict(
   banner1="> LEVELS", banner2="> SIDE QUESTS", lvl="LEVEL",
   status=["LIVE DEMO", "TEAM PROJECT", "UNIVERSITY PROJECT"],
-  titles=["ORCHA", "MEDICAL ABSTRACT CLASSIFIER", "TOURISM CRM DATABASE"],
+  titles=["ORCHA", "CYBERSECURITY EVENT EXTRACTION", "TOURISM CRM DATABASE"],
   rows=[[("WHAT", "AI AGENT CONTROL PLANE"), ("REVIEW", "HUMAN APPROVES / EDITS / REJECTS"), ("BUILT", "MULTI-TENANT, ROLES, JWT AUTH"), ("SHIPPED", "LIVE ON RAILWAY, 7 E2E TESTS")],
-        [("WHAT", "5-CLASS DISEASE CLASSIFIER"), ("MY PART", "MODELS, BIOMEDBERT, EVALUATION"), ("FOUND", "988 SHARED TRAIN/TEST ABSTRACTS"), ("RESULT", "0.8603 MACRO F1, LOCKED TEST")],
+        [("WHAT", "CYBER-NEWS EVENT ARGUMENT EXTRACTION"), ("MY PART", "MODELING, ERROR ANALYSIS, EVALUATION"), ("COMPARED", "CRF, BILSTM-CRF + TRANSFORMERS"), ("RESULT", "ROBERTA: 0.6196 ARG-C F1 ON TEST")],
         [("WHAT", "MYSQL LAYER FOR A TOURISM CRM"), ("BUILT", "9 TABLES, 3 VIEWS, 6 TRIGGERS"), ("GUARDS", "OVERPAYMENT + MISMATCHED REVIEWS"), ("TESTED", "SQL SUITE + 2-SESSION CONCURRENCY")]],
-  tags=[["REACT", "NODE", "PRISMA", "POSTGRES", "DOCKER"], ["PYTHON", "PYTORCH", "TRANSFORMERS", "TEAM OF 5"], ["MYSQL 8", "SQL", "POWERSHELL"]],
-  side=[("04", "CASIE EVENT EXTRACTION", "0.6196", "ARG-C F1", ["TEAM NLP PROJECT, 26 ROLES.", "MY PART: MODELING + EVAL."]),
-        ("05", "ICELANDIC ASR DATA PREP", "0", "SHARED SPEAKERS", ["TEAM PROJECT. 20H SAMROMUR", "SUBSET FOR WHISPER + WAV2VEC."]),
+  tags=[["REACT", "NODE", "PRISMA", "POSTGRES", "DOCKER"], ["PYTHON", "PYTORCH", "ROBERTA", "TEAM OF 5"], ["MYSQL 8", "SQL", "POWERSHELL"]],
+  side=[("04", "MEDICAL ABSTRACT CLASSIFIER", "0.8603", "MACRO F1", ["TEAM PROJECT. LOCKED TEST.", "MY PART: MODELS + EVAL."]),
+        ("05", "ICELANDIC ASR DATA PREP", "0", "SHARED SPEAKERS", ["20H SAMROMUR SUBSET FOR", "WHISPER + WAV2VEC."]),
         ("06", "BOOK RATING PREDICTION", "0.433", "ROC-AUC, NO EDGE", ["REPRODUCIBLE ML EXPERIMENT.", "REPORTED AS A NEGATIVE RESULT."])],
   links=["OPEN THE LIVE DEMO", "SOURCE"]),
 "tr": dict(
   banner1="> BÖLÜMLER", banner2="> YAN GÖREVLER", lvl="BÖLÜM",
   status=["CANLI DEMO", "TAKIM PROJESİ", "ÜNİVERSİTE PROJESİ"],
-  titles=["ORCHA", "TIBBİ ÖZET SINIFLANDIRICI", "TURİZM CRM VERİTABANI"],
+  titles=["ORCHA", "SİBER GÜVENLİK OLAY ÇIKARIMI", "TURİZM CRM VERİTABANI"],
   rows=[[("NE", "YAPAY ZEKÂ AJANI KONTROL PANELİ"), ("İNCELEME", "İNSAN ONAYLAR / DÜZENLER / REDDEDER"), ("KURULUM", "ÇOK KİRACILI, ROLLER, JWT"), ("YAYINDA", "RAILWAY'DE CANLI, 7 E2E TESTİ")],
-        [("NE", "5 SINIFLI HASTALIK SINIFLANDIRICI"), ("PAYIM", "MODELLER, BIOMEDBERT, DEĞERLENDİRME"), ("BULUNDU", "988 ORTAK EĞİTİM/TEST ÖZETİ"), ("SONUÇ", "0,8603 MAKRO F1, KİLİTLİ TEST")],
+        [("NE", "SİBER HABERLERDE OLAY ARGÜMANLARI"), ("PAYIM", "MODELLEME, HATA ANALİZİ, DEĞERLENDİRME"), ("KIYAS", "CRF, BILSTM-CRF + TRANSFORMER"), ("SONUÇ", "ROBERTA: TESTTE 0,6196 ARG-C F1")],
         [("NE", "TURİZM CRM İÇİN MYSQL KATMANI"), ("KURULUM", "9 TABLO, 3 GÖRÜNÜM, 6 TETİKLEYİCİ"), ("KORUR", "FAZLA ÖDEME + UYUMSUZ YORUM"), ("TEST", "SQL TESTLERİ + EŞZAMANLILIK")]],
-  tags=[["REACT", "NODE", "PRISMA", "POSTGRES", "DOCKER"], ["PYTHON", "PYTORCH", "TRANSFORMERS", "5 KİŞİLİK TAKIM"], ["MYSQL 8", "SQL", "POWERSHELL"]],
-  side=[("04", "CASIE OLAY ÇIKARIMI", "0,6196", "ARG-C F1", ["TAKIM NLP PROJESİ, 26 ROL.", "PAYIM: MODELLEME + DEĞERL."]),
-        ("05", "İZLANDACA ASR VERİ HAZIRLIĞI", "0", "ORTAK KONUŞMACI", ["TAKIM PROJESİ. 20 SAATLİK", "SAMROMUR: WHISPER + WAV2VEC."]),
+  tags=[["REACT", "NODE", "PRISMA", "POSTGRES", "DOCKER"], ["PYTHON", "PYTORCH", "ROBERTA", "5 KİŞİLİK TAKIM"], ["MYSQL 8", "SQL", "POWERSHELL"]],
+  side=[("04", "TIBBİ ÖZET SINIFLANDIRICI", "0,8603", "MAKRO F1", ["TAKIM PROJESİ. KİLİTLİ TEST.", "PAYIM: MODELLER + DEĞERL."]),
+        ("05", "İZLANDACA ASR VERİ HAZIRLIĞI", "0", "ORTAK KONUŞMACI", ["20 SAATLİK SAMROMUR ALT", "KÜMESİ, WHISPER + WAV2VEC."]),
         ("06", "KİTAP PUANI TAHMİNİ", "0,433", "ROC-AUC", ["TEKRARLANABİLİR ML DENEYİ.", "SONUÇ: ÜSTÜNLÜK YOK."])],
   links=["CANLI DEMOYU AÇ", "KAYNAK"]),
 "ar": dict(
   banner1="المراحل", banner2="مهام جانبية", lvl="المرحلة",
   status=["عرض مباشر", "مشروع فريق", "مشروع جامعي"],
-  titles=["ORCHA", "مصنّف الملخصات الطبية", "قاعدة بيانات CRM للسياحة"],
+  titles=["ORCHA", "استخراج أحداث الأمن السيبراني", "قاعدة بيانات CRM للسياحة"],
   rows=[[("ما هو", "لوحة تحكم لوكلاء الذكاء الاصطناعي"), ("المراجعة", "إنسان يوافق أو يعدّل أو يرفض"), ("البناء", "متعدد المستأجرين، أدوار، JWT"), ("النشر", "منشور على Railway، 7 اختبارات E2E")],
-        [("ما هو", "مصنّف أمراض بخمس فئات"), ("دوري", "تدريب النماذج، BiomedBERT، التقييم"), ("وُجد", "988 ملخصاً مشتركاً بين التدريب والاختبار"), ("النتيجة", "0.8603 ماكرو F1 على اختبار مقفل")],
+        [("ما هو", "عناصر الأحداث في أخبار الأمن السيبراني"), ("دوري", "النمذجة وتحليل الأخطاء والتقييم"), ("المقارنة", "CRF وBiLSTM-CRF ونماذج المحولات"), ("النتيجة", "RoBERTa: 0.6196 Arg-C F1 في الاختبار")],
         [("ما هو", "طبقة MySQL لنظام CRM سياحي"), ("البناء", "9 جداول و3 واجهات و6 مشغّلات"), ("الحماية", "يمنع الدفع الزائد والتقييم غير المطابق"), ("الاختبار", "اختبارات SQL وتزامن بجلستين")]],
-  tags=[["REACT", "NODE", "PRISMA", "POSTGRES", "DOCKER"], ["PYTHON", "PYTORCH", "TRANSFORMERS", "TEAM OF 5"], ["MYSQL 8", "SQL", "POWERSHELL"]],
-  side=[("04", "استخراج أحداث CASIE", "0.6196", "ARG-C F1", ["مشروع فريق لمعالجة اللغة، 26 دوراً.", "دوري: النمذجة والتقييم."]),
-        ("05", "تجهيز بيانات ASR الآيسلندية", "0", "متحدثون مشتركون", ["مشروع فريق: 20 ساعة", "من Samromur لنموذجي", "Whisper وwav2vec."]),
+  tags=[["REACT", "NODE", "PRISMA", "POSTGRES", "DOCKER"], ["PYTHON", "PYTORCH", "ROBERTA", "TEAM OF 5"], ["MYSQL 8", "SQL", "POWERSHELL"]],
+  side=[("04", "مصنّف الملخصات الطبية", "0.8603", "ماكرو F1", ["مشروع فريق. اختبار مقفل.", "دوري: النماذج والتقييم."]),
+        ("05", "تجهيز بيانات ASR الآيسلندية", "0", "متحدثون مشتركون", ["20 ساعة من", "Samromur لنموذجي", "Whisper وwav2vec."]),
         ("06", "التنبؤ بتقييم الكتب", "0.433", "ROC-AUC بلا أفضلية", ["تجربة تعلّم آلي قابلة للتكرار.", "نُشرت كنتيجة سلبية."])],
   links=["افتح العرض المباشر", "المصدر"]),
 }
@@ -74,6 +74,8 @@ COIN = ["..###..", ".#####.", "###.###", "###.###", "###.###", ".#####.", "..###
 LENS = [".#####.", "##...##", "#.....#", "#.....#", "#.....#", "##...##", ".#####.", "......##", ".......##"]
 SHIELD = ["..######..", ".########.", "##.####.##", "##.####.##", "##..##..##", ".##....##.", "..######..", "...####...", "....##...."]
 BOOK = ["########..", "#......#..", "#.####.#..", "#......#..", "#.###..#..", "#......#..", "########.."]
+
+BUG = ["#..##..#", ".#.##.#.", "..####..", "###..###", "..####..", "#.####.#", ".#.##.#.", "#..##..#"]
 
 def panel(ox, oy, w, h, c1, c2, c3, c4):
     o = []
@@ -131,7 +133,23 @@ def scene_crm(ox, oy):
     o.append(sprite(["#...#", ".#.#.", "..#..", ".#.#.", "#...#"], {"#": RED}, ox + 252, oy + 130, 6))
     return "".join(o)
 
-SCENES = [scene_orcha, scene_med, scene_crm]
+def scene_cyber(ox, oy):
+    o = panel(ox, oy, 300, 240, "#06161a", "#0b2a2a", "#103d3a", "#17554c")
+    o.append(rect(ox + 24, oy + 36, 150, 152, CREAM) + rect(ox + 28, oy + 40, 142, 144, "#10221f"))
+    lines = [(0, 100, None), (1, 124, RED), (2, 80, None), (3, 118, BLUE), (4, 96, None), (5, 110, AMBER), (6, 70, None)]
+    for r_, wdt, hl in lines:
+        yy = oy + 52 + r_ * 18
+        if hl:
+            o.append(rect(ox + 36, yy - 3, wdt, 14, hl) + rect(ox + 38, yy, wdt - 4, 8, "#10221f"))
+            o.append(rect(ox + 40, yy + 2, wdt - 12, 4, hl))
+        else:
+            o.append(rect(ox + 38, yy + 2, wdt, 4, "#3d6a62"))
+    o.append(sprite(BUG, {"#": RED}, ox + 206, oy + 38, 5, 'class="bob"'))
+    o.append(sprite(SHIELD, {"#": BLUE}, ox + 214, oy + 126, 5))
+    o.append(rect(ox + 232, oy + 100, 5, 20, RED, 'class="blink"'))
+    return "".join(o)
+
+SCENES = [scene_orcha, scene_cyber, scene_crm]
 
 # ---------------------------------------------------------------- level cards
 def card(lang, i):
@@ -197,7 +215,13 @@ def side(lang, i):
     xa = CW - 24 if R else 24
     o = [frame(0, 0, CW, CH, NIGHT, col)]
     o.append(T(xa, 22, n, 3, col, anc))
-    icon = [SHIELD, None, BOOK][i]
+    if i == 1:
+        wip = {"en": "IN PROGRESS", "tr": "DEVAM EDİYOR", "ar": "قيد العمل"}[lang]
+        ww = txt(0, 0, wip, 2, INK)[1] + 20
+        wx = (24 + 60 if R else CW - 24 - ww - 100)
+        wx = (CW - 24 - 70 - ww) if R else (24 + 70)
+        o.append(rect(wx, 18, ww, 26, YELLOW) + T(wx + ww // 2, 24 if not AR_RE.search(wip) else 20, wip, 2, INK, "middle"))
+    icon = [DOC, None, BOOK][i]
     ix = M(CW - 24 - 60, 60) if False else (24 if R else CW - 24 - 60)
     if icon:
         o.append(sprite(icon, {"#": col}, ix, 20, 6 if i == 0 else 6))

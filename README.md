@@ -13,8 +13,8 @@
 <a href="https://github.com/RanimAlyaseen/Orcha-App"><img src="assets/en/level-01.svg" width="100%" alt="Level 01, Orcha: AI agent control plane. Human review queue, multi-tenant, JWT auth, live on Railway, 7 end-to-end tests."/></a>
 <div align="right"><sub><a href="https://orcha-official.up.railway.app">Open the live demo</a> · <a href="https://github.com/RanimAlyaseen/Orcha-App">Source</a></sub></div>
 
-<a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification"><img src="assets/en/level-02.svg" width="100%" alt="Level 02, medical abstract classifier, team project. My part: models, BiomedBERT, evaluation. Found 988 shared train/test abstracts. 0.8603 macro F1 on a locked test set."/></a>
-<div align="right"><sub><a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification">Source</a></sub></div>
+<a href="https://github.com/RanimAlyaseen/casie-event-argument-extraction"><img src="assets/en/level-02.svg" width="100%" alt="Level 02, cybersecurity event extraction (CASIE), team project. My part: modeling, error analysis, evaluation. RoBERTa: 0.6196 Arg-C F1 on the test set."/></a>
+<div align="right"><sub><a href="https://github.com/RanimAlyaseen/casie-event-argument-extraction">Source</a></sub></div>
 
 <a href="https://github.com/RanimAlyaseen/tourism-crm-dbms"><img src="assets/en/level-03.svg" width="100%" alt="Level 03, tourism CRM database, university project. MySQL, 9 tables, 3 views, 6 triggers. Blocks overpayment and mismatched reviews."/></a>
 <div align="right"><sub><a href="https://github.com/RanimAlyaseen/tourism-crm-dbms">Source</a></sub></div>
@@ -22,8 +22,8 @@
 <img src="assets/en/b-side.svg" width="100%" alt="Side quests"/>
 
 <table><tr>
-<td width="33%"><a href="https://github.com/RanimAlyaseen/casie-event-argument-extraction"><img src="assets/en/side-04.svg" width="100%" alt="CASIE event extraction, team NLP project. 26 roles. 0.6196 Arg-C F1."/></a></td>
-<td width="33%"><a href="https://github.com/RanimAlyaseen/icelandic-asr-project3"><img src="assets/en/side-05.svg" width="100%" alt="Icelandic ASR data preparation, team project. 20 hours of Samromur, zero shared speakers."/></a></td>
+<td width="33%"><a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification"><img src="assets/en/side-04.svg" width="100%" alt="Medical abstract classifier, team project. My part: models, BiomedBERT, evaluation. 0.8603 macro F1 on a locked test set."/></a></td>
+<td width="33%"><a href="https://github.com/RanimAlyaseen/icelandic-asr-project3"><img src="assets/en/side-05.svg" width="100%" alt="Icelandic ASR data preparation, in progress. 20 hours of Samromur for Whisper and wav2vec 2.0, zero shared speakers."/></a></td>
 <td width="33%"><a href="https://github.com/RanimAlyaseen/book-rating-prediction"><img src="assets/en/side-06.svg" width="100%" alt="Book rating prediction. Reproducible ML experiment. ROC-AUC 0.433, no edge over the baseline."/></a></td>
 </tr></table>
 

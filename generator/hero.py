@@ -110,6 +110,7 @@ def build(lang='en'):
     widths = [tw(l.upper(), 3) + 28 if not AR_RE.search(l) else apix(l, 17, 2, INK, 0, 0)[1] + 28 for l, _ in L['badges']]
     bx2 = tx - sum(widths) - 12 * (len(widths) - 1) if RTL else tx
     order = list(zip(L['badges'], widths))
+    if RTL: order = order[::-1]   # read right to left: first badge on the right
     for (label, col), w in order:
         o.append(frame(bx2, 262, w, 44, NIGHT, col))
         if AR_RE.search(label):

@@ -13,8 +13,8 @@
 <a href="https://github.com/RanimAlyaseen/Orcha-App"><img src="assets/ar/level-01.svg" width="100%" alt="المرحلة 01، Orcha: لوحة تحكم لوكلاء الذكاء الاصطناعي. طابور مراجعة بشرية، متعدد المستأجرين، JWT، منشور على Railway، 7 اختبارات شاملة."/></a>
 <div align="left"><sub><a href="https://orcha-official.up.railway.app">افتح العرض المباشر</a> · <a href="https://github.com/RanimAlyaseen/Orcha-App">المصدر</a></sub></div>
 
-<a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification"><img src="assets/ar/level-02.svg" width="100%" alt="المرحلة 02، مصنّف الملخصات الطبية، مشروع فريق. دوري: النماذج وBiomedBERT والتقييم. وُجد 988 ملخصاً مشتركاً بين التدريب والاختبار. 0.8603 ماكرو F1 على اختبار مقفل."/></a>
-<div align="left"><sub><a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification">المصدر</a></sub></div>
+<a href="https://github.com/RanimAlyaseen/casie-event-argument-extraction"><img src="assets/ar/level-02.svg" width="100%" alt="المرحلة 02، استخراج أحداث الأمن السيبراني (CASIE)، مشروع فريق. دوري: النمذجة وتحليل الأخطاء والتقييم. RoBERTa: 0.6196 Arg-C F1 في الاختبار."/></a>
+<div align="left"><sub><a href="https://github.com/RanimAlyaseen/casie-event-argument-extraction">المصدر</a></sub></div>
 
 <a href="https://github.com/RanimAlyaseen/tourism-crm-dbms"><img src="assets/ar/level-03.svg" width="100%" alt="المرحلة 03، قاعدة بيانات CRM للسياحة، مشروع جامعي. MySQL، 9 جداول، 3 واجهات، 6 مشغّلات. يمنع الدفع الزائد والتقييم غير المطابق."/></a>
 <div align="left"><sub><a href="https://github.com/RanimAlyaseen/tourism-crm-dbms">المصدر</a></sub></div>
@@ -23,8 +23,8 @@
 
 <table><tr>
 <td width="33%"><a href="https://github.com/RanimAlyaseen/book-rating-prediction"><img src="assets/ar/side-06.svg" width="100%" alt="التنبؤ بتقييم الكتب. تجربة تعلّم آلي قابلة للتكرار. ROC-AUC 0.433 بلا أفضلية على الخط الأساسي."/></a></td>
-<td width="33%"><a href="https://github.com/RanimAlyaseen/icelandic-asr-project3"><img src="assets/ar/side-05.svg" width="100%" alt="تجهيز بيانات ASR الآيسلندية، مشروع فريق. 20 ساعة من Samromur بلا متحدثين مشتركين."/></a></td>
-<td width="33%"><a href="https://github.com/RanimAlyaseen/casie-event-argument-extraction"><img src="assets/ar/side-04.svg" width="100%" alt="استخراج أحداث CASIE، مشروع فريق. 26 دوراً. 0.6196 Arg-C F1."/></a></td>
+<td width="33%"><a href="https://github.com/RanimAlyaseen/icelandic-asr-project3"><img src="assets/ar/side-05.svg" width="100%" alt="تجهيز بيانات ASR الآيسلندية، قيد العمل. 20 ساعة من Samromur لنموذجي Whisper وwav2vec 2.0 بلا متحدثين مشتركين."/></a></td>
+<td width="33%"><a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification"><img src="assets/ar/side-04.svg" width="100%" alt="مصنّف الملخصات الطبية، مشروع فريق. دوري: النماذج وBiomedBERT والتقييم. 0.8603 ماكرو F1 على اختبار مقفل."/></a></td>
 </tr></table>
 
 <div align="center"><sub>الأقسام التالية قيد الإعداد.</sub></div>

@@ -25,13 +25,13 @@ for code, label, col in [("en", "ENGLISH", TEAL), ("ar", "العربية", ORANG
 
 # ------------------------------------------------------------ character sheet (3 languages)
 D = {
- "en": dict(name="RANIM", cap="CHARACTER SHEET", rows=[("CLASS", "SOFTWARE ENGINEER", AMBER), ("SIDE", "VIDEO EDITOR + GRAPHIC DESIGNER", ROSE),
+ "en": dict(name="RANIM", cap="CHARACTER SHEET", rows=[("CLASS", "SOFTWARE ENGINEER", AMBER), ("HOBBIES", "GRAPHIC DESIGN + VIDEO EDITING", ROSE),
             ("YEAR", "SOFTWARE ENGINEERING, FINAL YEAR", TEAL), ("UNI", "ISTINYE UNIVERSITY, ISTANBUL", BLUE)],
             langs="LANGUAGES", chips=["ENGLISH", "ARABIC", "TURKISH"], cnt=[("6", "PROJECTS"), ("3", "LANGUAGES")]),
- "tr": dict(name="RANIM", cap="KARAKTER KARTI", rows=[("SINIF", "YAZILIM MÜHENDİSİ", AMBER), ("YAN", "VİDEO EDİTÖRÜ + GRAFİK TASARIMCI", ROSE),
+ "tr": dict(name="RANIM", cap="KARAKTER KARTI", rows=[("SINIF", "YAZILIM MÜHENDİSİ", AMBER), ("HOBİLER", "GRAFİK TASARIM + VİDEO KURGU", ROSE),
             ("YIL", "YAZILIM MÜHENDİSLİĞİ, SON SINIF", TEAL), ("OKUL", "İSTİNYE ÜNİVERSİTESİ, İSTANBUL", BLUE)],
             langs="DİLLER", chips=["İNGİLİZCE", "ARAPÇA", "TÜRKÇE"], cnt=[("6", "PROJE"), ("3", "DİL")]),
- "ar": dict(name="رنيم", cap="بطاقة الشخصية", rows=[("التخصص", "هندسة البرمجيات", AMBER), ("الموهبة", "مونتاج الفيديو والتصميم الجرافيكي", ROSE),
+ "ar": dict(name="رنيم", cap="بطاقة الشخصية", rows=[("التخصص", "هندسة البرمجيات", AMBER), ("هوايات", "التصميم الجرافيكي ومونتاج الفيديو", ROSE),
             ("السنة", "الأخيرة في هندسة البرمجيات", TEAL), ("الجامعة", "جامعة إستينيه، إسطنبول", BLUE)],
             langs="اللغات", chips=["الإنجليزية", "العربية", "التركية"], cnt=[("6", "مشاريع"), ("3", "لغات")]),
 }
