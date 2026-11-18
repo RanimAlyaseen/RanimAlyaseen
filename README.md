@@ -38,6 +38,8 @@
 
 <img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="Contribution snake: my GitHub activity as a snake eating the contribution graph"/>
 
+<img src="assets/en/robot.svg" width="100%" alt="Pixel robot with a TV head patrolling a night street and saying hello"/>
+
 <img src="assets/en/b-contact.svg" width="100%" alt="Contact"/>
 
 <div align="center">

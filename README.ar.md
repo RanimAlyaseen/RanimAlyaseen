@@ -38,6 +38,8 @@
 
 <img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="ثعبان المساهمات: نشاطي على GitHub على شكل ثعبان يأكل مخطط المساهمات"/>
 
+<img src="assets/ar/robot.svg" width="100%" alt="روبوت بكسل برأس تلفاز يتجول في شارع ليلي ويقول مرحباً"/>
+
 <img src="assets/ar/b-contact.svg" width="100%" alt="تواصل"/>
 
 <div align="center">

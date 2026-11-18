@@ -38,6 +38,8 @@
 
 <img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="Katkı yılanı: GitHub etkinliğim, katkı grafiğini yiyen bir yılan olarak"/>
 
+<img src="assets/tr/robot.svg" width="100%" alt="Televizyon kafalı piksel robot, gece sokağında devriye gezip merhaba diyor"/>
+
 <img src="assets/tr/b-contact.svg" width="100%" alt="İletişim"/>
 
 <div align="center">
