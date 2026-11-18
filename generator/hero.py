@@ -157,25 +157,42 @@ def build(lang='en'):
         o.append(rect(sx + 8 + (i % 3) * 8, sy + 10 + i * 12, wd, 6, cols[i % len(cols)],
                       f'class="type" style="animation-delay:-{i*0.6:.1f}s"'))
     o.append(rect(sx + 8 + 50, sy + 10 + 8 * 12, 6, 8, CREAM, 'class="blink"'))
-    # video preview
-    px0, py0 = sx + 112, sy + 8
-    o.append(rect(px0, py0, 114, 76, "#321a58"))
-    o.append(rect(px0, py0 + 40, 114, 36, "#b8426a") + rect(px0, py0 + 58, 114, 18, "#ee7a4b"))
-    o.append(rect(px0 + 78, py0 + 36, 20, 20, YELLOW))
-    o.append(sprite(["....##....", "...####...", "..######..", ".########.", "##########"], {"#": INK}, px0 + 16, py0 + 40, 6))
-    o.append(rect(px0 + 6, py0 + 6, 6, 6, RED, 'class="blink"'))
-    rec_x = px0 + 16
-    # timeline
-    ty = sy + 92
-    o.append(rect(sx, ty - 4, 234, 40, "#121833"))
-    tracks = [
-        [(6, 60, TEAL), (70, 46, ORANGE), (120, 70, TEAL), (194, 34, ROSE)],
-        [(14, 84, ROSE), (102, 56, YELLOW), (162, 62, BLUE)],
-    ]
-    for i, tr in enumerate(tracks):
-        for (a, wd, c) in tr:
-            o.append(rect(sx + a, ty + i * 16, wd, 12, c))
-    o.append(f'<g class="play"><rect x="{sx + 4}" y="{ty - 6}" width="3" height="44" fill="{RED}"/><rect x="{sx + 1}" y="{ty - 8}" width="9" height="5" fill="{RED}"/></g>')
+    # neural network panel
+    px0, py0 = sx + 116, sy + 6
+    o.append(rect(px0 - 2, py0 - 2, 116, 80, "#101530"))
+    layers = [(px0 + 12, [16, 38, 60], TEAL), (px0 + 42, [8, 28, 48, 68], AMBER), (px0 + 72, [8, 28, 48, 68], ROSE), (px0 + 100, [26, 50], GREEN)]
+    lines = []
+    for li in range(len(layers) - 1):
+        x1, ys1, _ = layers[li]; x2, ys2, _ = layers[li + 1]
+        for y1 in ys1:
+            for y2 in ys2:
+                lines.append(f'<line x1="{x1}" y1="{py0 + y1}" x2="{x2}" y2="{py0 + y2}"/>')
+    o.append('<g stroke="#3a4088" stroke-width="2" shape-rendering="crispEdges">' + "".join(lines) + '</g>')
+    k = 0
+    for x, ys, c in layers:
+        for y in ys:
+            o.append(rect(x - 5, py0 + y - 5, 10, 10, INK) + rect(x - 4, py0 + y - 4, 8, 8, c, f'class="tw" style="animation-delay:-{(k * 0.37) % 2.4:.2f}s"'))
+            k += 1
+    # training loss curve
+    ty = sy + 90
+    o.append(rect(sx, ty, 234, 38, "#121833"))
+    o.append(rect(sx + 6, ty + 4, 2, 30, "#3a4088") + rect(sx + 6, ty + 32, 222, 2, "#3a4088"))
+    import math as _m
+    cur = []; prev = None
+    for i in range(36):
+        h = int(24 * _m.exp(-i / 9.0)) + 3 + (i % 3) // 2
+        top = ty + 32 - h - 2
+        seg_h = 4 if prev is None else max(4, abs(prev - top) + 4)
+        cur.append(rect(sx + 10 + i * 6, min(top, prev if prev is not None else top), 6, seg_h, GREEN))
+        prev = top
+    val = []; prev = None
+    for i in range(36):
+        h = int(22 * _m.exp(-i / 11.0)) + 5 + (i % 4) // 2
+        top = ty + 32 - h - 2
+        seg_h = 3 if prev is None else max(3, abs(prev - top) + 3)
+        val.append(rect(sx + 10 + i * 6, min(top, prev if prev is not None else top), 6, seg_h, AMBER))
+        prev = top
+    o.append('<g class="type">' + "".join(val) + "".join(cur) + rect(sx + 10 + 35 * 6 + 2, prev - 2, 6, 6, CREAM, 'class="blink"') + '</g>')
     # keyboard
     o.append(rect(deskx + 60, deskt - 6, 84, 6, "#cfd3e8") + rect(deskx + 60, deskt - 2, 84, 2, "#8c90b0"))
     o.append(rect(deskx + 72, deskt - 12, 14, 8, "#f7e1d3") + rect(deskx + 118, deskt - 12, 14, 8, "#f7e1d3"))   # hands on the keyboard
@@ -187,9 +204,8 @@ def build(lang='en'):
     scene = o[scene_start:]; del o[scene_start:]
     if RTL:
         o.append('<g transform="translate(1200,0) scale(-1,1)">' + "".join(scene) + '</g>')
-        o.append(ptext(1200 - rec_x - 17, py0 + 6, "REC", 1, CREAM))
     else:
-        o.append("".join(scene)); o.append(ptext(rec_x, py0 + 6, "REC", 1, CREAM))
+        o.append("".join(scene))
     o.append(robot_group(lang, 70, 416))
     o.append("</g></svg>")
     return "".join(o)
