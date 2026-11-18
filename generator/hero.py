@@ -5,9 +5,9 @@ from robot_lib import robot_group, robot_css
 W, H, S = 1200, 530, 6
 
 T = dict(
- en=dict(hi='HELLO, WORLD!', name='RANIM', badges=[('DEV',TEAL),('DESIGN',ORANGE),('VIDEO',ROSE)], line='> EN / AR / TR'),
- tr=dict(hi='HELLO, WORLD!', sub='MERHABA DÜNYA', name='RANIM', badges=[('YAZILIM',TEAL),('TASARIM',ORANGE),('KURGU',ROSE)], line='> EN / AR / TR'),
- ar=dict(hi='HELLO, WORLD!', sub='مرحباً، أنا', name='رنيم', badges=[('برمجة',TEAL),('تصميم',ORANGE),('مونتاج',ROSE)], line='> EN / AR / TR'),
+ en=dict(hi='HELLO, WORLD!', name='RANIM', badges=[('DEV',TEAL),('AI / NLP',ORANGE),('DESIGN',ROSE)], line='> EN / AR / TR'),
+ tr=dict(hi='HELLO, WORLD!', sub='MERHABA DÜNYA', name='RANIM', badges=[('YAZILIM',TEAL),('YZ / NLP',ORANGE),('TASARIM',ROSE)], line='> EN / AR / TR'),
+ ar=dict(hi='HELLO, WORLD!', sub='مرحباً، أنا', name='رنيم', badges=[('برمجة',TEAL),('ذكاء اصطناعي',ORANGE),('تصميم',ROSE)], line='> EN / AR / TR'),
 )
 
 import os
@@ -139,7 +139,7 @@ def build(lang='en'):
     # character, drawn BEFORE the desk so the desk hides her lower body (she sits behind it)
     o.append(f'<g class="bob">{sprite(CHIBI[:25], CHIBI_LEG, 700, 190, 5)}</g>')
     STAR = ["..#..", "..#..", "#####", "..#..", "..#.."]
-    for k, (sx, sy, sc_, col) in enumerate(((664, 214, 3, "#ff5fa8"), (822, 204, 3, "#b05cff"), (668, 290, 3, "#ffffff"), (824, 296, 3, "#ff9ad0"))):
+    for k, (sx, sy, sc_, col) in enumerate(((664, 214, 3, "#ff5fa8"), (822, 204, 3, "#b05cff"), (682, 292, 3, "#ffffff"), (824, 296, 3, "#ff9ad0"))):
         o.append(sprite(STAR, {"#": col}, sx, sy, sc_, f'class="pulse" style="animation-delay:-{k*0.4}s"'))
     # desk
     o.append(rect(deskx, deskt, 500, 12, "#8a4b2d") + rect(deskx, deskt + 12, 500, 6, "#5e311c"))
