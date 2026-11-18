@@ -6,8 +6,11 @@ W, H, S = 1200, 420, 6
 T = dict(
  en=dict(hi='HELLO, WORLD!', name='RANIM', badges=[('DEV',TEAL),('DESIGN',ORANGE),('VIDEO',ROSE)], line='> EN / AR / TR'),
  tr=dict(hi='HELLO, WORLD!', sub='MERHABA DÜNYA', name='RANIM', badges=[('YAZILIM',TEAL),('TASARIM',ORANGE),('KURGU',ROSE)], line='> EN / AR / TR'),
- ar=dict(hi='HELLO, WORLD!', sub='في عالم', name='رنيم', badges=[('برمجة',TEAL),('تصميم',ORANGE),('مونتاج',ROSE)], line='> EN / AR / TR'),
+ ar=dict(hi='HELLO, WORLD!', sub='مرحباً، أنا', name='رنيم', badges=[('برمجة',TEAL),('تصميم',ORANGE),('مونتاج',ROSE)], line='> EN / AR / TR'),
 )
+
+import os
+VAR = os.environ.get('VAR','C')
 
 def build(lang='en'):
     random.seed(7)
@@ -83,10 +86,17 @@ def build(lang='en'):
     tx = 1136 if RTL else 64
     anc = "end" if RTL else "start"
     sub = L.get('sub')
-    if RTL:
+    if RTL and VAR == 'A':
+        g, _ = txt(tx, 34, L['hi'], 4, CREAM, anc); o.append(g)
+        g, w, hh = apix(L['name'], 62, 3, YELLOW, tx, 104, "end", shadow=ORANGE); o.append(g)
+    elif RTL and VAR == 'B':
+        g, _ = txt(tx, 16, L['hi'], 3, CREAM, anc); o.append(g)
+        g, _, _ = apix(sub, 26, 3, AMBER, tx, 52, "end"); o.append(g)
+        g, w, hh = apix(L['name'], 56, 3, YELLOW, tx, 128, "end", shadow=ORANGE); o.append(g)
+    elif RTL:
         g, _ = txt(tx, 26, L['hi'], 4, CREAM, anc); o.append(g)
         _, sw, sh = apix(sub, 26, 2, AMBER, 0, 0)
-        g, _, _ = apix(sub, 26, 2, AMBER, tx, 190 - sh, "end", shadow=ORANGE if False else None); o.append(g)
+        g, _, _ = apix(sub, 26, 2, AMBER, tx, 190 - sh, "end"); o.append(g)
         g, w, hh = apix(L['name'], 50, 3, YELLOW, tx - sw - 28, 112, "end", shadow=ORANGE); o.append(g)
     else:
         hy = 30 if sub else 66
