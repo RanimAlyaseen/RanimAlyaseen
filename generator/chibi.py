@@ -36,7 +36,6 @@ def build():
     # eyes (big, dark, with a highlight)
     for c0 in (6, 14):
         put(10, c0, "eeee"); put(11, c0, "ewve"); put(12, c0, "evve"); put(13, c0, ".ee.")
-    put(14, 5, "pp"); put(14, 17, "pp")                      # blush
     put(14, 11, "d"); put(16, 11, "mm")                      # nose, mouth
     # headphones: pink band over the hair, purple cups with pink centres
     def top(c): return 8.5 - 8.2 * math.sqrt(max(0, 1 - ((c - 11.5) / 10.2) ** 2))
@@ -50,7 +49,7 @@ def build():
             for c in range(c0, c0 + 3): g[r][c] = 'C'
         for r in (10, 11, 12): g[r][c0 + 1] = 'c'
     # neck + choker
-    put(17, 10, "dsss"); put(18, 9, "TTtTTT")
+    put(17, 10, "dsss"); put(18, 9, "TTLTTT")
     # body: shoulders, bare arms, sleeveless dress
     put(19, 8, "sssssss"); put(19, 5, "ss"); put(19, 15, "ss")
     for r in range(20, 28):
@@ -69,6 +68,12 @@ def build():
     put(33, 8, "LLLL"); put(33, 12, "LLLL")
     put(34, 8, "oooo"); put(34, 12, "oooo")
     put(35, 6, "ooooo"); put(35, 12, "ooooo")
+    # close the see-through gaps around the eyes, jaw and neck
+    for (r, c, ch) in ((13,6,'s'),(13,9,'s'),(13,14,'s'),(13,17,'s'),(16,6,'s'),(16,17,'s'),
+                       (17,7,'d'),(17,8,'d'),(17,15,'d'),(17,16,'d'),(17,5,'k'),(17,6,'k'),(17,17,'k'),(17,18,'k'),
+                       (18,5,'k'),(18,6,'k'),(18,7,'k'),(18,8,'k'),(18,15,'k'),(18,16,'k'),(18,17,'k'),(18,18,'k'),
+                       (19,4,'k'),(19,7,'s'),(19,17,'s'),(19,18,'s'),(19,19,'k')):
+        g[r][c] = ch
     return ["".join(r) for r in g]
 CHIBI = build()
 if __name__ == "__main__":
