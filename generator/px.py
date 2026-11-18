@@ -173,25 +173,25 @@ PLAYER_OLD = [
 ]
 
 
-# ---------------------------------------------------------------- diva character: black high ponytail, headphones, pink/purple accents (same 22x25 grid)
+# ---------------------------------------------------------------- diva character: black shoulder-length hair, headphones, pink/purple accents (same 22x25 grid)
 PLAYER_LEG = {'h': '#0b0610', 's': '#e9a97b', 'd': '#c98259', 'p': '#2ec4b6', 'P': '#05020a', 'o': '#ff3d94', 'O': '#7b3fd0', 'n': '#2d3a6b', 'N': '#1f2850', 'w': '#ffffff', 'k': '#1b1033', 'b': '#1b1033', 'c': '#4a4f78', 'C': '#363a5c', 'y': '#f2c94c', 'H': '#2e2540', 'l': '#e0197d', 'S': '#ff7bbd', 'V': '#b05cff', 'v': '#8a4fe0', 'f': '#ff3d94'}
 
 PLAYER = [
-".hhhh...h.............",
-"hHhhhhhhhhh...........",
-"hhhSOOOOOOOOOh........",
-"hhhSOhhhOOOOsvkkv.....",
-"hHh.OhhhOooOsskskk....",
-"hhhhOhHhOSoOsssssd....",
-"hhhhhhhhOooOsssss.....",
-"hHhhhhhhOOOOsslld.....",
-"hh.hhhhhhhSssssd......",
-"hh.hhhhhhVsssss.......",
-"Hh.....sSSVSs.........",
-"hh...SOOOOOOOO........",
-"hh...OoooooooooO......",
-"..cc.oooooooooooo.....",
-"..cc.ooooooooooOOOss..",
+"......................",
+".....hhhhhhh..........",
+"....OOOOOOOOOh........",
+"....OhhhOOOOsvkkv.....",
+"...hOhhhOooOsskskk....",
+"..hhOhhhOSoOsssssd....",
+"..hHhhhhOooOsssss.....",
+".hhhhhhhOOOOsslld.....",
+".hHhhhhhhhSssssd......",
+".hhhhhhhhVsssss.......",
+".hHhhhhhhSVSs.........",
+".hhhhhhhHhOOOO........",
+"..hhHhhhhhoooooO......",
+"..cchhHhhhooooooo.....",
+"..cchhhhhhoooooOOOss..",
 "..cc.oooooooooooooss..",
 "..cc.ooooooooooo......",
 "..cc.ooooooooooo......",
