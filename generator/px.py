@@ -70,7 +70,8 @@ FONT["İ"]="..#..|.....|"+FONT["I"]
 FONT["Ğ"]=".#.#.|..#..|"+FONT["G"]
 FONT["Ç"]=FONT["C"].rsplit("|",1)[0]+"|.####|..#..|.##.."
 FONT["Ş"]=FONT["S"]+"|..#..|.##.."
-ABOVE=set("ÜÖİĞ")
+FONT["Â"]="..#..|.#.#.|"+FONT["A"]
+ABOVE=set("ÜÖİĞÂ")
 
 def tw(s, sc):
     """pixel width of a string at scale sc"""

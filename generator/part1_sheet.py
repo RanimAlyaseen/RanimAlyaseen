@@ -65,7 +65,7 @@ def sheet(lang):
             g, _ = txt(W - x0 - 150, y, v, 3, c, anchor="end"); o.append(g)
         else:
             g, _ = txt(x0, y, k, 3, MUTED); o.append(g)
-            g, _ = txt(x0 + 130, y, v, 3, c); o.append(g)
+            g, _ = txt(x0 + 150, y, v, 3, c); o.append(g)
     o.append(rect(M(x0, 800), 190, 800, 4, PLUM))
     g, _ = txt(W - x0 if R else x0, 214, d["langs"], 3, CREAM, anchor="end" if R else "start"); o.append(g)
     # language chips
