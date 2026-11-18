@@ -49,7 +49,7 @@ def build():
         o.append(rect(x, y, sz, sz, CREAM, f'class="tw" style="animation-delay:-{dl:.1f}s"'))
 
     # sun (pixel disc, banded) sitting on the skyline
-    cx, cy, r = 560, 340, 84
+    cx, cy, r = 600, 372, 96
     sun = []
     for row in range(-r // S, 1):
         yy = row * S
@@ -60,55 +60,11 @@ def build():
         sun.append(rect(cx - hw, cy + yy, hw * 2, S, col))
     o.append(f'<g class="sun">{"".join(sun)}</g>')
 
-    # clouds
-    cloud = ["...######.....", ".##########...", "##############.", ".############..", ]
-    for i, (yy, dl) in enumerate([(70, 0), (130, -25), (100, -45)]):
-        o.append(f'<g class="cloud" style="animation-delay:{dl}s">{sprite(cloud, {"#": "#ffffff22"}, 0, yy, 8)}</g>')
-
-    # skyline: city silhouettes + mosque
-    sky = INK
-    bx = 0
-    wins = []
-    while bx < 770:
-        w = random.choice([48, 60, 72, 84])
-        h = random.choice([18, 24, 30]) if bx < 430 else random.choice([48, 60, 72]) if bx > 700 else random.choice([24, 30, 36])
-        y = 372 - h
-        o.append(rect(bx, y, w, h, sky))
-        for wy in range(y + 12, 366, 18):
-            for wx in range(bx + 9, bx + w - 9, 15):
-                if random.random() < .32 and not (wx < 440 and wy > 296) and not (400 < bx < 720):
-                    dl = random.random() * 2.4
-                    wins.append(rect(wx, wy, 6, 6, AMBER, f'class="tw" style="animation-delay:-{dl:.1f}s"'))
-        bx += w + random.choice([0, 6, 12])
-    # tall needle tower
-    pass
-    # billboard building with a neon code + play sign
-    o.append(rect(470, 312, 190, 60, sky))
-    o.append(rect(500, 284, 10, 30, sky) + rect(620, 284, 10, 30, sky))
-    o.append(rect(450, 236, 230, 52, AMBER) + rect(456, 242, 218, 40, INK))
-    o.append(ptext(520, 249, "</>", 6, TEAL, anchor="middle", shadow=PURPLE, extra='class="tw" style="animation-duration:3.2s"'))
-    o.append(f'<g class="tw" style="animation-duration:2.6s">{sprite(["#.....", "###...", "#####.", "######", "#####.", "###...", "#....."], {"#": ORANGE}, 600, 248, 5)}</g>')
-    for lx in range(458, 676, 24):
-        o.append(rect(lx, 238, 6, 4, YELLOW, 'class="tw"') + rect(lx + 12, 282, 6, 4, YELLOW, 'class="tw"'))
-    o.append("".join(wins))
-    # palms
-    palm = [
-        "..gg.....gg..",
-        ".gggg...gggg.",
-        "gg.ggg.ggg.gg",
-        "g...gggggg..g",
-        ".....gtg.....",
-        ".....tt......",
-        "......tt.....",
-        "......tt.....",
-        ".....tt......",
-        ".....tt......",
-        ".....tt......",
-        "......tt.....",
-        "......tt.....",
-    ]
-    o.append(sprite(palm, dict(g="#0f3d3a", t="#0b2b2a"), 1146, 240, 6))
-
+    # low stepped hills (no clutter behind text)
+    hx = 0
+    while hx < W:
+        w = random.choice([96, 144, 192]); h = random.choice([12, 18, 24])
+        o.append(rect(hx, 372 - h, w, h, INK)); hx += w
     # ground
     o.append(rect(0, 372, W, 48, "#0e0720"))
     for x in range(0, W, 24):
@@ -126,8 +82,7 @@ def build():
         o.append(frame(bx2, 262, w, 44, NIGHT, col))
         o.append(ptext(bx2 + 14, 276, label, 3, col))
         bx2 += w + 12
-    o.append(ptext(64, 322, "PLAYER 1 + TRIPLE CLASS", 3, CREAM))
-    o.append(f'<g class="blink">{ptext(64, 350, "> PRESS START", 3, AMBER)}</g>')
+    o.append(f'<g class="blink">{ptext(64, 322, "> PRESS START", 3, CREAM, shadow=INK)}</g>')
 
     # ---------------- desk scene
     deskx, deskt = 790, 316
@@ -173,10 +128,6 @@ def build():
         o.append(rect(dx, deskt - 36, 4, 8, "#ffffff88", f'class="steam" style="animation-delay:-{i*0.5}s"'))
     # character (bob = tiny head nod)
     o.append(f'<g class="bob">{sprite(PLAYER, PLAYER_LEG, 690, 222, 6)}</g>')
-    # floating coins / sparks
-    for i, (x, y) in enumerate([(850, 120), (1160, 200), (760, 160)]):
-        o.append(f'<g class="coin" style="animation-delay:-{i*.5}s">{sprite(["..##..", ".####.", "######", "######", ".####.", "..##.."], {"#": YELLOW}, x, y, 5)}</g>')
-
     o.append("</g></svg>")
     return "".join(o)
 
