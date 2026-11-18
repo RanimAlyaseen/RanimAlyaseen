@@ -5,9 +5,9 @@ from robot_lib import robot_group, robot_css
 W, H, S = 1200, 530, 6
 
 T = dict(
- en=dict(hi='HELLO, WORLD!', name='RANIM', badges=[('FULL-STACK',TEAL),('AI / NLP',ORANGE),('SAAS',ROSE)], line='> EN / AR / TR'),
- tr=dict(hi='HELLO, WORLD!', sub='MERHABA DÜNYA', name='RANIM', badges=[('FULL-STACK',TEAL),('YZ / NLP',ORANGE),('SAAS',ROSE)], line='> EN / AR / TR'),
- ar=dict(hi='HELLO, WORLD!', sub='مرحباً، أنا', name='رنيم', badges=[('تطوير الويب',TEAL),('ذكاء اصطناعي',ORANGE),('SAAS',ROSE)], line='> EN / AR / TR'),
+ en=dict(hi='HELLO, WORLD!', name='RANIM', badges=[('GROWING FOCUS: AI / NLP',TEAL)], line='> EN / AR / TR'),
+ tr=dict(hi='HELLO, WORLD!', sub='MERHABA DÜNYA', name='RANIM', badges=[('GELİŞEN ODAK: YZ / NLP',TEAL)], line='> EN / AR / TR'),
+ ar=dict(hi='HELLO, WORLD!', sub='مرحباً، أنا', name='رنيم', badges=[('تركيز متنامي: AI / NLP',TEAL)], line='> EN / AR / TR'),
 )
 
 import os
