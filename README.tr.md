@@ -6,6 +6,8 @@
 
 <img src="assets/tr/hero.svg" alt="Ranim: yazılım mühendisi, video editörü ve grafik tasarımcı" width="100%"/>
 
+<img src="assets/tr/robot.svg" width="100%" alt="Televizyon kafalı piksel robot, gece sokağında devriye gezip merhaba diyor"/>
+
 <img src="assets/tr/sheet.svg" width="100%" alt="Karakter kartı: İstinye Üniversitesi'nde yazılım mühendisliği öğrencisi, İstanbul. İngilizce, Arapça, Türkçe. 6 proje."/>
 
 <img src="assets/tr/b-levels.svg" width="100%" alt="Bölümler"/>
@@ -37,8 +39,6 @@
 <img src="assets/tr/skills.svg" width="100%" alt="Programlama: JavaScript, Python, SQL. Web: React, Vite, Node.js, Express, Prisma, REST API. Veri: PostgreSQL, MySQL, SQLite. ML ve NLP: PyTorch, Transformers, scikit-learn, pandas. Teslimat: Docker, Nginx, Railway, Git, Playwright, pytest. Hobiler: grafik tasarım, video kurgu. Diller: İngilizce, Arapça, Türkçe. Öğreniyor: uygulamalı NLP, biyomedikal modeller, konuşma, değerlendirme tasarımı."/>
 
 <img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="Katkı yılanı: GitHub etkinliğim, katkı grafiğini yiyen bir yılan olarak"/>
-
-<img src="assets/tr/robot.svg" width="100%" alt="Televizyon kafalı piksel robot, gece sokağında devriye gezip merhaba diyor"/>
 
 <img src="assets/tr/b-contact.svg" width="100%" alt="İletişim"/>
 

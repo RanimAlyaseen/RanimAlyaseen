@@ -6,6 +6,8 @@
 
 <img src="assets/ar/hero.svg" alt="رنيم: هندسة برمجيات ومونتاج وتصميم جرافيكي" width="100%"/>
 
+<img src="assets/ar/robot.svg" width="100%" alt="روبوت بكسل برأس تلفاز يتجول في شارع ليلي ويقول مرحباً"/>
+
 <img src="assets/ar/sheet.svg" width="100%" alt="بطاقة الشخصية: هندسة البرمجيات في جامعة إستينيه، إسطنبول. الإنجليزية والعربية والتركية. 6 مشاريع."/>
 
 <img src="assets/ar/b-levels.svg" width="100%" alt="المراحل"/>
@@ -37,8 +39,6 @@
 <img src="assets/ar/skills.svg" width="100%" alt="البرمجة: JavaScript وPython وSQL. الويب: React وVite وNode.js وExpress وPrisma وREST APIs. البيانات: PostgreSQL وMySQL وSQLite. ML وNLP: PyTorch وTransformers وscikit-learn وpandas. النشر: Docker وNginx وRailway وGit وPlaywright وpytest. هوايات: التصميم الجرافيكي ومونتاج الفيديو. اللغات: الإنجليزية والعربية والتركية. أتعمق في: معالجة اللغة التطبيقية والنماذج الطبية الحيوية والكلام وتصميم التقييم."/>
 
 <img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="ثعبان المساهمات: نشاطي على GitHub على شكل ثعبان يأكل مخطط المساهمات"/>
-
-<img src="assets/ar/robot.svg" width="100%" alt="روبوت بكسل برأس تلفاز يتجول في شارع ليلي ويقول مرحباً"/>
 
 <img src="assets/ar/b-contact.svg" width="100%" alt="تواصل"/>
 
