@@ -328,17 +328,17 @@ for lang in ("en", "tr", "ar"):
 
 # ---------------------------------------------------------------- skills card
 SK = {
-"en": dict(banner="> WHAT I KNOW", snake="> SNAKE",
+"en": dict(banner="> SKILLS", snake="> SNAKE",
   rows=[("PROGRAMMING", TEAL, ["JAVASCRIPT", "PYTHON", "SQL"]), ("WEB", AMBER, ["REACT", "VITE", "NODE.JS", "EXPRESS", "PRISMA", "REST APIS"]),
         ("DATA", ROSE, ["POSTGRESQL", "MYSQL", "SQLITE"]), ("ML + NLP", "#9a87ff", ["PYTORCH", "TRANSFORMERS", "SCIKIT-LEARN", "PANDAS"]),
         ("DELIVERY", GREEN, ["DOCKER", "NGINX", "RAILWAY", "GIT", "PLAYWRIGHT", "PYTEST"]), ("HOBBIES", ORANGE, ["GRAPHIC DESIGN", "VIDEO EDITING"]),
         ("LANGUAGES", BLUE, ["ENGLISH", "ARABIC", "TURKISH"]), ("DEEPENING", YELLOW, ["APPLIED NLP", "BIOMEDICAL MODELS", "SPEECH", "EVAL DESIGN"])]),
-"tr": dict(banner="> BİLDİKLERİM", snake="> YILAN",
+"tr": dict(banner="> YETENEKLER", snake="> YILAN",
   rows=[("PROGRAMLAMA", TEAL, ["JAVASCRIPT", "PYTHON", "SQL"]), ("WEB", AMBER, ["REACT", "VITE", "NODE.JS", "EXPRESS", "PRISMA", "REST API"]),
         ("VERİ", ROSE, ["POSTGRESQL", "MYSQL", "SQLITE"]), ("ML + NLP", "#9a87ff", ["PYTORCH", "TRANSFORMERS", "SCIKIT-LEARN", "PANDAS"]),
         ("TESLİMAT", GREEN, ["DOCKER", "NGINX", "RAILWAY", "GIT", "PLAYWRIGHT", "PYTEST"]), ("HOBİLER", ORANGE, ["GRAFİK TASARIM", "VİDEO KURGU"]),
         ("DİLLER", BLUE, ["İNGİLİZCE", "ARAPÇA", "TÜRKÇE"]), ("ÖĞRENİYOR", YELLOW, ["UYGULAMALI NLP", "BİYOMEDİKAL MODELLER", "KONUŞMA", "DEĞERLENDİRME"])]),
-"ar": dict(banner="ما أعرفه", snake="الثعبان",
+"ar": dict(banner="المهارات", snake="الثعبان",
   rows=[("البرمجة", TEAL, ["JAVASCRIPT", "PYTHON", "SQL"]), ("الويب", AMBER, ["REACT", "VITE", "NODE.JS", "EXPRESS", "PRISMA", "REST APIS"]),
         ("البيانات", ROSE, ["POSTGRESQL", "MYSQL", "SQLITE"]), ("ML + NLP", "#9a87ff", ["PYTORCH", "TRANSFORMERS", "SCIKIT-LEARN", "PANDAS"]),
         ("النشر", GREEN, ["DOCKER", "NGINX", "RAILWAY", "GIT", "PLAYWRIGHT", "PYTEST"]), ("هوايات", ORANGE, ["التصميم الجرافيكي", "مونتاج الفيديو"]),
@@ -372,7 +372,7 @@ def skills(lang):
 
 for lang in ("en", "tr", "ar"):
     skills(lang)
-    banner(lang, "b-know", SK[lang]["banner"], GREEN)
+    banner(lang, "b-skills", SK[lang]["banner"], GREEN)
     banner(lang, "b-snake", SK[lang]["snake"], YELLOW)
 
 print("ok")

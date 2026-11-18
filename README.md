@@ -32,7 +32,7 @@
 <a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/en/research.svg" width="100%" alt="Pulmonary nodule detection in chest CT. Research and pre-prototype system design: literature, AI pipeline, evaluation, clinical workflow, safety. No trained model and no clinical claims."/></a>
 <div align="right"><sub><a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing">Open the research folder</a></sub></div>
 
-<img src="assets/en/b-know.svg" width="100%" alt="What I know"/>
+<img src="assets/en/b-skills.svg" width="100%" alt="Skills"/>
 
 <img src="assets/en/skills.svg" width="100%" alt="Programming: JavaScript, Python, SQL. Web: React, Vite, Node.js, Express, Prisma, REST APIs. Data: PostgreSQL, MySQL, SQLite. ML and NLP: PyTorch, Transformers, scikit-learn, pandas. Delivery: Docker, Nginx, Railway, Git, Playwright, pytest. Hobbies: graphic design, video editing. Languages: English, Arabic, Turkish. Deepening: applied NLP, biomedical models, speech, evaluation design."/>
 
