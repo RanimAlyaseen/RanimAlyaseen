@@ -167,9 +167,9 @@ def build(lang='en'):
     for i, dx in enumerate((1104, 1112, 1118)):
         o.append(rect(dx, deskt - 36, 4, 8, "#ffffff88", f'class="steam" style="animation-delay:-{i*0.5}s"'))
     # character (bob = tiny head nod)
-    o.append(f'<g class="bob">{sprite(CHIBI, CHIBI_LEG, 636, 156, 6)}</g>')
+    o.append(f'<g class="bob">{sprite(CHIBI, CHIBI_LEG, 648, 192, 5)}</g>')
     STAR = ["..#..", "..#..", "#####", "..#..", "..#.."]
-    for k, (sx, sy, sc_, col) in enumerate(((606, 190, 4, "#ff5fa8"), (800, 176, 3, "#b05cff"), (612, 276, 3, "#ffffff"), (796, 262, 3, "#ff9ad0"))):
+    for k, (sx, sy, sc_, col) in enumerate(((624, 216, 3, "#ff5fa8"), (780, 208, 3, "#b05cff"), (630, 292, 3, "#ffffff"), (776, 284, 3, "#ff9ad0"))):
         o.append(sprite(STAR, {"#": col}, sx, sy, sc_, f'class="pulse" style="animation-delay:-{k*0.4}s"'))
     scene = o[scene_start:]; del o[scene_start:]
     if RTL:
