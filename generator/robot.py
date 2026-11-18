@@ -42,7 +42,7 @@ LEGS_B = ["....ogoogo.....".ljust(16, "."), "....oooooo....."[:16].ljust(16, "."
 
 T = {"en": "HELLO!", "tr": "MERHABA!", "ar": "مرحباً!"}
 CSS = (
- ".mv{animation:patrol 22s steps(220) infinite}@keyframes patrol{0%{transform:translateX(0)}50%{transform:translateX(1000px)}100%{transform:translateX(0)}}"
+ ".mv{animation:patrol 22s steps(220) infinite}@keyframes patrol{0%{transform:translateX(0)}50%{transform:translateX(960px)}100%{transform:translateX(0)}}"
  ".fl{transform-box:fill-box;transform-origin:center;animation:flip 22s steps(1) infinite}@keyframes flip{0%{transform:scaleX(1)}50%{transform:scaleX(-1)}100%{transform:scaleX(-1)}}"
  ".la{animation:la .44s steps(1) infinite}.lb{animation:lb .44s steps(1) infinite}"
  "@keyframes la{0%{opacity:1}50%{opacity:0}}@keyframes lb{0%{opacity:0}50%{opacity:1}}"
@@ -80,7 +80,7 @@ def build(lang):
     for k, (x, col) in enumerate(((330, TEAL), (610, ROSE), (900, YELLOW))):
         o.append(f'<g class="hop" style="animation-delay:-{k*.4:.1f}s">' + rect(x, GROUND - 22, 14, 14, col) + rect(x + 3, GROUND - 19, 8, 8, INK) + rect(x + 5, GROUND - 17, 4, 4, col) + '</g>')
     # the robot
-    X0 = 40; Y0 = GROUND - 20 * S
+    X0 = 70; Y0 = GROUND - 20 * S
     rb = []
     rb.append(f'<g class="la">{sprite(LEGS_A, LEG, 0, 18 * S, S)}</g><g class="lb">{sprite(LEGS_B, LEG, 0, 18 * S, S)}</g>')
     up = [sprite(UPPER, LEG, 0, 0, S), sprite(ARM, LEG, 0, 13 * S, S),
@@ -90,9 +90,14 @@ def build(lang):
     rb.append(f'<g class="bod">{"".join(up)}</g>')
     o.append(f'<g transform="translate({X0},{Y0})"><g class="mv"><g class="fl">{"".join(rb)}</g>')
     # speech bubble (does not flip with the robot)
-    txt_svg, tw_ = txt(0, 0, T[lang], 3, INK, "start")
-    bw = tw_ + 28; bh = 38; bx = 8 * S - bw // 2; by = -54
-    g, _ = txt(bx + bw // 2, by + 12, T[lang], 3, INK, "middle")
+    if AR_RE.search(T[lang]):
+        _, tw_, th_ = apix(T[lang], 14, 2, INK, 0, 0)
+        bw = tw_ + 28; bh = max(38, th_ + 14); bx = 8 * S - bw // 2; by = -(bh + 6)
+        g, _, _ = apix(T[lang], 14, 2, INK, bx + bw // 2, by + (bh - th_) // 2, "middle")
+    else:
+        _, tw_ = txt(0, 0, T[lang], 3, INK, "start")
+        bw = tw_ + 28; bh = 38; bx = 8 * S - bw // 2; by = -54
+        g, _ = txt(bx + bw // 2, by + 12, T[lang], 3, INK, "middle")
     o.append(f'<g class="bub">{frame(bx, by, bw, bh, CREAM, PLUM)}{rect(8 * S - 6, by + bh, 12, 4, PLUM)}{rect(8 * S - 4, by + bh, 8, 2, CREAM)}{g}</g>')
     o.append('</g></g>')
     os.makedirs(f"{OUT}/{lang}", exist_ok=True)
