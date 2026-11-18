@@ -82,23 +82,13 @@ def build():
         bx += w + random.choice([0, 6, 12])
     # tall needle tower
     pass
-    # mosque: dome + two minarets
-    mx = 560
-    o.append(rect(mx - 120, 318, 240, 54, sky))
-    for row in range(0, 11):
-        hw = int(math.sqrt(max(11 * 11 - (11 - row) ** 2, 0)) * S)
-        o.append(rect(mx - hw, 318 - (11 - row) * S + S * 0, hw * 2, S, sky)) if False else None
-    dome = []
-    R = 60
-    for yy in range(0, R, S):
-        hw = int(math.sqrt(R * R - (R - yy) ** 2) // S) * S
-        dome.append(rect(mx - hw, 318 - R + yy, hw * 2, S, sky))
-    o.append("".join(dome))
-    o.append(rect(mx - 3, 244, 6, 14, sky) + rect(mx - 9, 238, 18, 6, sky))  # finial
-    for dx in (-104, 94):
-        o.append(rect(mx + dx, 276, 12, 96, sky) + rect(mx + dx - 6, 270, 24, 12, sky))
-        o.append(rect(mx + dx + 0, 252, 12, 18, sky) + rect(mx + dx + 3, 240, 6, 12, sky))
-        o.append(rect(mx + dx + 4, 300, 4, 8, AMBER, 'class="tw"'))
+    # billboard building with a neon RANIM sign
+    o.append(rect(470, 312, 190, 60, sky))
+    o.append(rect(500, 284, 10, 30, sky) + rect(620, 284, 10, 30, sky))
+    o.append(rect(450, 236, 230, 52, AMBER) + rect(456, 242, 218, 40, INK))
+    o.append(ptext(565, 249, "RANIM", 6, TEAL, anchor="middle", shadow=PURPLE, extra='class="tw" style="animation-duration:3.2s"'))
+    for lx in range(458, 676, 24):
+        o.append(rect(lx, 238, 6, 4, YELLOW, 'class="tw"') + rect(lx + 12, 282, 6, 4, YELLOW, 'class="tw"'))
     o.append("".join(wins))
     # palms
     palm = [
