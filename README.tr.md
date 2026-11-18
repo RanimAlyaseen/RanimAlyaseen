@@ -32,4 +32,8 @@
 <a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/tr/research.svg" width="100%" alt="Akciğer nodülü tespiti (BT). Araştırma ve ön prototip sistem tasarımı: literatür, yapay zekâ hattı, değerlendirme, klinik akış, güvenlik. Eğitilmiş model ve klinik iddia yok."/></a>
 <div align="right"><sub><a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing">Araştırma klasörünü aç</a></sub></div>
 
+<img src="assets/tr/b-know.svg" width="100%" alt="Bildiklerim"/>
+
+<img src="assets/tr/skills.svg" width="100%" alt="Programlama: JavaScript, Python, SQL. Web: React, Vite, Node.js, Express, Prisma, REST API. Veri: PostgreSQL, MySQL, SQLite. ML ve NLP: PyTorch, Transformers, scikit-learn, pandas. Teslimat: Docker, Nginx, Railway, Git, Playwright, pytest. Hobiler: grafik tasarım, video kurgu. Diller: İngilizce, Arapça, Türkçe. Öğreniyor: uygulamalı NLP, biyomedikal modeller, konuşma, değerlendirme tasarımı."/>
+
 <div align="center"><sub>Sonraki bölümler hazırlanıyor.</sub></div>

@@ -32,4 +32,8 @@
 <a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/ar/research.svg" width="100%" alt="كشف عقيدات الرئة في الأشعة المقطعية. بحث وتصميم نظام ما قبل النموذج الأولي: الأدبيات، مسار الذكاء الاصطناعي، التقييم، سير العمل السريري، السلامة. بلا نموذج مدرَّب وبلا ادعاءات سريرية."/></a>
 <div align="left"><sub><a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing">افتح مجلد الأبحاث</a></sub></div>
 
+<img src="assets/ar/b-know.svg" width="100%" alt="ما أعرفه"/>
+
+<img src="assets/ar/skills.svg" width="100%" alt="البرمجة: JavaScript وPython وSQL. الويب: React وVite وNode.js وExpress وPrisma وREST APIs. البيانات: PostgreSQL وMySQL وSQLite. ML وNLP: PyTorch وTransformers وscikit-learn وpandas. النشر: Docker وNginx وRailway وGit وPlaywright وpytest. هوايات: التصميم الجرافيكي ومونتاج الفيديو. اللغات: الإنجليزية والعربية والتركية. أتعمق في: معالجة اللغة التطبيقية والنماذج الطبية الحيوية والكلام وتصميم التقييم."/>
+
 <div align="center"><sub>الأقسام التالية قيد الإعداد.</sub></div>

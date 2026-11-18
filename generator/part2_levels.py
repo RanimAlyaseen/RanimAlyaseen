@@ -325,4 +325,54 @@ for lang in ("en", "tr", "ar"):
     research_card(lang)
     banner(lang, "b-research", RS[lang]["banner"], ROSE)
 
+
+# ---------------------------------------------------------------- skills card
+SK = {
+"en": dict(banner="> WHAT I KNOW", snake="> SNAKE",
+  rows=[("PROGRAMMING", TEAL, ["JAVASCRIPT", "PYTHON", "SQL"]), ("WEB", AMBER, ["REACT", "VITE", "NODE.JS", "EXPRESS", "PRISMA", "REST APIS"]),
+        ("DATA", ROSE, ["POSTGRESQL", "MYSQL", "SQLITE"]), ("ML + NLP", "#9a87ff", ["PYTORCH", "TRANSFORMERS", "SCIKIT-LEARN", "PANDAS"]),
+        ("DELIVERY", GREEN, ["DOCKER", "NGINX", "RAILWAY", "GIT", "PLAYWRIGHT", "PYTEST"]), ("HOBBIES", ORANGE, ["GRAPHIC DESIGN", "VIDEO EDITING"]),
+        ("LANGUAGES", BLUE, ["ENGLISH", "ARABIC", "TURKISH"]), ("DEEPENING", YELLOW, ["APPLIED NLP", "BIOMEDICAL MODELS", "SPEECH", "EVAL DESIGN"])]),
+"tr": dict(banner="> BİLDİKLERİM", snake="> YILAN",
+  rows=[("PROGRAMLAMA", TEAL, ["JAVASCRIPT", "PYTHON", "SQL"]), ("WEB", AMBER, ["REACT", "VITE", "NODE.JS", "EXPRESS", "PRISMA", "REST API"]),
+        ("VERİ", ROSE, ["POSTGRESQL", "MYSQL", "SQLITE"]), ("ML + NLP", "#9a87ff", ["PYTORCH", "TRANSFORMERS", "SCIKIT-LEARN", "PANDAS"]),
+        ("TESLİMAT", GREEN, ["DOCKER", "NGINX", "RAILWAY", "GIT", "PLAYWRIGHT", "PYTEST"]), ("HOBİLER", ORANGE, ["GRAFİK TASARIM", "VİDEO KURGU"]),
+        ("DİLLER", BLUE, ["İNGİLİZCE", "ARAPÇA", "TÜRKÇE"]), ("ÖĞRENİYOR", YELLOW, ["UYGULAMALI NLP", "BİYOMEDİKAL MODELLER", "KONUŞMA", "DEĞERLENDİRME"])]),
+"ar": dict(banner="ما أعرفه", snake="الثعبان",
+  rows=[("البرمجة", TEAL, ["JAVASCRIPT", "PYTHON", "SQL"]), ("الويب", AMBER, ["REACT", "VITE", "NODE.JS", "EXPRESS", "PRISMA", "REST APIS"]),
+        ("البيانات", ROSE, ["POSTGRESQL", "MYSQL", "SQLITE"]), ("ML + NLP", "#9a87ff", ["PYTORCH", "TRANSFORMERS", "SCIKIT-LEARN", "PANDAS"]),
+        ("النشر", GREEN, ["DOCKER", "NGINX", "RAILWAY", "GIT", "PLAYWRIGHT", "PYTEST"]), ("هوايات", ORANGE, ["التصميم الجرافيكي", "مونتاج الفيديو"]),
+        ("اللغات", BLUE, ["الإنجليزية", "العربية", "التركية"]), ("أتعمق في", YELLOW, ["معالجة اللغة التطبيقية", "النماذج الطبية الحيوية", "الكلام", "تصميم التقييم"])]),
+}
+
+def skills(lang):
+    d = SK[lang]; R = lang == "ar"
+    CW, rh = W, 56
+    CH = rh * len(d["rows"]) + 28
+    o = [frame(0, 0, CW, CH, NIGHT, PLUM)]
+    for i, (lab, col, items) in enumerate(d["rows"]):
+        y = 18 + i * rh
+        if i:
+            o.append(rect(28, y - 8, CW - 56, 2, PURPLE))
+        # coloured marker + label
+        mk = CW - 28 - 14 if R else 28
+        o.append(rect(mk, y + 14, 14, 14, col))
+        lx = CW - 28 - 14 - 16 if R else 28 + 14 + 16
+        o.append(T(lx, y + 12, lab, 3, CREAM, "end" if R else "start", maxw=238))
+        # chips
+        x = CW - 300 if R else 300
+        for it in items:
+            w = (txt(0, 0, it, 2, INK)[1] if AR_RE.search(it) else tw(it.upper(), 2)) + 24
+            bx = x - w if R else x
+            ar = bool(AR_RE.search(it))
+            yb, hb = (y + 6, 36) if ar else (y + 9, 30)
+            o.append(rect(bx, yb, w, hb, col) + rect(bx + 2, yb + 2, w - 4, hb - 4, INK) + T(bx + w // 2, yb + (8 if ar else 8), it, 2, col, "middle"))
+            x = bx - 10 if R else x + w + 10
+    save(f"{OUT}/{lang}/skills.svg", CW, CH, "".join(o))
+
+for lang in ("en", "tr", "ar"):
+    skills(lang)
+    banner(lang, "b-know", SK[lang]["banner"], GREEN)
+    banner(lang, "b-snake", SK[lang]["snake"], YELLOW)
+
 print("ok")
