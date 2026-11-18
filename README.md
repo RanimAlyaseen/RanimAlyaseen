@@ -4,9 +4,9 @@
 <a href="README.tr.md"><img src="assets/lang-tr.svg" height="48" alt="Türkçe"/></a>
 </div>
 
-<img src="assets/en/hero-crop.svg" alt="Ranim: software engineer working in development, AI and NLP, and design, at her desk. A pixel robot walks the street below and says hello." width="100%"/>
+<img src="assets/en/hero-top.svg" alt="Ranim: software engineer working in development, AI and NLP, and design, at her desk. A pixel robot walks the street below and says hello." width="100%"/>
 
-<img src="assets/en/sheet-crop.svg" width="100%" alt="Character sheet: software engineering student at Istinye University, Istanbul. English, Arabic, Turkish. 6 projects."/>
+<img src="assets/en/sheet-top.svg" width="100%" alt="Character sheet: software engineering student at Istinye University, Istanbul. English, Arabic, Turkish. 6 projects."/>
 
 <img src="assets/en/b-levels.svg" width="100%" alt="Levels"/>
 
