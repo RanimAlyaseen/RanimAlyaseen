@@ -83,17 +83,16 @@ def build(lang='en'):
     tx = 1136 if RTL else 64
     anc = "end" if RTL else "start"
     sub = L.get('sub')
-    hy = 20 if (RTL and sub) else 30 if sub else 66
-    g, _ = txt(tx, hy, L['hi'], 4, CREAM, anc); o.append(g)
-    if sub:
-        if RTL:
-            g, _, _ = apix(sub, 15, 2, AMBER, tx, 58, "end")
-        else:
-            g, _ = txt(tx, 72, sub, 2, AMBER, anc)
-        o.append(g)
     if RTL:
-        g, w, h = apix(L['name'], 62, 3, YELLOW, tx, 104, "end", shadow=ORANGE); o.append(g)
+        g, _ = txt(tx, 26, L['hi'], 4, CREAM, anc); o.append(g)
+        _, sw, sh = apix(sub, 26, 2, AMBER, 0, 0)
+        g, _, _ = apix(sub, 26, 2, AMBER, tx, 190 - sh, "end", shadow=ORANGE if False else None); o.append(g)
+        g, w, hh = apix(L['name'], 50, 3, YELLOW, tx - sw - 28, 112, "end", shadow=ORANGE); o.append(g)
     else:
+        hy = 30 if sub else 66
+        g, _ = txt(tx, hy, L['hi'], 4, CREAM, anc); o.append(g)
+        if sub:
+            g, _ = txt(tx, 72, sub, 2, AMBER, anc); o.append(g)
         o.append(ptext(60, 108, L['name'], 18, YELLOW, shadow=ORANGE))
     widths = [tw(l.upper(), 3) + 28 if not AR_RE.search(l) else apix(l, 17, 2, INK, 0, 0)[1] + 28 for l, _ in L['badges']]
     bx2 = tx - sum(widths) - 12 * (len(widths) - 1) if RTL else tx
