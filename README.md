@@ -8,22 +8,24 @@
 
 <img src="assets/en/sheet.svg" width="100%" alt="Character sheet: software engineering student at Istinye University, Istanbul. English, Arabic, Turkish. 6 projects."/>
 
-<img src="assets/b-built.svg" width="100%" alt="What I've built"/>
+<img src="assets/en/b-levels.svg" width="100%" alt="Levels"/>
 
-<a href="https://github.com/RanimAlyaseen/Orcha-App"><img src="assets/case-01.svg" width="100%" alt="Orcha: AI agent control plane. Multi-tenant, JWT auth, role-based access, live on Railway, 7 Playwright end-to-end specs. React, Node, Prisma, PostgreSQL, Docker."/></a>
+<a href="https://github.com/RanimAlyaseen/Orcha-App"><img src="assets/en/level-01.svg" width="100%" alt="Level 01, Orcha: AI agent control plane. Human review queue, multi-tenant, JWT auth, live on Railway, 7 end-to-end tests."/></a>
 <div align="right"><sub><a href="https://orcha-official.up.railway.app">Open the live demo</a> · <a href="https://github.com/RanimAlyaseen/Orcha-App">Source</a></sub></div>
 
-<a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification"><img src="assets/case-02.svg" width="100%" alt="Medical abstract classifier, team project. My role: model training, BiomedBERT fine-tuning, evaluation. 0.8603 macro F1 on a locked test set. Found 988 train/test overlaps and rebuilt the splits."/></a>
-<div align="right"><sub><a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification">Source and report</a></sub></div>
+<a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification"><img src="assets/en/level-02.svg" width="100%" alt="Level 02, medical abstract classifier, team project. My part: models, BiomedBERT, evaluation. Found 988 shared train/test abstracts. 0.8603 macro F1 on a locked test set."/></a>
+<div align="right"><sub><a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification">Source</a></sub></div>
 
-<a href="https://github.com/RanimAlyaseen/tourism-crm-dbms"><img src="assets/case-03.svg" width="100%" alt="Tourism CRM database, university project. MySQL with 9 tables, 3 views, 2 functions and 6 triggers; blocks overpayment; SQL and concurrency tests."/></a>
+<a href="https://github.com/RanimAlyaseen/tourism-crm-dbms"><img src="assets/en/level-03.svg" width="100%" alt="Level 03, tourism CRM database, university project. MySQL, 9 tables, 3 views, 6 triggers. Blocks overpayment and mismatched reviews."/></a>
 <div align="right"><sub><a href="https://github.com/RanimAlyaseen/tourism-crm-dbms">Source</a></sub></div>
 
-<img src="assets/b-more.svg" width="100%" alt="More work"/>
+<img src="assets/en/b-side.svg" width="100%" alt="Side quests"/>
 
-<a href="https://github.com/RanimAlyaseen/casie-event-argument-extraction"><img src="assets/more-04.svg" width="100%" alt="CASIE event extraction, team NLP project. 0.6196 Arg-C F1."/></a>
-<a href="https://github.com/RanimAlyaseen/icelandic-asr-project3"><img src="assets/more-05.svg" width="100%" alt="Icelandic ASR data preparation, team project. 20 hours of Samromur audio, zero shared speakers across splits."/></a>
-<a href="https://github.com/RanimAlyaseen/book-rating-prediction"><img src="assets/more-06.svg" width="100%" alt="Book rating prediction. Reproducible ML experiment; no edge over the baseline."/></a>
+<table><tr>
+<td width="33%"><a href="https://github.com/RanimAlyaseen/casie-event-argument-extraction"><img src="assets/en/side-04.svg" width="100%" alt="CASIE event extraction, team NLP project. 26 roles. 0.6196 Arg-C F1."/></a></td>
+<td width="33%"><a href="https://github.com/RanimAlyaseen/icelandic-asr-project3"><img src="assets/en/side-05.svg" width="100%" alt="Icelandic ASR data preparation, team project. 20 hours of Samromur, zero shared speakers."/></a></td>
+<td width="33%"><a href="https://github.com/RanimAlyaseen/book-rating-prediction"><img src="assets/en/side-06.svg" width="100%" alt="Book rating prediction. Reproducible ML experiment. ROC-AUC 0.433, no edge over the baseline."/></a></td>
+</tr></table>
 
 <img src="assets/b-know.svg" width="100%" alt="What I know"/>
 
