@@ -91,8 +91,8 @@ def build(lang='en'):
         g, w, hh = apix(L['name'], 62, 3, YELLOW, tx, 104, "end", shadow=ORANGE); o.append(g)
     elif RTL and VAR == 'B':
         g, _ = txt(tx, 16, L['hi'], 3, CREAM, anc); o.append(g)
-        g, _, _ = apix(sub, 17, 3, AMBER, tx, 56, "end"); o.append(g)
-        g, w, hh = apix(L['name'], 54, 3, YELLOW, tx, 130, "end", shadow=ORANGE); o.append(g)
+        g, _, _ = apix(sub, 15, 3, AMBER, tx, 58, "end"); o.append(g)
+        g, w, hh = apix(L['name'], 48, 3, YELLOW, tx, 130, "end", shadow=ORANGE); o.append(g)
     elif RTL:
         g, _ = txt(tx, 26, L['hi'], 4, CREAM, anc); o.append(g)
         _, sw, sh = apix(sub, 26, 2, AMBER, 0, 0)
