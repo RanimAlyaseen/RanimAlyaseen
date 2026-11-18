@@ -1,6 +1,12 @@
-<img src="assets/hero.svg" alt="Ranim: software engineer, video editor and graphic designer" width="100%"/>
+<div align="center">
+<a href="README.md"><img src="assets/lang-en-on.svg" height="48" alt="English"/></a>
+<a href="README.ar.md"><img src="assets/lang-ar.svg" height="48" alt="العربية"/></a>
+<a href="README.tr.md"><img src="assets/lang-tr.svg" height="48" alt="Türkçe"/></a>
+</div>
 
-<img src="assets/sheet.svg" width="100%" alt="Ranim: software engineer and video editor and graphic designer. Final-year software engineering student at Istinye University, Istanbul. Speaks English, Arabic and Turkish. 6 projects."/>
+<img src="assets/en/hero.svg" alt="Ranim: software engineer, video editor and graphic designer" width="100%"/>
+
+<img src="assets/en/sheet.svg" width="100%" alt="Character sheet: software engineering student at Istinye University, Istanbul. English, Arabic, Turkish. 6 projects."/>
 
 <img src="assets/b-built.svg" width="100%" alt="What I've built"/>
 

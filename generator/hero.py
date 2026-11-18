@@ -2,9 +2,16 @@ import random, math
 from px import *
 
 W, H, S = 1200, 420, 6
-random.seed(7)
 
-def build():
+T = dict(
+ en=dict(hi='HELLO, WORLD!', name='RANIM', badges=[('DEV',TEAL),('DESIGN',ORANGE),('VIDEO',ROSE)], line='> EN / AR / TR'),
+ tr=dict(hi='MERHABA DÜNYA!', name='RANIM', badges=[('YAZILIM',TEAL),('TASARIM',ORANGE),('KURGU',ROSE)], line='> EN / AR / TR'),
+ ar=dict(hi='مرحباً يا عالم!', name='رنيم', badges=[('برمجة',TEAL),('تصميم',ORANGE),('مونتاج',ROSE)], line='> EN / AR / TR'),
+)
+
+def build(lang='en'):
+    random.seed(7)
+    L = T[lang]; RTL = lang == 'ar'
     o = []
     css = f"""
     .tw {{ animation: tw 2.4s steps(2) infinite; }}
@@ -73,18 +80,32 @@ def build():
         o.append(rect(x + 12, 396, 24, 6, "#1d1038"))
 
     # ---------------- title block
-    o.append(ptext(64, 66, "HELLO, WORLD!", 4, CREAM))
-    o.append(ptext(60, 108, "RANIM", 18, YELLOW, shadow=ORANGE))
-    # class badges
-    bx2 = 64
-    for label, col in [("DEV", TEAL), ("DESIGN", ORANGE), ("VIDEO", ROSE)]:
-        w = tw(label, 3) + 28
+    tx = 1136 if RTL else 64
+    anc = "end" if RTL else "start"
+    if RTL:
+        g, w, hh = apix(L['hi'], 22, 2, CREAM, tx, 34, "end"); o.append(g)
+    else:
+        g, _ = txt(tx, 66, L['hi'], 4, CREAM, anc); o.append(g)
+    if RTL:
+        g, w, h = apix(L['name'], 62, 3, YELLOW, tx, 104, "end", shadow=ORANGE); o.append(g)
+    else:
+        o.append(ptext(60, 108, L['name'], 18, YELLOW, shadow=ORANGE))
+    widths = [tw(l.upper(), 3) + 28 if not AR_RE.search(l) else apix(l, 17, 2, INK, 0, 0)[1] + 28 for l, _ in L['badges']]
+    bx2 = tx - sum(widths) - 12 * (len(widths) - 1) if RTL else tx
+    order = list(zip(L['badges'], widths))
+    for (label, col), w in order:
         o.append(frame(bx2, 262, w, 44, NIGHT, col))
-        o.append(ptext(bx2 + 14, 276, label, 3, col))
+        if AR_RE.search(label):
+            g, aw, ah = apix(label, 17, 2, col, bx2 + w // 2, 262 + (44 - 0) // 2, "middle"); 
+            g, aw, ah = apix(label, 17, 2, col, bx2 + w // 2, 262 + (44 - ah) // 2, "middle")
+        else:
+            g, _ = txt(bx2 + 14, 276, label, 3, col)
+        o.append(g)
         bx2 += w + 12
-    o.append(ptext(64, 322, "> EN / AR / TR", 3, CREAM, shadow=INK))
+    g, _ = txt(tx, 322, L['line'], 3, CREAM, anc, shadow=INK); o.append(g)
 
     # ---------------- desk scene
+    scene_start = len(o)
     deskx, deskt = 790, 316
     # desk
     o.append(rect(deskx, deskt, 380, 12, "#8a4b2d") + rect(deskx, deskt + 12, 380, 6, "#5e311c"))
@@ -107,7 +128,8 @@ def build():
     o.append(rect(px0, py0 + 40, 114, 36, "#b8426a") + rect(px0, py0 + 58, 114, 18, "#ee7a4b"))
     o.append(rect(px0 + 78, py0 + 36, 20, 20, YELLOW))
     o.append(sprite(["....##....", "...####...", "..######..", ".########.", "##########"], {"#": INK}, px0 + 16, py0 + 40, 6))
-    o.append(rect(px0 + 6, py0 + 6, 6, 6, RED, 'class="blink"') + ptext(px0 + 16, py0 + 6, "REC", 1, CREAM))
+    o.append(rect(px0 + 6, py0 + 6, 6, 6, RED, 'class="blink"'))
+    rec_x = px0 + 16
     # timeline
     ty = sy + 92
     o.append(rect(sx, ty - 4, 234, 40, "#121833"))
@@ -128,9 +150,17 @@ def build():
         o.append(rect(dx, deskt - 36, 4, 8, "#ffffff88", f'class="steam" style="animation-delay:-{i*0.5}s"'))
     # character (bob = tiny head nod)
     o.append(f'<g class="bob">{sprite(PLAYER, PLAYER_LEG, 690, 222, 6)}</g>')
+    scene = o[scene_start:]; del o[scene_start:]
+    if RTL:
+        o.append('<g transform="translate(1200,0) scale(-1,1)">' + "".join(scene) + '</g>')
+        o.append(ptext(1200 - rec_x - 17, py0 + 6, "REC", 1, CREAM))
+    else:
+        o.append("".join(scene)); o.append(ptext(rec_x, py0 + 6, "REC", 1, CREAM))
     o.append("</g></svg>")
     return "".join(o)
 
 if __name__ == "__main__":
     import sys
-    open(sys.argv[1] + "/hero.svg", "w").write(build())
+    for l in ("en","tr","ar"):
+        import os; os.makedirs(f"{sys.argv[1]}/{l}", exist_ok=True)
+        open(f"{sys.argv[1]}/{l}/hero.svg", "w").write(build(l))

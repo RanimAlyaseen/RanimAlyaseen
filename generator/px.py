@@ -63,6 +63,15 @@ FONT = {
 "%": "##..#|##..#|...#.|..#..|.#...|#..##|#..##",
 }
 
+
+FONT["Ü"]=".#.#.|.....|"+FONT["U"]
+FONT["Ö"]=".#.#.|.....|"+FONT["O"]
+FONT["İ"]="..#..|.....|"+FONT["I"]
+FONT["Ğ"]=".#.#.|..#..|"+FONT["G"]
+FONT["Ç"]=FONT["C"].rsplit("|",1)[0]+"|.####|..#..|.##.."
+FONT["Ş"]=FONT["S"]+"|..#..|.##.."
+ABOVE=set("ÜÖİĞ")
+
 def tw(s, sc):
     """pixel width of a string at scale sc"""
     return len(s) * 6 * sc - sc
@@ -86,7 +95,7 @@ def ptext(x, y, s, sc, color, shadow=None, anchor="start", extra=""):
                         e = c
                         while e < 5 and row[e] == "#":
                             e += 1
-                        d.append(f"M{cx + c*sc} {y + ox*0 + r*sc + oy}h{(e-c)*sc}v{sc}h-{(e-c)*sc}z")
+                        d.append(f"M{cx + c*sc} {y + (-2*sc if (ch in ABOVE) else 0) + r*sc + oy}h{(e-c)*sc}v{sc}h-{(e-c)*sc}z")
                         c = e
                     else:
                         c += 1
@@ -161,3 +170,44 @@ PLAYER = [
 "..CCC..........bbbb...",
 "..C............bbbbb..",
 ]
+
+
+# ---------------------------------------------------------------- Arabic as real pixel art (rasterised, shaped by raqm)
+import re as _re
+from PIL import Image, ImageDraw, ImageFont
+AR_RE = _re.compile(r"[\u0600-\u06FF]")
+_AF = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+def apix(text, size, sc, color, x, y, anchor="start", shadow=None):
+    f = ImageFont.truetype(_AF, size, layout_engine=ImageFont.Layout.RAQM)
+    im = Image.new("L", (size * len(text) * 2 + 20, size * 3), 0)
+    d = ImageDraw.Draw(im); d.fontmode = "1"
+    d.text((10, size // 2), text, font=f, fill=255, direction="rtl", language="ar")
+    bb = im.getbbox()
+    im = im.crop(bb); w, h = im.size
+    px = im.load()
+    if anchor == "middle": x -= (w * sc) // 2
+    elif anchor == "end": x -= w * sc
+    def build(ox, oy):
+        out = []
+        for r in range(h):
+            c = 0
+            while c < w:
+                if px[c, r] > 127:
+                    e = c
+                    while e < w and px[e, r] > 127: e += 1
+                    out.append(f"M{x + ox + c*sc} {y + oy + r*sc}h{(e-c)*sc}v{sc}h-{(e-c)*sc}z"); c = e
+                else: c += 1
+        return "".join(out)
+    o = ""
+    if shadow:
+        sh = max(1, sc // 3)
+        o += f'<path fill="{shadow}" d="{build(sh, sh)}"/>'
+    o += f'<path fill="{color}" d="{build(0, 0)}"/>'
+    return o, w * sc, h * sc
+
+def txt(x, y, s, sc, color, anchor="start", shadow=None, extra=""):
+    """pixel text for Latin/Turkish (bitmap font) or Arabic (rasterised). returns (svg, width)."""
+    if AR_RE.search(s):
+        o, w, h = apix(s, 5 * sc + 1 if sc >= 3 else 10, max(1, round(sc * 2 / 3)) if sc >= 3 else 2, color, x, y, anchor, shadow)
+        return o, w
+    return ptext(x, y, s, sc, color, shadow, anchor, extra), tw(s.upper(), sc)
