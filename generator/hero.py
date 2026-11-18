@@ -87,7 +87,7 @@ def build(lang='en'):
     anc = "end" if RTL else "start"
     sub = L.get('sub')
     if RTL and VAR == 'O':
-        g, _, _ = apix('مرحباً يا عالم! معكم', 22, 2, CREAM, tx, 34, "end"); o.append(g)
+        g, _, _ = apix('أهلاً بكم في عالم', 22, 2, CREAM, tx, 34, "end"); o.append(g)
         g, w, hh = apix(L['name'], 62, 3, YELLOW, tx, 104, "end", shadow=ORANGE); o.append(g)
     elif RTL and VAR == 'A':
         g, _ = txt(tx, 34, L['hi'], 4, CREAM, anc); o.append(g)
