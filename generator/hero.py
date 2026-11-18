@@ -5,8 +5,8 @@ W, H, S = 1200, 420, 6
 
 T = dict(
  en=dict(hi='HELLO, WORLD!', name='RANIM', badges=[('DEV',TEAL),('DESIGN',ORANGE),('VIDEO',ROSE)], line='> EN / AR / TR'),
- tr=dict(hi='MERHABA DÜNYA!', name='RANIM', badges=[('YAZILIM',TEAL),('TASARIM',ORANGE),('KURGU',ROSE)], line='> EN / AR / TR'),
- ar=dict(hi='مرحباً يا عالم!', name='رنيم', badges=[('برمجة',TEAL),('تصميم',ORANGE),('مونتاج',ROSE)], line='> EN / AR / TR'),
+ tr=dict(hi='HELLO, WORLD!', sub='MERHABA DÜNYA', name='RANIM', badges=[('YAZILIM',TEAL),('TASARIM',ORANGE),('KURGU',ROSE)], line='> EN / AR / TR'),
+ ar=dict(hi='HELLO, WORLD!', sub='مرحباً بالعالم', name='رنيم', badges=[('برمجة',TEAL),('تصميم',ORANGE),('مونتاج',ROSE)], line='> EN / AR / TR'),
 )
 
 def build(lang='en'):
@@ -82,10 +82,15 @@ def build(lang='en'):
     # ---------------- title block
     tx = 1136 if RTL else 64
     anc = "end" if RTL else "start"
-    if RTL:
-        g, w, hh = apix(L['hi'], 22, 2, CREAM, tx, 34, "end"); o.append(g)
-    else:
-        g, _ = txt(tx, 66, L['hi'], 4, CREAM, anc); o.append(g)
+    sub = L.get('sub')
+    hy = 20 if (RTL and sub) else 30 if sub else 66
+    g, _ = txt(tx, hy, L['hi'], 4, CREAM, anc); o.append(g)
+    if sub:
+        if RTL:
+            g, _, _ = apix(sub, 15, 2, AMBER, tx, 58, "end")
+        else:
+            g, _ = txt(tx, 72, sub, 2, AMBER, anc)
+        o.append(g)
     if RTL:
         g, w, h = apix(L['name'], 62, 3, YELLOW, tx, 104, "end", shadow=ORANGE); o.append(g)
     else:
