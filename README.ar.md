@@ -43,6 +43,7 @@
 <div align="center">
 <a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/ar/btn-research.svg" height="56" alt="الأبحاث"/></a>
 <a href="https://github.com/RanimAlyaseen?tab=repositories"><img src="assets/ar/btn-github.svg" height="56" alt="مستودعات GitHub"/></a>
+<a href="mailto:ranimalyasein@gmail.com"><img src="assets/ar/btn-email.svg" height="56" alt="البريد الإلكتروني"/></a>
 <a href="https://www.linkedin.com/in/ranim-alyaseen-846522373"><img src="assets/ar/btn-linkedin.svg" height="56" alt="LinkedIn"/></a>
 </div>
 

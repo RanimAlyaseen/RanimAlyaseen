@@ -377,35 +377,38 @@ for lang in ("en", "tr", "ar"):
 
 # ---------------------------------------------------------------- contact buttons
 CT = {
-"en": dict(banner="> CONTACT", labels=["LINKEDIN", "REPO", "RESEARCH"]),
-"tr": dict(banner="> İLETİŞİM", labels=["LINKEDIN", "REPO", "ARAŞTIRMA"]),
-"ar": dict(banner="تواصل", labels=["LINKEDIN", "REPO", "الأبحاث"]),
+"en": dict(banner="> CONTACT", labels=["LINKEDIN", "EMAIL", "REPO", "RESEARCH"]),
+"tr": dict(banner="> İLETİŞİM", labels=["LINKEDIN", "E-POSTA", "REPO", "ARAŞTIRMA"]),
+"ar": dict(banner="تواصل", labels=["LINKEDIN", "البريد", "REPO", "الأبحاث"]),
 }
-BTN = [("linkedin", BLUE), ("github", YELLOW), ("research", ROSE)]
+BTN = [("linkedin", BLUE), ("email", GREEN), ("github", YELLOW), ("research", ROSE)]
 
 def button(lang, i):
     R = lang == "ar"; name, col = BTN[i]; lab = CT[lang]["labels"][i]
-    bw, bh = 340, 72
+    bw, bh = 260, 72
     o = [rect(4, 0, bw - 8, bh, col) + rect(0, 4, bw, bh - 8, col) + rect(4, 4, bw - 8, bh - 8, INK),
          rect(8, 4, bw - 16, 4, "#ffffff22"), rect(8, bh - 16, bw - 16, 6, "#00000055")]
-    ix = bw - 24 - 36 if R else 24
-    if i == 0:
+    ix = bw - 22 - 36 if R else 22
+    if name == "linkedin":
         o.append(rect(ix, 18, 36, 36, col) + T(ix + 18, 30, "IN", 2, INK, "middle"))
-    elif i == 1:
+    elif name == "email":
+        o.append(sprite(MAIL, {"#": col}, ix, 24, 4))
+    elif name == "github":
         o.append(sprite(BOOK, {"#": col}, ix, 18, 4))
     else:
         o.append(sprite(DOC, {"#": col}, ix, 14, 4))
-    tx = ix - 18 if R else ix + 36 + 18
+    tx = ix - 14 if R else ix + 36 + 14
+    mw = bw - 22 - 36 - 14 - 16
     if AR_RE.search(lab):
         _, aw, ah = apix(lab, 16, 2, CREAM, 0, 0)
         g, _, _ = apix(lab, 16, 2, CREAM, tx, (bh - ah) // 2, "end"); o.append(g)
     else:
-        o.append(T(tx, 26, lab, 3, CREAM, "end" if R else "start", maxw=bw - 24 - 36 - 18 - 20))
+        o.append(T(tx, 26, lab, 3, CREAM, "end" if R else "start", maxw=mw))
     save(f"{OUT}/{lang}/btn-{name}.svg", bw, bh, "".join(o))
 
 for lang in ("en", "tr", "ar"):
     banner(lang, "b-contact", CT[lang]["banner"], TEAL)
-    for i in range(3):
+    for i in range(4):
         button(lang, i)
 
 print("ok")
