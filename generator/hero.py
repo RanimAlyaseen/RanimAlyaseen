@@ -6,7 +6,7 @@ W, H, S = 1200, 420, 6
 T = dict(
  en=dict(hi='HELLO, WORLD!', name='RANIM', badges=[('DEV',TEAL),('DESIGN',ORANGE),('VIDEO',ROSE)], line='> EN / AR / TR'),
  tr=dict(hi='HELLO, WORLD!', sub='MERHABA DÜNYA', name='RANIM', badges=[('YAZILIM',TEAL),('TASARIM',ORANGE),('KURGU',ROSE)], line='> EN / AR / TR'),
- ar=dict(hi='HELLO, WORLD!', sub='مرحباً بالعالم', name='رنيم', badges=[('برمجة',TEAL),('تصميم',ORANGE),('مونتاج',ROSE)], line='> EN / AR / TR'),
+ ar=dict(hi='HELLO, WORLD!', sub='في عالم رنيم', name='رنيم', badges=[('برمجة',TEAL),('تصميم',ORANGE),('مونتاج',ROSE)], line='> EN / AR / TR'),
 )
 
 def build(lang='en'):
