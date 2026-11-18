@@ -329,20 +329,20 @@ for lang in ("en", "tr", "ar"):
 # ---------------------------------------------------------------- skills card
 SK = {
 "en": dict(banner="> SKILLS", snake="> SNAKE",
-  rows=[("PROGRAMMING", TEAL, ["JAVASCRIPT", "PYTHON", "SQL"]), ("WEB", AMBER, ["REACT", "VITE", "NODE.JS", "EXPRESS", "PRISMA", "REST APIS"]),
-        ("DATA", ROSE, ["POSTGRESQL", "MYSQL", "SQLITE"]), ("ML + NLP", "#9a87ff", ["PYTORCH", "TRANSFORMERS", "SCIKIT-LEARN", "PANDAS"]),
-        ("DELIVERY", GREEN, ["DOCKER", "NGINX", "RAILWAY", "GIT", "PLAYWRIGHT", "PYTEST"]), ("HOBBIES", ORANGE, ["GRAPHIC DESIGN", "VIDEO EDITING"]),
-        ("LANGUAGES", BLUE, ["ENGLISH", "ARABIC", "TURKISH"]), ("DEEPENING", YELLOW, ["APPLIED NLP", "BIOMEDICAL MODELS", "SPEECH", "EVAL DESIGN"])]),
+  rows=[("BUILD WITH", TEAL, ["JAVASCRIPT", "PYTHON", "SQL", "REACT", "NODE.JS", "POSTGRESQL", "GIT"]),
+        ("LEARNING", YELLOW, ["APPLIED NLP", "TRANSFORMERS", "SPEECH / ASR"]),
+        ("HOBBIES", ORANGE, ["GRAPHIC DESIGN", "VIDEO EDITING"]),
+        ("LANGUAGES", BLUE, ["ENGLISH", "ARABIC", "TURKISH"])]),
 "tr": dict(banner="> YETENEKLER", snake="> YILAN",
-  rows=[("PROGRAMLAMA", TEAL, ["JAVASCRIPT", "PYTHON", "SQL"]), ("WEB", AMBER, ["REACT", "VITE", "NODE.JS", "EXPRESS", "PRISMA", "REST API"]),
-        ("VERİ", ROSE, ["POSTGRESQL", "MYSQL", "SQLITE"]), ("ML + NLP", "#9a87ff", ["PYTORCH", "TRANSFORMERS", "SCIKIT-LEARN", "PANDAS"]),
-        ("TESLİMAT", GREEN, ["DOCKER", "NGINX", "RAILWAY", "GIT", "PLAYWRIGHT", "PYTEST"]), ("HOBİLER", ORANGE, ["GRAFİK TASARIM", "VİDEO KURGU"]),
-        ("DİLLER", BLUE, ["İNGİLİZCE", "ARAPÇA", "TÜRKÇE"]), ("ÖĞRENİYOR", YELLOW, ["UYGULAMALI NLP", "BİYOMEDİKAL MODELLER", "KONUŞMA", "DEĞERLENDİRME"])]),
+  rows=[("ARAÇLAR", TEAL, ["JAVASCRIPT", "PYTHON", "SQL", "REACT", "NODE.JS", "POSTGRESQL", "GIT"]),
+        ("ÖĞRENİYOR", YELLOW, ["UYGULAMALI NLP", "TRANSFORMERS", "KONUŞMA / ASR"]),
+        ("HOBİLER", ORANGE, ["GRAFİK TASARIM", "VİDEO KURGU"]),
+        ("DİLLER", BLUE, ["İNGİLİZCE", "ARAPÇA", "TÜRKÇE"])]),
 "ar": dict(banner="المهارات", snake="الثعبان",
-  rows=[("البرمجة", TEAL, ["JAVASCRIPT", "PYTHON", "SQL"]), ("الويب", AMBER, ["REACT", "VITE", "NODE.JS", "EXPRESS", "PRISMA", "REST APIS"]),
-        ("البيانات", ROSE, ["POSTGRESQL", "MYSQL", "SQLITE"]), ("ML + NLP", "#9a87ff", ["PYTORCH", "TRANSFORMERS", "SCIKIT-LEARN", "PANDAS"]),
-        ("النشر", GREEN, ["DOCKER", "NGINX", "RAILWAY", "GIT", "PLAYWRIGHT", "PYTEST"]), ("هوايات", ORANGE, ["التصميم الجرافيكي", "مونتاج الفيديو"]),
-        ("اللغات", BLUE, ["الإنجليزية", "العربية", "التركية"]), ("أتعمق في", YELLOW, ["معالجة اللغة التطبيقية", "النماذج الطبية الحيوية", "الكلام", "تصميم التقييم"])]),
+  rows=[("أعمل بها", TEAL, ["JAVASCRIPT", "PYTHON", "SQL", "REACT", "NODE.JS", "POSTGRESQL", "GIT"]),
+        ("أتعلم", YELLOW, ["معالجة اللغة التطبيقية", "TRANSFORMERS", "الكلام ASR"]),
+        ("هوايات", ORANGE, ["التصميم الجرافيكي", "مونتاج الفيديو"]),
+        ("اللغات", BLUE, ["الإنجليزية", "العربية", "التركية"])]),
 }
 
 def skills(lang):

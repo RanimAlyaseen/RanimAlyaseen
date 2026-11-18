@@ -34,7 +34,7 @@
 
 <img src="assets/tr/b-skills.svg" width="100%" alt="Yetenekler"/>
 
-<img src="assets/tr/skills.svg" width="100%" alt="Programlama: JavaScript, Python, SQL. Web: React, Vite, Node.js, Express, Prisma, REST API. Veri: PostgreSQL, MySQL, SQLite. ML ve NLP: PyTorch, Transformers, scikit-learn, pandas. Teslimat: Docker, Nginx, Railway, Git, Playwright, pytest. Hobiler: grafik tasarım, video kurgu. Diller: İngilizce, Arapça, Türkçe. Öğreniyor: uygulamalı NLP, biyomedikal modeller, konuşma, değerlendirme tasarımı."/>
+<img src="assets/tr/skills-core.svg" width="100%" alt="Araçlar: JavaScript, Python, SQL, React, Node.js, PostgreSQL, Git. Öğreniyor: uygulamalı NLP, Transformers, konuşma ve ASR. Hobiler: grafik tasarım, video kurgu. Diller: İngilizce, Arapça, Türkçe."/>
 
 <img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="Katkı yılanı: GitHub etkinliğim, katkı grafiğini yiyen bir yılan olarak"/>
 
