@@ -5,9 +5,9 @@ from robot_lib import robot_group, robot_css
 W, H, S = 1200, 530, 6
 
 T = dict(
- en=dict(hi='HELLO, WORLD!', name='RANIM', badges=[('GROWING FOCUS: AI / NLP',TEAL)], line='> EN / AR / TR'),
- tr=dict(hi='HELLO, WORLD!', sub='MERHABA DÜNYA', name='RANIM', badges=[('GELİŞEN ODAK: YZ / NLP',TEAL)], line='> EN / AR / TR'),
- ar=dict(hi='HELLO, WORLD!', sub='مرحباً، أنا', name='رنيم', badges=[('تركيز متنامي: AI / NLP',TEAL)], line='> EN / AR / TR'),
+ en=dict(hi='HELLO, WORLD!', name='RANIM', badges=[('PYTHON',TEAL),('REACT',ORANGE),('NODE.JS',ROSE)], focus='> GROWING FOCUS: AI / NLP', line='> EN / AR / TR'),
+ tr=dict(hi='HELLO, WORLD!', sub='MERHABA DÜNYA', name='RANIM', badges=[('PYTHON',TEAL),('REACT',ORANGE),('NODE.JS',ROSE)], focus='> GELİŞEN ODAK: YZ / NLP', line='> EN / AR / TR'),
+ ar=dict(hi='HELLO, WORLD!', sub='مرحباً، أنا', name='رنيم', badges=[('PYTHON',TEAL),('REACT',ORANGE),('NODE.JS',ROSE)], focus='تركيز متنامي: AI / NLP', line='> EN / AR / TR'),
 )
 
 import os
@@ -131,7 +131,7 @@ def build(lang='en'):
             g, _ = txt(bx2 + 14, 276, label, 3, col)
         o.append(g)
         bx2 += w + 12
-    g, _ = txt(tx, 322, L['line'], 3, CREAM, anc, shadow=INK); o.append(g)
+    g, _ = txt(tx, 322, L['focus'], 3, CREAM, anc, shadow=INK); o.append(g)
 
     # ---------------- desk scene
     scene_start = len(o)
