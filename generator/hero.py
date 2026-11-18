@@ -10,7 +10,7 @@ T = dict(
 )
 
 import os
-VAR = os.environ.get('VAR','B')
+VAR = os.environ.get('VAR','O')
 
 def build(lang='en'):
     random.seed(7)
@@ -86,7 +86,10 @@ def build(lang='en'):
     tx = 1136 if RTL else 64
     anc = "end" if RTL else "start"
     sub = L.get('sub')
-    if RTL and VAR == 'A':
+    if RTL and VAR == 'O':
+        g, _, _ = apix('مرحباً يا عالم!', 22, 2, CREAM, tx, 34, "end"); o.append(g)
+        g, w, hh = apix(L['name'], 62, 3, YELLOW, tx, 104, "end", shadow=ORANGE); o.append(g)
+    elif RTL and VAR == 'A':
         g, _ = txt(tx, 34, L['hi'], 4, CREAM, anc); o.append(g)
         g, w, hh = apix(L['name'], 62, 3, YELLOW, tx, 104, "end", shadow=ORANGE); o.append(g)
     elif RTL and VAR == 'B':
