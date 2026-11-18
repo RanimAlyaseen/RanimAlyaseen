@@ -1,78 +1,110 @@
-<div align="center">
-<a href="README.md"><img src="assets/lang-en-on.svg" height="40" alt="English"/></a>
-<a href="README.ar.md"><img src="assets/lang-ar.svg" height="40" alt="العربية"/></a>
-<a href="README.tr.md"><img src="assets/lang-tr.svg" height="40" alt="Türkçe"/></a>
-</div>
+<img src="assets/hero.svg" alt="Ranim: software engineer, video editor and graphic designer" width="100%"/>
 
+<img src="assets/sheet.svg" width="100%" alt="Ranim: software engineer and video editor and graphic designer. Final-year software engineering student at Istinye University, Istanbul. Speaks English, Arabic and Turkish. 6 projects."/>
 
-<img src="assets/en/hero.svg" width="100%" alt="Ranim: engineer by degree, editor and designer by habit. A short film about building things that hold up."/>
+<img src="assets/b-built.svg" width="100%" alt="What I've built"/>
 
-> **Logline:** A final-year software engineer who ships full-stack products, runs ML experiments honestly, and designs and edits the visuals around them.
+<a href="https://github.com/RanimAlyaseen/Orcha-App"><img src="assets/case-01.svg" width="100%" alt="Orcha: AI agent control plane. Multi-tenant, JWT auth, role-based access, live on Railway, 7 Playwright end-to-end specs. React, Node, Prisma, PostgreSQL, Docker."/></a>
+<div align="right"><sub><a href="https://orcha-official.up.railway.app">Open the live demo</a> · <a href="https://github.com/RanimAlyaseen/Orcha-App">Source</a></sub></div>
 
-<img src="assets/en/s0.svg" width="100%" alt="Cold open: who's behind the camera"/>
+<a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification"><img src="assets/case-02.svg" width="100%" alt="Medical abstract classifier, team project. My role: model training, BiomedBERT fine-tuning, evaluation. 0.8603 macro F1 on a locked test set. Found 988 train/test overlaps and rebuilt the splits."/></a>
+<div align="right"><sub><a href="https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification">Source and report</a></sub></div>
 
-I'm Ranim, a final-year software engineering student at Istinye University in Istanbul. I work in English, Arabic and Turkish, and I split my time between three crafts: building software, editing video, and designing visuals. What they share is the part I care about most: making something clear, and making sure it holds up when someone pushes on it. This page is the director's cut.
+<a href="https://github.com/RanimAlyaseen/tourism-crm-dbms"><img src="assets/case-03.svg" width="100%" alt="Tourism CRM database, university project. MySQL with 9 tables, 3 views, 2 functions and 6 triggers; blocks overpayment; SQL and concurrency tests."/></a>
+<div align="right"><sub><a href="https://github.com/RanimAlyaseen/tourism-crm-dbms">Source</a></sub></div>
 
-<img src="assets/en/s1.svg" width="100%" alt="Scene 1: Orcha, who watches the AI agents?"/>
+<img src="assets/b-more.svg" width="100%" alt="More work"/>
 
-<img src="assets/en/d-orcha.svg" width="100%" alt="Diagram: AI agents on WhatsApp, voice, web chat and email flow into Orcha, then through a human review queue (approve, edit, reject) before reaching the customer."/>
+<a href="https://github.com/RanimAlyaseen/casie-event-argument-extraction"><img src="assets/more-04.svg" width="100%" alt="CASIE event extraction, team NLP project. 0.6196 Arg-C F1."/></a>
+<a href="https://github.com/RanimAlyaseen/icelandic-asr-project3"><img src="assets/more-05.svg" width="100%" alt="Icelandic ASR data preparation, team project. 20 hours of Samromur audio, zero shared speakers across splits."/></a>
+<a href="https://github.com/RanimAlyaseen/book-rating-prediction"><img src="assets/more-06.svg" width="100%" alt="Book rating prediction. Reproducible ML experiment; no edge over the baseline."/></a>
 
-Companies are putting AI agents on WhatsApp, phone lines, website chat and email. Then a practical question shows up: **who is watching them?** Orcha is my answer. It's one control plane for every agent a team runs, with tasks, customer records, event logs and analytics, plus a review queue where a human approves, edits or rejects flagged output *before* it reaches a customer.
+<img src="assets/b-know.svg" width="100%" alt="What I know"/>
 
-It's multi-tenant, with role-based access, JWT authentication, email verification and rate limiting. It's deployed on Railway, runs in Docker behind Nginx, and is covered by 7 Playwright end-to-end specs. The live demo follows a fictional clinic with four agents and bilingual Arabic and English event logs (login details are in the repo README).
+<img src="assets/skills.svg" width="100%" alt="Programming: JavaScript, Python, SQL. Web: React, Vite, Node, Express, Prisma, REST APIs. Data: PostgreSQL, MySQL, SQLite. ML and NLP: PyTorch, Transformers, scikit-learn, pandas. Delivery: Docker, Nginx, Railway, Git, Playwright, pytest. Creative: graphic design, video editing. Spoken: English, Arabic, Turkish."/>
 
-**Stack:** React 18 · Vite · Node.js / Express · Prisma · PostgreSQL · Docker
-
-[Open the live demo](https://orcha-official.up.railway.app) · [Read the code](https://github.com/RanimAlyaseen/Orcha-App)
-
-<img src="assets/en/s2.svg" width="100%" alt="Scene 2: the day the test set lied"/>
-
-<img src="assets/en/d-leak.svg" width="100%" alt="Diagram: the original train and test files shared 988 abstracts. The team audited, rebuilt the splits, chose models on validation, and looked at the locked test set once: 0.8603 macro F1."/>
-
-In a five-person NLP course project at Istinye University, the task was to classify medical abstracts into five disease categories. Before any training, the team audited the data and found a problem: of 14,438 rows, only 11,227 were unique texts, **988 abstracts appeared in both the train and the test files**, and 2,929 groups of abstracts carried conflicting labels. A test set that overlaps the training set measures nothing.
-
-So the team cleaned the data, rebuilt the splits, chose models on validation only, and looked at the test set exactly once. My part was model training and comparison, BiomedBERT fine-tuning, the benchmark, error analysis and the final evaluation. BiomedBERT won with **0.8672 macro F1 on validation and 0.8603 on the locked test set**. A gap of just 0.0069 suggests the score holds up.
-
-[Source and docs](https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification)
-
-<img src="assets/en/s3.svg" width="100%" alt="Scene 3: the model that didn't win"/>
-
-<img src="assets/en/d-twist.svg" width="100%" alt="Diagram: the selected model scored ROC-AUC 0.433 on held-out data, below the 0.5 coin-flip line. Published anyway."/>
-
-Not every experiment wins. In a university ML project that I rebuilt as a reproducible experiment, the goal was to predict from six metadata fields whether a book's rating is 4.6 or higher (348 books). I used group-aware splits, chose models using training data only, and compared everything against a majority-class baseline.
-
-The result: the selected Logistic Regression scored 0.457 held-out accuracy and 0.433 ROC-AUC, which is **no reliable advantage over the baseline**. I published it exactly like that, with the limits written down, because a clear negative result is still a result. A Streamlit demo and automated tests ship with it.
-
-[Source and docs](https://github.com/RanimAlyaseen/book-rating-prediction)
-
-<img src="assets/en/s4.svg" width="100%" alt="Scene 4: money can't go negative"/>
-
-<img src="assets/en/d-vault.svg" width="100%" alt="Diagram: a payment that would overpay a booking is rejected by a database trigger."/>
-
-A CRM is only useful if its numbers can be trusted. For a tourism CRM database (a university DBMS project, rebuilt as a reproducible MySQL repository) I put the rules inside the database itself: nine tables, three reporting views, two functions and six triggers.
-
-A payment that would overpay a booking is **rejected by a trigger**. A review has to belong to the customer who owns the booking, enforced with a composite foreign key. SQL test cases and controlled two-session concurrency tests prove it. It's the database layer only, with no web UI.
-
-[Source and docs](https://github.com/RanimAlyaseen/tourism-crm-dbms)
-
-<img src="assets/en/s5.svg" width="100%" alt="Scene 5: side quests"/>
-
-<img src="assets/en/d-side.svg" width="100%" alt="Three side projects: CASIE event extraction with 26 roles, Icelandic speech data with zero shared speakers, and a pulmonary nodule detection design study."/>
-
-[CASIE](https://github.com/RanimAlyaseen/casie-event-argument-extraction) · [Icelandic ASR](https://github.com/RanimAlyaseen/icelandic-asr-project3) · [Pulmonary nodule study](https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing)
-
-<img src="assets/en/s6.svg" width="100%" alt="Toolbox"/>
-
-<img src="assets/en/toolbox.svg" width="100%" alt="Toolbox. Programming: JavaScript, Python, SQL. Web: React, Vite, Node.js, Express, Prisma, REST APIs. Data: PostgreSQL, MySQL, SQLite. ML and NLP: PyTorch, Transformers, scikit-learn, pandas. Delivery: Docker, Nginx, Railway, Git, Playwright, pytest. Creative: graphic design, video editing. Spoken: English, Arabic, Turkish."/>
-
-<img src="assets/en/s7.svg" width="100%" alt="Next episode"/>
-
-<img src="assets/en/next.svg" width="100%" alt="Next episode: speech, biomedical NLP, and how to evaluate them honestly."/>
+<img src="assets/b-contact.svg" width="100%" alt="Contact"/>
 
 <div align="center">
-<a href="https://www.linkedin.com/in/ranim-alyaseen-846522373"><img src="assets/en/btn-linkedin.svg" height="56" alt="LinkedIn"/></a>
-<a href="https://github.com/RanimAlyaseen?tab=repositories"><img src="assets/en/btn-github.svg" height="56" alt="GitHub"/></a>
-<a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/en/btn-research.svg" height="56" alt="Research"/></a>
+<a href="https://www.linkedin.com/in/ranim-alyaseen-846522373"><img src="assets/btn-linkedin.svg" height="56" alt="LinkedIn"/></a>
+<a href="https://github.com/RanimAlyaseen?tab=repositories"><img src="assets/btn-github.svg" height="56" alt="GitHub repositories"/></a>
+<a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/btn-research.svg" height="56" alt="Research"/></a>
 </div>
 
-<sub>Team and university projects are identified as such in their repositories. Contribution claims follow the published attribution records.</sub>
+<details>
+<summary><b>Full written details</b> (projects, research, technical foundation)</summary>
+
+### Featured engineering work
+
+#### [Orcha — AI Agent Management Platform](https://github.com/RanimAlyaseen/Orcha-App)
+
+Orcha brings AI agents, tasks, customer records, activity, and human-review workflows into one management dashboard.
+
+**Engineering highlight:** A multi-tenant full-stack architecture with JWT authentication, role-aware access, REST workflows, Docker deployment, and end-to-end browser tests.
+
+**Stack:** React, Vite, Node.js, Express, Prisma, PostgreSQL, Docker.
+
+#### [Tourism CRM DBMS](https://github.com/RanimAlyaseen/tourism-crm-dbms)
+
+A MySQL data layer for a tourism CRM, covering customers, packages, bookings, payments, reviews, agents, and reporting.
+
+**Engineering highlight:** Database-level rules protect booking and payment integrity through foreign keys, triggers, atomic balance tracking, guarded totals, and controlled two-session concurrency tests.
+
+**Stack:** MySQL 8, SQL, InnoDB transactions, PowerShell test runners.
+
+#### [Medical Abstract Disease Classification](https://github.com/RanimAlyaseen/team-ultron-medical-abstract-classification)
+
+A Team Ultron course project that classifies medical abstracts into five disease categories and compares classical, neural, and transformer models.
+
+**Engineering highlight:** After auditing dataset overlap and rebuilding deterministic splits, the team selected models on validation data and evaluated the winner once on the locked test set. BiomedBERT achieved **0.8603 locked-test Macro F1**. My documented work covered model comparison, BiomedBERT fine-tuning, benchmark construction, error analysis, and final evaluation.
+
+**Stack:** Python, pandas, scikit-learn, PyTorch, Transformers.
+
+#### [Book High-Rating Prediction](https://github.com/RanimAlyaseen/book-rating-prediction)
+
+A binary-classification experiment that predicts whether a book belongs to the high-rating class, defined as a rating of at least 4.6.
+
+**Engineering highlight:** The reproducible workflow uses group-aware splitting, training-only model selection, a majority-class baseline, uncertainty estimates, automated tests, and a Streamlit demo. The selected model did **not** establish a reliable held-out advantage over the baseline.
+
+**Stack:** Python, pandas, scikit-learn, pytest, Streamlit.
+
+### Research & technical studies
+
+#### [AI-Assisted Pulmonary Nodule Detection in Chest CT](https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing)
+
+**Research & Pre-Prototype System Design** — literature synthesis, a proposed AI pipeline, evaluation methodology, clinical workflow design, and safety and regulatory considerations. This work does not claim a trained model, diagnostic results, clinical validation, or deployment.
+
+### Additional technical work
+
+- [CASIE Event Argument Extraction](https://github.com/RanimAlyaseen/casie-event-argument-extraction) — a team NLP benchmark with event-conditioned scoring, validation-selected RoBERTa, checkpoint verification, and an explicit distinction between gold-trigger benchmark results and the unmeasured raw-text demo pipeline.
+- [Icelandic ASR Dataset Preparation](https://github.com/RanimAlyaseen/icelandic-asr-project3) — reproducible preparation and integrity checks for a speaker/session-separated 20-hour Samrómur subset for Whisper and wav2vec 2.0 experiments; human listening and transcript-agreement review remain documented as pending.
+
+### Technical foundation
+
+**Used in published repositories**
+
+- **Languages:** JavaScript, Python, SQL.
+- **Application engineering:** React, Vite, Node.js, Express, REST APIs, Prisma.
+- **Data systems:** PostgreSQL, MySQL, SQLite, relational modeling, transactions.
+- **ML & NLP:** pandas, scikit-learn, PyTorch, Transformers, model comparison, leakage-aware splitting, Macro F1 and error analysis.
+- **Engineering workflow:** Git, Docker, pytest, Playwright, reproducible scripts, technical documentation.
+
+**Currently deepening**
+
+- Applied NLP, biomedical language models, speech processing, and evaluation design.
+- The connection between reliable software architecture and maintainable AI-enabled products.
+
+### How I approach engineering
+
+- Start with the system boundary, data contract, and failure cases.
+- Make important behavior reproducible and testable.
+- Separate measured results from assumptions and future work.
+- Document limitations as part of the engineering result.
+
+### Connect
+
+[GitHub](https://github.com/RanimAlyaseen) · [LinkedIn](https://www.linkedin.com/in/ranim-alyaseen-846522373)
+
+<sub>Team and university projects are identified as such in their repositories. Contribution claims above follow the published attribution records.</sub>
+
+</details>
