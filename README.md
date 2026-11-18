@@ -4,9 +4,7 @@
 <a href="README.tr.md"><img src="assets/lang-tr.svg" height="48" alt="Türkçe"/></a>
 </div>
 
-<img src="assets/en/hero.svg" alt="Ranim: software engineer, video editor and graphic designer" width="100%"/>
-
-<img src="assets/en/robot.svg" width="100%" alt="Pixel robot with a TV head patrolling a night street and saying hello"/>
+<img src="assets/en/hero.svg" alt="Ranim: software engineer, video editor and graphic designer, at her desk. A pixel robot walks the street below and says hello." width="100%"/>
 
 <img src="assets/en/sheet.svg" width="100%" alt="Character sheet: software engineering student at Istinye University, Istanbul. English, Arabic, Turkish. 6 projects."/>
 

@@ -1,7 +1,8 @@
 import random, math
 from px import *
+from robot_lib import robot_group, robot_css
 
-W, H, S = 1200, 420, 6
+W, H, S = 1200, 560, 6
 
 T = dict(
  en=dict(hi='HELLO, WORLD!', name='RANIM', badges=[('DEV',TEAL),('DESIGN',ORANGE),('VIDEO',ROSE)], line='> EN / AR / TR'),
@@ -36,8 +37,8 @@ def build(lang='en'):
     .coin {{ animation: coin 1.6s steps(1) infinite; }}
     @keyframes coin {{ 0%{{opacity:1}} 25%{{opacity:.4}} 50%{{opacity:1}} 75%{{opacity:.4}} }}
     """
-    o.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}"><style>{css}</style>')
-    o.append('<clipPath id="cp"><rect width="1200" height="420" rx="0"/></clipPath><g clip-path="url(#cp)">')
+    o.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}"><style>{css}{robot_css(960)}</style>')
+    o.append('<clipPath id="cp"><rect width="1200" height="560" rx="0"/></clipPath><g clip-path="url(#cp)">')
 
     # banded sunset sky
     bands = ["#1b1033", "#241446", "#321a58", "#4a2269", "#6b2a72", "#8f3470", "#b8426a", "#d9575a", "#ee7a4b", "#f4a259", "#f8c27a"]
@@ -75,12 +76,24 @@ def build(lang='en'):
     while hx < W:
         w = random.choice([96, 144, 192]); h = random.choice([12, 18, 24])
         o.append(rect(hx, 372 - h, w, h, INK)); hx += w
-    # ground
-    o.append(rect(0, 372, W, 48, "#0e0720"))
+    # street: far curb, sidewalk with lamps, near curb, road with a lane line
+    o.append(rect(0, 372, W, H - 372, "#0e0720"))
     for x in range(0, W, 24):
         o.append(rect(x, 372, 12, 6, "#1d1038"))
+    o.append(rect(0, 378, W, 52, "#1b0f35"))
+    for x in range(0, W, 60):
+        o.append(rect(x, 378, 4, 52, "#150a2a"))
+    o.append(rect(0, 430, W, 8, "#3a2266") + rect(0, 438, W, 4, "#120a22"))
+    o.append(rect(0, 442, W, H - 442, "#0b0517"))
+    for x in range(20, W, 120):
+        o.append(rect(x, 492, 64, 6, "#f2c94c"))
     for x in range(0, W, 48):
-        o.append(rect(x + 12, 396, 24, 6, "#1d1038"))
+        o.append(rect(x + 12, 534, 24, 6, "#1d1038"))
+    o.append(rect(0, H - 12, W, 12, "#1d1038"))
+    for k, x in enumerate((150, 520, 930, 1140)):                         # sidewalk lamps
+        o.append(rect(x - 8, 386, 24, 16, "#ffd23f22") + rect(x, 396, 8, 30, "#2a1650") + rect(x - 2, 388, 12, 8, "#ffd23f", f'class="blink" style="animation-delay:-{k*.3:.1f}s"'))
+    for k, (x, col) in enumerate(((330, TEAL), (610, ROSE), (900, YELLOW))):   # data chips on the road
+        o.append(f'<g class="hop" style="animation-delay:-{k*.4:.1f}s">' + rect(x, 506, 14, 14, col) + rect(x + 3, 509, 8, 8, INK) + rect(x + 5, 511, 4, 4, col) + '</g>')
 
     # ---------------- title block
     tx = 1136 if RTL else 64
@@ -179,6 +192,7 @@ def build(lang='en'):
         o.append(ptext(1200 - rec_x - 17, py0 + 6, "REC", 1, CREAM))
     else:
         o.append("".join(scene)); o.append(ptext(rec_x, py0 + 6, "REC", 1, CREAM))
+    o.append(robot_group(lang, 70, 428))
     o.append("</g></svg>")
     return "".join(o)
 

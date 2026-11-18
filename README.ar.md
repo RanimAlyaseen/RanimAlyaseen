@@ -4,9 +4,7 @@
 <a href="README.tr.md"><img src="assets/lang-tr.svg" height="48" alt="Türkçe"/></a>
 </div>
 
-<img src="assets/ar/hero.svg" alt="رنيم: هندسة برمجيات ومونتاج وتصميم جرافيكي" width="100%"/>
-
-<img src="assets/ar/robot.svg" width="100%" alt="روبوت بكسل برأس تلفاز يتجول في شارع ليلي ويقول مرحباً"/>
+<img src="assets/ar/hero.svg" alt="رنيم: هندسة برمجيات ومونتاج وتصميم جرافيكي، على مكتبها. روبوت بكسل يتجول في الشارع أسفلها ويقول مرحباً." width="100%"/>
 
 <img src="assets/ar/sheet.svg" width="100%" alt="بطاقة الشخصية: هندسة البرمجيات في جامعة إستينيه، إسطنبول. الإنجليزية والعربية والتركية. 6 مشاريع."/>
 
