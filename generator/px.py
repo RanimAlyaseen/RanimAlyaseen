@@ -173,49 +173,36 @@ PLAYER_OLD = [
 ]
 
 
-# ---------------------------------------------------------------- diva character (same 22x25 grid as before)
-PLAYER_LEG = dict(h="#431866", H="#d05bff", P="#12061f", s="#e9a97b", d="#c98259",
-                  g="#0b0612", w="#ffffff", l="#e0194a", y="#ffd23f", Y="#f29e1b",
-                  f="#ff5fa8", F="#ffc4e1", o="#ff3d94", O="#a01f66",
-                  n="#2d3a6b", N="#1f2850", k=NIGHT, b=NIGHT, c="#4a4f78", C="#363a5c")
+# ---------------------------------------------------------------- dark diva character (same 22x25 grid as before)
+PLAYER_LEG = {'h': '#0e0714', 's': '#e9a97b', 'd': '#c98259', 'p': '#2ec4b6', 'P': '#05020a', 'o': '#1a1228', 'O': '#5a3399', 'n': '#2d3a6b', 'N': '#1f2850', 'w': '#ffffff', 'k': '#1b1033', 'b': '#1b1033', 'c': '#4a4f78', 'C': '#363a5c', 'y': '#f2c94c', 'H': '#7a45c9', 'l': '#7a0f3f', 'S': '#d7d3f0', 'V': '#b05cff', 'v': '#6a3aa8'}
 
-def _diva():
-    g = [['.'] * 22 for _ in range(25)]
-    def put(r, c, s):
-        for i, ch in enumerate(s):
-            g[r][c + i] = ch
-    put(0, 6, "y..y..y")
-    put(1, 4, "PPyyyyyyyyP")
-    put(2, 2, "PhhhhhhhhhhhhhP")
-    put(3, 1, "PhhhHhhhhhh"); put(3, 12, "ssss")
-    put(4, 0, "PhhhhHhhhhhh"); put(4, 12, "gwggg")
-    put(5, 0, "PhhhhhHhhhhh"); put(5, 12, "ggggg"); put(5, 17, "d")
-    put(6, 0, "PhhhhhhHhhhh"); put(6, 12, "sssss")
-    put(7, 0, "PhhhhhhHhhh"); put(7, 11, "ssslld")
-    put(8, 0, "PhhhhhhhHhh"); put(8, 11, "ssssd")
-    put(9, 1, "PhhhhhhhhyYsssss")
-    put(10, 1, "PhhhhhHssssss")
-    put(11, 1, "PhhhhhFfFfFfFf")
-    put(12, 1, "PhhHfFfFfFfFfF")
-    put(13, 1, "PhhHoooooooooooo"); put(13, 5, "oooooooooooo")
-    put(14, 1, "PhH"); put(14, 5, "ooooooooooOOy"); put(14, 18, "ss")
-    put(15, 5, "oooooooooooooss"); put(15, 20, "")
-    put(16, 5, "ooooooooooo")
-    put(17, 5, "ooooooooooo")
-    put(18, 2, "ccnnnnnnnnnnnnn")
-    put(19, 2, "CCnnnnnnnnnnnnnn")
-    put(20, 2, "CC.NNNNNN.....nn")
-    put(21, 2, "CC............nn")
-    put(22, 2, "CC............nn")
-    put(23, 2, "CCC..........bbbb")
-    put(24, 2, "C............bbbbb")
-    for r in (13, 14, 15, 16, 17):   # chair back behind the hair/torso rows
-        for c in (2, 3):
-            if g[r][c] == '.':
-                g[r][c] = 'c'
-    return ["".join(row) for row in g]
-
-PLAYER = _diva()
+PLAYER = [
+".....S.S.S.S..........",
+"....SSSSVSSSS.........",
+"....hHhhhhhhhh........",
+"...Hhhhhhhhhsvkkv.....",
+"...hhhhhHhhhsskskk....",
+".hHhhhhhhhhhsssssd....",
+".hhhhhHhhhhhsssss.....",
+".hhHhhhhhhhssslld.....",
+".hhhhhhhhhSssssd......",
+".hHhhhhhhVsssss.......",
+".hhhhhhsSSVSs.........",
+".hHhhSOOOOOOOO........",
+".hhhhOoooooooooO......",
+".hHh.oooooooooooo.....",
+".hhh.ooooooooooOOOss..",
+".hHh.oooooooooooooss..",
+".hhh.ooooooooooo......",
+"..cc.ooooooooooo......",
+"..ccnnnnnnnnnnnnn.....",
+"..CCnnnnnnnnnnnnnn....",
+"..CC.NNNNNN.....nn....",
+"..CC............nn....",
+"..CC............nn....",
+"..CCC..........bbbb...",
+"..C............bbbbb..",
+]
 
 
 # ---------------------------------------------------------------- Arabic as real pixel art (rasterised, shaped by raqm)
