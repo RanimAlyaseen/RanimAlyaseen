@@ -32,10 +32,6 @@
 <a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/tr/research.svg" width="100%" alt="Akciğer nodülü tespiti (BT). Araştırma ve ön prototip sistem tasarımı: literatür, yapay zekâ hattı, değerlendirme, klinik akış, güvenlik. Eğitilmiş model ve klinik iddia yok."/></a>
 <div align="right"><sub><a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing">Araştırma klasörünü aç</a></sub></div>
 
-<img src="assets/tr/b-courses.svg" width="100%" alt="Üniversite dersleri"/>
-
-<img src="assets/tr/courses.svg" width="100%" alt="Üniversite dersleri: veri yapıları, nesne yönelimli programlama, veri analizi, yazılım mimarisi, yazılım proje yönetimi."/>
-
 <img src="assets/tr/b-skills.svg" width="100%" alt="Yetenekler"/>
 
 <img src="assets/tr/skills-llm.svg" width="100%" alt="Araçlar: JavaScript, Python, SQL, React, Node.js, PostgreSQL, Git. Yapay zeka ve ML: makine öğrenmesi, sinir ağları, NLP, LLM. Hobiler: grafik tasarım, video kurgu. Diller: İngilizce, Arapça, Türkçe."/>

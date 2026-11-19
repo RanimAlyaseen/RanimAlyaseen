@@ -345,20 +345,8 @@ SK = {
         ("اللغات", BLUE, ["الإنجليزية", "العربية", "التركية"])]),
 }
 
-CO = {
-"en": dict(banner="> UNIVERSITY COURSES",
-  rows=[("FOUNDATIONS", AMBER, ["DSA", "OOP", "DATA ANALYSIS"]),
-        ("ENGINEERING", GREEN, ["SOFTWARE ARCHITECTURE", "PROJECT MANAGEMENT"])]),
-"tr": dict(banner="> ÜNİVERSİTE DERSLERİ",
-  rows=[("TEMELLER", AMBER, ["VERİ YAPILARI", "OOP", "VERİ ANALİZİ"]),
-        ("MÜHENDİSLİK", GREEN, ["YAZILIM MİMARİSİ", "PROJE YÖNETİMİ"])]),
-"ar": dict(banner="مقررات الجامعة",
-  rows=[("الأساسيات", AMBER, ["هياكل البيانات", "البرمجة كائنية التوجه", "تحليل البيانات"]),
-        ("الهندسة", GREEN, ["معمارية البرمجيات", "إدارة المشاريع"])]),
-}
-
-def skills(lang, d=None, name="skills"):
-    d = d or SK[lang]; R = lang == "ar"
+def skills(lang):
+    d = SK[lang]; R = lang == "ar"
     CW, rh = W, 56
     CH = rh * len(d["rows"]) + 28
     o = [frame(0, 0, CW, CH, NIGHT, PLUM)]
@@ -380,13 +368,11 @@ def skills(lang, d=None, name="skills"):
             yb, hb = (y + 6, 36) if ar else (y + 9, 30)
             o.append(rect(bx, yb, w, hb, col) + rect(bx + 2, yb + 2, w - 4, hb - 4, INK) + T(bx + w // 2, yb + (8 if ar else 8), it, 2, col, "middle"))
             x = bx - 10 if R else x + w + 10
-    save(f"{OUT}/{lang}/{name}.svg", CW, CH, "".join(o))
+    save(f"{OUT}/{lang}/skills.svg", CW, CH, "".join(o))
 
 for lang in ("en", "tr", "ar"):
     skills(lang)
     banner(lang, "b-skills", SK[lang]["banner"], GREEN)
-    skills(lang, CO[lang], "courses")
-    banner(lang, "b-courses", CO[lang]["banner"], AMBER)
 
 
 # ---------------------------------------------------------------- contact buttons
