@@ -1,7 +1,7 @@
 <div align="center">
-<a href="README.md"><img src="assets/lang-en.svg" height="48" alt="English"/></a>
-<a href="README.ar.md"><img src="assets/lang-ar.svg" height="48" alt="العربية"/></a>
-<a href="README.tr.md"><img src="assets/lang-tr-on.svg" height="48" alt="Türkçe"/></a>
+<a href="README.md"><img src="assets/lang-en.svg" height="30" alt="English"/></a>
+<a href="README.ar.md"><img src="assets/lang-ar.svg" height="30" alt="العربية"/></a>
+<a href="README.tr.md"><img src="assets/lang-tr-on.svg" height="30" alt="Türkçe"/></a>
 </div>
 
 <img src="assets/tr/hero-neck.svg" alt="Ranim: yazılım, yapay zeka ve NLP ile tasarım alanlarında çalışan yazılım mühendisi, masasında. Aşağıdaki sokakta bir piksel robot yürüyüp merhaba diyor." width="100%"/>

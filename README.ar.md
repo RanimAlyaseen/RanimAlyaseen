@@ -1,7 +1,7 @@
 <div align="center">
-<a href="README.md"><img src="assets/lang-en.svg" height="48" alt="English"/></a>
-<a href="README.ar.md"><img src="assets/lang-ar-on.svg" height="48" alt="العربية"/></a>
-<a href="README.tr.md"><img src="assets/lang-tr.svg" height="48" alt="Türkçe"/></a>
+<a href="README.md"><img src="assets/lang-en.svg" height="30" alt="English"/></a>
+<a href="README.ar.md"><img src="assets/lang-ar-on.svg" height="30" alt="العربية"/></a>
+<a href="README.tr.md"><img src="assets/lang-tr.svg" height="30" alt="Türkçe"/></a>
 </div>
 
 <img src="assets/ar/hero-neck.svg" alt="رنيم: هندسة برمجيات وذكاء اصطناعي ومعالجة اللغة وتصميم، على مكتبها. روبوت بكسل يتجول في الشارع أسفلها ويقول مرحباً." width="100%"/>
