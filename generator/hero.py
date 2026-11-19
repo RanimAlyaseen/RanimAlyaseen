@@ -12,6 +12,7 @@ T = dict(
 
 import os
 VAR = os.environ.get('VAR','O')
+SHOW_FOCUS = False   # the 'growing focus' pill is built but switched off
 
 def build(lang='en'):
     random.seed(7)
@@ -234,7 +235,7 @@ def build(lang='en'):
         o.append('<g transform="translate(1200,0) scale(-1,1)">' + "".join(scene) + '</g>')
     else:
         o.append("".join(scene))
-    o.append("".join(focus_o))
+    if SHOW_FOCUS: o.append("".join(focus_o))
     o.append(robot_group(lang, 70, 416))
     o.append("</g></svg>")
     return "".join(o)
