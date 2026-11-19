@@ -32,6 +32,10 @@
 <a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/ar/research.svg" width="100%" alt="كشف عقيدات الرئة في الأشعة المقطعية. بحث وتصميم نظام ما قبل النموذج الأولي: الأدبيات، مسار الذكاء الاصطناعي، التقييم، سير العمل السريري، السلامة. بلا نموذج مدرَّب وبلا ادعاءات سريرية."/></a>
 <div align="left"><sub><a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing">افتح مجلد الأبحاث</a></sub></div>
 
+<img src="assets/ar/b-courses.svg" width="100%" alt="مقررات الجامعة"/>
+
+<img src="assets/ar/courses.svg" width="100%" alt="مقررات الجامعة: هياكل البيانات والخوارزميات، البرمجة كائنية التوجه، تحليل البيانات، معمارية البرمجيات، إدارة المشاريع البرمجية."/>
+
 <img src="assets/ar/b-skills.svg" width="100%" alt="المهارات"/>
 
 <img src="assets/ar/skills-llm.svg" width="100%" alt="أعمل بها: JavaScript وPython وSQL وReact وNode.js وPostgreSQL وGit. ذكاء اصطناعي: تعلم الآلة والشبكات العصبية وNLP وLLM. هوايات: التصميم الجرافيكي ومونتاج الفيديو. اللغات: الإنجليزية والعربية والتركية."/>

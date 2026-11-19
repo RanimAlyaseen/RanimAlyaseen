@@ -32,6 +32,10 @@
 <a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing"><img src="assets/en/research.svg" width="100%" alt="Pulmonary nodule detection in chest CT. Research and pre-prototype system design: literature, AI pipeline, evaluation, clinical workflow, safety. No trained model and no clinical claims."/></a>
 <div align="right"><sub><a href="https://drive.google.com/drive/folders/1t_D6z8vG5mqFVUuV0Yiw7lJgMr2kazwr?usp=sharing">Open the research folder</a></sub></div>
 
+<img src="assets/en/b-courses.svg" width="100%" alt="University courses"/>
+
+<img src="assets/en/courses.svg" width="100%" alt="University courses: data structures and algorithms, object-oriented programming, data analysis, software architecture, software project management."/>
+
 <img src="assets/en/b-skills.svg" width="100%" alt="Skills"/>
 
 <img src="assets/en/skills-llm.svg" width="100%" alt="Build with: JavaScript, Python, SQL, React, Node.js, PostgreSQL, Git. AI and ML: machine learning, neural networks, NLP, LLMs. Hobbies: graphic design, video editing. Languages: English, Arabic, Turkish."/>
