@@ -329,20 +329,29 @@ for lang in ("en", "tr", "ar"):
 # ---------------------------------------------------------------- skills card
 SK = {
 "en": dict(banner="> SKILLS", snake="> SNAKE",
-  rows=[("BUILD WITH", TEAL, ["JAVASCRIPT", "PYTHON", "SQL", "REACT", "NODE.JS", "POSTGRESQL", "GIT"]),
-        ("AI / ML", "#9a87ff", ["MACHINE LEARNING", "NEURAL NETWORKS", "NLP", "LLMS"]),
+  rows=[("LANGUAGES", TEAL, ["PYTHON", "JAVASCRIPT", "SQL", "HTML", "CSS"]),
+        ("FRAMEWORKS", BLUE, ["REACT", "NODE.JS", "EXPRESS", "PRISMA", "PYTORCH", "TRANSFORMERS", "SCIKIT-LEARN", "PANDAS", "STREAMLIT"]),
+        ("DATABASES", GREEN, ["MYSQL", "POSTGRESQL"]),
+        ("TOOLS", AMBER, ["GIT", "GITHUB", "DOCKER", "REST APIS", "SWAGGER", "JWT", "PLAYWRIGHT", "PYTEST", "JUPYTER"]),
+        ("CONCEPTS", "#9a87ff", ["OOP", "DSA", "DBMS", "WEB PROGRAMMING", "SOFTWARE ARCHITECTURE", "SSAD", "ML", "NEURAL NETWORKS", "NLP", "LLMS"]),
         ("HOBBIES", ORANGE, ["GRAPHIC DESIGN", "VIDEO EDITING"]),
-        ("LANGUAGES", BLUE, ["ENGLISH", "ARABIC", "TURKISH"])]),
+        ("SPOKEN", ROSE, ["ENGLISH", "ARABIC", "TURKISH"])]),
 "tr": dict(banner="> YETENEKLER", snake="> YILAN",
-  rows=[("ARAÇLAR", TEAL, ["JAVASCRIPT", "PYTHON", "SQL", "REACT", "NODE.JS", "POSTGRESQL", "GIT"]),
-        ("YZ / ML", "#9a87ff", ["MAKİNE ÖĞRENMESİ", "SİNİR AĞLARI", "NLP", "LLM"]),
+  rows=[("KOD DİLLERİ", TEAL, ["PYTHON", "JAVASCRIPT", "SQL", "HTML", "CSS"]),
+        ("ÇERÇEVELER", BLUE, ["REACT", "NODE.JS", "EXPRESS", "PRISMA", "PYTORCH", "TRANSFORMERS", "SCIKIT-LEARN", "PANDAS", "STREAMLIT"]),
+        ("VERİTABANI", GREEN, ["MYSQL", "POSTGRESQL"]),
+        ("ARAÇLAR", AMBER, ["GIT", "GITHUB", "DOCKER", "REST APIS", "SWAGGER", "JWT", "PLAYWRIGHT", "PYTEST", "JUPYTER"]),
+        ("KAVRAMLAR", "#9a87ff", ["OOP", "DSA", "DBMS", "WEB PROGRAMLAMA", "YAZILIM MİMARİSİ", "SSAD", "ML", "SİNİR AĞLARI", "NLP", "LLM"]),
         ("HOBİLER", ORANGE, ["GRAFİK TASARIM", "VİDEO KURGU"]),
-        ("DİLLER", BLUE, ["İNGİLİZCE", "ARAPÇA", "TÜRKÇE"])]),
+        ("KONUŞULAN", ROSE, ["İNGİLİZCE", "ARAPÇA", "TÜRKÇE"])]),
 "ar": dict(banner="المهارات", snake="الثعبان",
-  rows=[("أعمل بها", TEAL, ["JAVASCRIPT", "PYTHON", "SQL", "REACT", "NODE.JS", "POSTGRESQL", "GIT"]),
-        ("ذكاء اصطناعي", "#9a87ff", ["تعلم الآلة", "الشبكات العصبية", "NLP", "LLM"]),
+  rows=[("لغات البرمجة", TEAL, ["PYTHON", "JAVASCRIPT", "SQL", "HTML", "CSS"]),
+        ("الأطر", BLUE, ["REACT", "NODE.JS", "EXPRESS", "PRISMA", "PYTORCH", "TRANSFORMERS", "SCIKIT-LEARN", "PANDAS", "STREAMLIT"]),
+        ("قواعد البيانات", GREEN, ["MYSQL", "POSTGRESQL"]),
+        ("الأدوات", AMBER, ["GIT", "GITHUB", "DOCKER", "REST APIS", "SWAGGER", "JWT", "PLAYWRIGHT", "PYTEST", "JUPYTER"]),
+        ("المفاهيم", "#9a87ff", ["OOP", "DSA", "DBMS", "برمجة الويب", "معمارية البرمجيات", "SSAD", "ML", "الشبكات العصبية", "NLP", "LLMS"]),
         ("هوايات", ORANGE, ["التصميم الجرافيكي", "مونتاج الفيديو"]),
-        ("اللغات", BLUE, ["الإنجليزية", "العربية", "التركية"])]),
+        ("اللغات", ROSE, ["الإنجليزية", "العربية", "التركية"])]),
 }
 
 ST = {
@@ -362,9 +371,38 @@ def skills(lang, d=None, name="skills"):
     CW, rh = W, 56
     SR = 44 if R else 36                      # stat row pitch
     stat_h = 24 + SR * len(st["stats"]) + 8
-    chips_h = rh * len(d["rows"])
-    crs_h = 20 + 34 * len(st["courses"])
-    CH = stat_h + chips_h + crs_h + 14
+    def chip_w(it):
+        return (txt(0, 0, it, 2, INK)[1] if AR_RE.search(it) else tw(it.upper(), 2)) + 24
+    AV = CW - 300 - 28
+    lines_per_row = []
+    for _lab, _col, items in d["rows"]:
+        lines, cur, curw = [], [], 0
+        for it in items:
+            w = chip_w(it)
+            if cur and curw + w > AV:
+                lines.append(cur); cur, curw = [], 0
+            cur.append(it); curw += w + 10
+        lines.append(cur)
+        if len(lines) > 1:                       # balance the wrapped lines instead of leaving an orphan chip
+            n = len(lines)
+            tot = sum(chip_w(it) + 10 for it in items)
+            lim = tot // n
+            while True:
+                bl, bc, bw = [], [], 0
+                for it in items:
+                    w = chip_w(it)
+                    if bc and bw + w > lim:
+                        bl.append(bc); bc, bw = [], 0
+                    bc.append(it); bw += w + 10
+                bl.append(bc)
+                if len(bl) <= n or lim >= AV:
+                    break
+                lim += 6
+            lines = bl
+        lines_per_row.append(lines)
+    row_hs = [rh + (len(ln) - 1) * 40 for ln in lines_per_row]
+    chips_h = sum(row_hs)
+    CH = stat_h + chips_h + 14
     o = [frame(0, 0, CW, CH, NIGHT, PLUM)]
     # ---- stat bars
     for i, (lab, v, col, vt) in enumerate(st["stats"]):
@@ -381,28 +419,27 @@ def skills(lang, d=None, name="skills"):
         o.append(T(vx, y + (-4 if R else 0), vt, 3, col, "end" if R else "start"))
     base = stat_h
     o.append(rect(28, base - 4, CW - 56, 2, PURPLE))
-    # ---- chip rows
+    # ---- chip rows (wrap onto extra lines when needed)
+    yrow = base + 12
     for i, (lab, col, items) in enumerate(d["rows"]):
-        y = base + 12 + i * rh
+        y = yrow
         if i:
             o.append(rect(28, y - 8, CW - 56, 2, PURPLE))
         mk = CW - 28 - 14 if R else 28
         o.append(rect(mk, y + 14, 14, 14, col))
         lx = CW - 28 - 14 - 16 if R else 28 + 14 + 16
         o.append(T(lx, y + 12, lab, 3, CREAM, "end" if R else "start", maxw=238))
-        x = CW - 300 if R else 300
-        for it in items:
-            w = (txt(0, 0, it, 2, INK)[1] if AR_RE.search(it) else tw(it.upper(), 2)) + 24
-            bx = x - w if R else x
-            ar = bool(AR_RE.search(it))
-            yb, hb = (y + 6, 36) if ar else (y + 9, 30)
-            o.append(rect(bx, yb, w, hb, col) + rect(bx + 2, yb + 2, w - 4, hb - 4, INK) + T(bx + w // 2, yb + (8 if ar else 8), it, 2, col, "middle"))
-            x = bx - 10 if R else x + w + 10
-    # ---- courses line (quiet)
-    cy = base + chips_h + 12
-    o.append(rect(28, cy - 6, CW - 56, 2, PURPLE))
-    for j, line in enumerate(st["courses"]):
-        o.append(T(CW - 28 if R else 28, cy + 8 + j * 34, line, 2, AMBER, "end" if R else "start"))
+        for li, line in enumerate(lines_per_row[i]):
+            x = CW - 300 if R else 300
+            ly = y + li * 40
+            for it in line:
+                w = chip_w(it)
+                bx = x - w if R else x
+                ar = bool(AR_RE.search(it))
+                yb, hb = (ly + 6, 36) if ar else (ly + 9, 30)
+                o.append(rect(bx, yb, w, hb, col) + rect(bx + 2, yb + 2, w - 4, hb - 4, INK) + T(bx + w // 2, yb + 8, it, 2, col, "middle"))
+                x = bx - 10 if R else x + w + 10
+        yrow += row_hs[i]
     save(f"{OUT}/{lang}/{name}.svg", CW, CH, "".join(o))
 
 for lang in ("en", "tr", "ar"):
