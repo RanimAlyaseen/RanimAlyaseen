@@ -1,7 +1,11 @@
 <div align="center">
+<details>
+<summary><img src="assets/lang-select-en.svg" height="30" alt="Language"/></summary>
+<br/>
 <a href="README.md"><img src="assets/lang-en-on.svg" height="30" alt="English"/></a>
 <a href="README.ar.md"><img src="assets/lang-ar.svg" height="30" alt="العربية"/></a>
 <a href="README.tr.md"><img src="assets/lang-tr.svg" height="30" alt="Türkçe"/></a>
+</details>
 </div>
 
 <img src="assets/en/hero-neck.svg" alt="Ranim: software engineer working in development, AI and NLP, and design, at her desk. A pixel robot walks the street below and says hello." width="100%"/>
