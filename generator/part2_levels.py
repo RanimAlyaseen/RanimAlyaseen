@@ -331,16 +331,22 @@ SK = {
 "en": dict(banner="> SKILLS", snake="> SNAKE",
   rows=[("BUILD WITH", TEAL, ["JAVASCRIPT", "PYTHON", "SQL", "REACT", "NODE.JS", "POSTGRESQL", "GIT"]),
         ("AI / ML", "#9a87ff", ["MACHINE LEARNING", "NEURAL NETWORKS", "NLP", "LLMS"]),
+        ("PROJECTS FOR", AMBER, ["SOFTWARE ARCHITECTURE", "PROJECT MANAGEMENT", "DATA ANALYSIS"]),
+        (None, AMBER, ["DSA", "OOP"]),
         ("HOBBIES", ORANGE, ["GRAPHIC DESIGN", "VIDEO EDITING"]),
         ("LANGUAGES", BLUE, ["ENGLISH", "ARABIC", "TURKISH"])]),
 "tr": dict(banner="> YETENEKLER", snake="> YILAN",
   rows=[("ARAÇLAR", TEAL, ["JAVASCRIPT", "PYTHON", "SQL", "REACT", "NODE.JS", "POSTGRESQL", "GIT"]),
         ("YZ / ML", "#9a87ff", ["MAKİNE ÖĞRENMESİ", "SİNİR AĞLARI", "NLP", "LLM"]),
+        ("PROJELER", AMBER, ["YAZILIM MİMARİSİ", "PROJE YÖNETİMİ", "VERİ ANALİZİ"]),
+        (None, AMBER, ["VERİ YAPILARI", "OOP"]),
         ("HOBİLER", ORANGE, ["GRAFİK TASARIM", "VİDEO KURGU"]),
         ("DİLLER", BLUE, ["İNGİLİZCE", "ARAPÇA", "TÜRKÇE"])]),
 "ar": dict(banner="المهارات", snake="الثعبان",
   rows=[("أعمل بها", TEAL, ["JAVASCRIPT", "PYTHON", "SQL", "REACT", "NODE.JS", "POSTGRESQL", "GIT"]),
         ("ذكاء اصطناعي", "#9a87ff", ["تعلم الآلة", "الشبكات العصبية", "NLP", "LLM"]),
+        ("مشاريع", AMBER, ["معمارية البرمجيات", "إدارة المشاريع", "تحليل البيانات"]),
+        (None, AMBER, ["هياكل البيانات", "البرمجة كائنية التوجه"]),
         ("هوايات", ORANGE, ["التصميم الجرافيكي", "مونتاج الفيديو"]),
         ("اللغات", BLUE, ["الإنجليزية", "العربية", "التركية"])]),
 }
@@ -352,13 +358,14 @@ def skills(lang):
     o = [frame(0, 0, CW, CH, NIGHT, PLUM)]
     for i, (lab, col, items) in enumerate(d["rows"]):
         y = 18 + i * rh
-        if i:
-            o.append(rect(28, y - 8, CW - 56, 2, PURPLE))
-        # coloured marker + label
-        mk = CW - 28 - 14 if R else 28
-        o.append(rect(mk, y + 14, 14, 14, col))
-        lx = CW - 28 - 14 - 16 if R else 28 + 14 + 16
-        o.append(T(lx, y + 12, lab, 3, CREAM, "end" if R else "start", maxw=238))
+        if lab is not None:
+            if i:
+                o.append(rect(28, y - 8, CW - 56, 2, PURPLE))
+            # coloured marker + label
+            mk = CW - 28 - 14 if R else 28
+            o.append(rect(mk, y + 14, 14, 14, col))
+            lx = CW - 28 - 14 - 16 if R else 28 + 14 + 16
+            o.append(T(lx, y + 12, lab, 3, CREAM, "end" if R else "start", maxw=238))
         # chips
         x = CW - 300 if R else 300
         for it in items:
