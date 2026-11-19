@@ -139,21 +139,27 @@ def build(lang='en'):
         _g, kw, kh = apix(key, 17, 2, YELLOW, 0, 0)
     else:
         lw = tw(lab.upper(), 3); kw = tw(key.upper(), 3); lh = kh = 21
-    FW = 16 + 36 + 14 + lw + 14 + kw + 16
+    CP = 10                                           # padding inside the key-words chip
+    FW = 16 + 36 + 14 + lw + 14 + (kw + 2 * CP) + 6
     fx = tx - FW if RTL else tx
     focus_o = [frame(fx, FY, FW, FH, NIGHT, GREEN)]
     ix0 = fx + FW - 16 - 32 if RTL else fx + 16       # rising bars icon
     for i, hgt in enumerate([8, 14, 22]):
         focus_o.append(rect(ix0 + i * 12, FY + FH - 9 - hgt, 8, hgt, GREEN))
         focus_o.append(rect(ix0 + i * 12, FY + FH - 9 - hgt, 8, 3, "#d4f7dc"))
+    CH, CY = 30, FY + 5                                # solid yellow chip, dark text = easy to read
     if RTL:
         x1 = ix0 - 14
         g, _w, _h = apix(lab, 17, 2, CREAM, x1, FY + (FH - lh) // 2, "end"); focus_o.append(g)
-        g, _w, _h = apix(key, 17, 2, YELLOW, x1 - lw - 14, FY + (FH - kh) // 2, "end"); focus_o.append(g)
+        cx1 = x1 - lw - 14                             # chip's right edge
+        focus_o.append(rect(cx1 - kw - 2 * CP, CY, kw + 2 * CP, CH, YELLOW))
+        g, _w, _h = apix(key, 17, 2, INK, cx1 - CP, FY + (FH - kh) // 2, "end"); focus_o.append(g)
     else:
         x1 = ix0 + 36 + 14
         g, _ = txt(x1, FY + 10, lab, 3, CREAM); focus_o.append(g)
-        g, _ = txt(x1 + lw + 14, FY + 10, key, 3, YELLOW, "start", shadow=ORANGE); focus_o.append(g)
+        cx0 = x1 + lw + 14
+        focus_o.append(rect(cx0, CY, kw + 2 * CP, CH, YELLOW))
+        g, _ = txt(cx0 + CP, FY + 10, key, 3, INK); focus_o.append(g)
 
     # ---------------- desk scene
     scene_start = len(o)
