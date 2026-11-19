@@ -5,9 +5,9 @@ from robot_lib import robot_group, robot_css
 W, H, S = 1200, 530, 6
 
 T = dict(
- en=dict(hi='HELLO, WORLD!', name='RANIM', badges=[('DEV',TEAL),('AI / NLP',ORANGE),('DESIGN',ROSE)], line='> EN / AR / TR'),
- tr=dict(hi='HELLO, WORLD!', sub='MERHABA DÜNYA', name='RANIM', badges=[('YAZILIM',TEAL),('YZ / NLP',ORANGE),('TASARIM',ROSE)], line='> EN / AR / TR'),
- ar=dict(hi='HELLO, WORLD!', sub='مرحباً، أنا', name='رنيم', badges=[('برمجة',TEAL),('ذكاء اصطناعي',ORANGE),('تصميم',ROSE)], line='> EN / AR / TR'),
+ en=dict(hi='HELLO, WORLD!', name='RANIM', badges=[('DEV',TEAL),('AI / NLP',ORANGE),('DESIGN',ROSE)], focus=('GROWING FOCUS:', 'AI / NLP')),
+ tr=dict(hi='HELLO, WORLD!', sub='MERHABA DÜNYA', name='RANIM', badges=[('YAZILIM',TEAL),('YZ / NLP',ORANGE),('TASARIM',ROSE)], focus=('GELİŞEN ODAK:', 'YZ / NLP')),
+ ar=dict(hi='HELLO, WORLD!', sub='مرحباً، أنا', name='رنيم', badges=[('برمجة',TEAL),('ذكاء اصطناعي',ORANGE),('تصميم',ROSE)], focus=('تركيز متنامٍ:', 'ذكاء اصطناعي')),
 )
 
 import os
@@ -131,7 +131,29 @@ def build(lang='en'):
             g, _ = txt(bx2 + 14, 276, label, 3, col)
         o.append(g)
         bx2 += w + 12
-    g, _ = txt(tx, 322, L['line'], 3, CREAM, anc, shadow=INK); o.append(g)
+    # ---------------- growing-focus pill (drawn last so it sits on top of the sun / desk)
+    lab, key = L['focus']
+    FY, FH = 320, 40
+    if RTL:
+        _g, lw, lh = apix(lab, 17, 2, CREAM, 0, 0)
+        _g, kw, kh = apix(key, 17, 2, YELLOW, 0, 0)
+    else:
+        lw = tw(lab.upper(), 3); kw = tw(key.upper(), 3); lh = kh = 21
+    FW = 16 + 36 + 14 + lw + 14 + kw + 16
+    fx = tx - FW if RTL else tx
+    focus_o = [frame(fx, FY, FW, FH, NIGHT, GREEN)]
+    ix0 = fx + FW - 16 - 32 if RTL else fx + 16       # rising bars icon
+    for i, hgt in enumerate([8, 14, 22]):
+        focus_o.append(rect(ix0 + i * 12, FY + FH - 9 - hgt, 8, hgt, GREEN))
+        focus_o.append(rect(ix0 + i * 12, FY + FH - 9 - hgt, 8, 3, "#d4f7dc"))
+    if RTL:
+        x1 = ix0 - 14
+        g, _w, _h = apix(lab, 17, 2, CREAM, x1, FY + (FH - lh) // 2, "end"); focus_o.append(g)
+        g, _w, _h = apix(key, 17, 2, YELLOW, x1 - lw - 14, FY + (FH - kh) // 2, "end"); focus_o.append(g)
+    else:
+        x1 = ix0 + 36 + 14
+        g, _ = txt(x1, FY + 10, lab, 3, CREAM); focus_o.append(g)
+        g, _ = txt(x1 + lw + 14, FY + 10, key, 3, YELLOW, "start", shadow=ORANGE); focus_o.append(g)
 
     # ---------------- desk scene
     scene_start = len(o)
@@ -206,6 +228,7 @@ def build(lang='en'):
         o.append('<g transform="translate(1200,0) scale(-1,1)">' + "".join(scene) + '</g>')
     else:
         o.append("".join(scene))
+    o.append("".join(focus_o))
     o.append(robot_group(lang, 70, 416))
     o.append("</g></svg>")
     return "".join(o)
