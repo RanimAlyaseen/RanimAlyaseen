@@ -28,7 +28,7 @@ D = {
  "en": dict(name="RANIM", cap="CHARACTER SHEET", rows=[("CLASS", "SOFTWARE ENGINEER", AMBER), ("HOBBIES", "GRAPHIC DESIGN + VIDEO EDITING", ROSE),
             ("YEAR", "SOFTWARE ENGINEERING, FINAL YEAR", TEAL), ("UNI", "ISTINYE UNIVERSITY, ISTANBUL", BLUE)],
             langs="LANGUAGES", chips=["ENGLISH", "ARABIC", "TURKISH"], cnt=[("6", "PROJECTS"), ("3", "LANGUAGES")]),
- "tr": dict(name="RANIM", cap="KARAKTER KARTI", rows=[("SINIF", "YAZILIM MÜHENDİSİ", AMBER), ("HOBİLER", "GRAFİK TASARIM + VİDEO KURGU", ROSE),
+ "tr": dict(name="RANİM", cap="KARAKTER KARTI", rows=[("SINIF", "YAZILIM MÜHENDİSİ", AMBER), ("HOBİLER", "GRAFİK TASARIM + VİDEO KURGU", ROSE),
             ("YIL", "YAZILIM MÜHENDİSLİĞİ, SON SINIF", TEAL), ("OKUL", "İSTİNYE ÜNİVERSİTESİ, İSTANBUL", BLUE)],
             langs="DİLLER", chips=["İNGİLİZCE", "ARAPÇA", "TÜRKÇE"], cnt=[("6", "PROJE"), ("3", "DİL")]),
  "ar": dict(name="رنيم", cap="بطاقة الشخصية", rows=[("التخصص", "هندسة البرمجيات", AMBER), ("هوايات", "التصميم الجرافيكي ومونتاج الفيديو", ROSE),

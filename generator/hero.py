@@ -6,7 +6,7 @@ W, H, S = 1200, 530, 6
 
 T = dict(
  en=dict(hi='HELLO, WORLD!', name='RANIM', badges=[('DEV',TEAL),('AI / NLP',ORANGE),('DESIGN',ROSE)], focus=('GROWING FOCUS:', 'AI / NLP')),
- tr=dict(hi='HELLO, WORLD!', sub='MERHABA DÜNYA', name='RANIM', badges=[('YAZILIM',TEAL),('YZ / NLP',ORANGE),('TASARIM',ROSE)], focus=('GELİŞEN ODAK:', 'YZ / NLP')),
+ tr=dict(hi='HELLO, WORLD!', sub='MERHABA DÜNYA', name='RANİM', badges=[('YAZILIM',TEAL),('YZ / NLP',ORANGE),('TASARIM',ROSE)], focus=('GELİŞEN ODAK:', 'YZ / NLP')),
  ar=dict(hi='HELLO, WORLD!', sub='مرحباً، أنا', name='رنيم', badges=[('برمجة',TEAL),('ذكاء اصطناعي',ORANGE),('تصميم',ROSE)], focus=('تركيز متزايد:', 'الذكاء الاصطناعي')),
 )
 
