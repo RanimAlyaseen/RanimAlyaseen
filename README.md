@@ -34,7 +34,7 @@
 
 <img src="assets/en/b-skills.svg" width="100%" alt="Skills"/>
 
-<img src="assets/en/skills-proj.svg" width="100%" alt="Build with: JavaScript, Python, SQL, React, Node.js, PostgreSQL, Git. AI and ML: machine learning, neural networks, NLP, LLMs. Hobbies: graphic design, video editing. Languages: English, Arabic, Turkish."/>
+<img src="assets/en/skills-web.svg" width="100%" alt="Build with: JavaScript, Python, SQL, React, Node.js, PostgreSQL, Git. AI and ML: machine learning, neural networks, NLP, LLMs. Hobbies: graphic design, video editing. Languages: English, Arabic, Turkish."/>
 
 <img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="Contribution snake: my GitHub activity as a snake eating the contribution graph"/>
 

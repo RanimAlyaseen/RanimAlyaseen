@@ -34,7 +34,7 @@
 
 <img src="assets/tr/b-skills.svg" width="100%" alt="Yetenekler"/>
 
-<img src="assets/tr/skills-proj.svg" width="100%" alt="Araçlar: JavaScript, Python, SQL, React, Node.js, PostgreSQL, Git. Yapay zeka ve ML: makine öğrenmesi, sinir ağları, NLP, LLM. Hobiler: grafik tasarım, video kurgu. Diller: İngilizce, Arapça, Türkçe."/>
+<img src="assets/tr/skills-web.svg" width="100%" alt="Araçlar: JavaScript, Python, SQL, React, Node.js, PostgreSQL, Git. Yapay zeka ve ML: makine öğrenmesi, sinir ağları, NLP, LLM. Hobiler: grafik tasarım, video kurgu. Diller: İngilizce, Arapça, Türkçe."/>
 
 <img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="Katkı yılanı: GitHub etkinliğim, katkı grafiğini yiyen bir yılan olarak"/>
 

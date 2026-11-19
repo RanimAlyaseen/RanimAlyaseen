@@ -34,7 +34,7 @@
 
 <img src="assets/ar/b-skills.svg" width="100%" alt="المهارات"/>
 
-<img src="assets/ar/skills-proj.svg" width="100%" alt="أعمل بها: JavaScript وPython وSQL وReact وNode.js وPostgreSQL وGit. ذكاء اصطناعي: تعلم الآلة والشبكات العصبية وNLP وLLM. هوايات: التصميم الجرافيكي ومونتاج الفيديو. اللغات: الإنجليزية والعربية والتركية."/>
+<img src="assets/ar/skills-web.svg" width="100%" alt="أعمل بها: JavaScript وPython وSQL وReact وNode.js وPostgreSQL وGit. ذكاء اصطناعي: تعلم الآلة والشبكات العصبية وNLP وLLM. هوايات: التصميم الجرافيكي ومونتاج الفيديو. اللغات: الإنجليزية والعربية والتركية."/>
 
 <img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="ثعبان المساهمات: نشاطي على GitHub على شكل ثعبان يأكل مخطط المساهمات"/>
 
