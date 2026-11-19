@@ -331,42 +331,65 @@ SK = {
 "en": dict(banner="> SKILLS", snake="> SNAKE",
   rows=[("BUILD WITH", TEAL, ["JAVASCRIPT", "PYTHON", "SQL", "REACT", "NODE.JS", "POSTGRESQL", "GIT"]),
         ("AI / ML", "#9a87ff", ["MACHINE LEARNING", "NEURAL NETWORKS", "NLP", "LLMS"]),
-        ("PROJECTS FOR", AMBER, ["SOFTWARE ARCHITECTURE", "PROJECT MANAGEMENT", "DATA ANALYSIS"]),
-        (None, AMBER, ["DSA", "OOP", "WEB PROGRAMMING", "DBMS"]),
         ("HOBBIES", ORANGE, ["GRAPHIC DESIGN", "VIDEO EDITING"]),
         ("LANGUAGES", BLUE, ["ENGLISH", "ARABIC", "TURKISH"])]),
 "tr": dict(banner="> YETENEKLER", snake="> YILAN",
   rows=[("ARAÇLAR", TEAL, ["JAVASCRIPT", "PYTHON", "SQL", "REACT", "NODE.JS", "POSTGRESQL", "GIT"]),
         ("YZ / ML", "#9a87ff", ["MAKİNE ÖĞRENMESİ", "SİNİR AĞLARI", "NLP", "LLM"]),
-        ("PROJELER", AMBER, ["YAZILIM MİMARİSİ", "PROJE YÖNETİMİ", "VERİ ANALİZİ"]),
-        (None, AMBER, ["VERİ YAPILARI", "OOP", "WEB PROGRAMLAMA", "DBMS"]),
         ("HOBİLER", ORANGE, ["GRAFİK TASARIM", "VİDEO KURGU"]),
         ("DİLLER", BLUE, ["İNGİLİZCE", "ARAPÇA", "TÜRKÇE"])]),
 "ar": dict(banner="المهارات", snake="الثعبان",
   rows=[("أعمل بها", TEAL, ["JAVASCRIPT", "PYTHON", "SQL", "REACT", "NODE.JS", "POSTGRESQL", "GIT"]),
         ("ذكاء اصطناعي", "#9a87ff", ["تعلم الآلة", "الشبكات العصبية", "NLP", "LLM"]),
-        ("مشاريع", AMBER, ["معمارية البرمجيات", "إدارة المشاريع", "تحليل البيانات"]),
-        (None, AMBER, ["هياكل البيانات", "البرمجة كائنية التوجه", "برمجة الويب", "قواعد البيانات"]),
         ("هوايات", ORANGE, ["التصميم الجرافيكي", "مونتاج الفيديو"]),
         ("اللغات", BLUE, ["الإنجليزية", "العربية", "التركية"])]),
 }
 
-def skills(lang):
-    d = SK[lang]; R = lang == "ar"
+ST = {
+"en": dict(stats=[("CODE", 7, TEAL, "7"), ("ARCHITECTURE", 7, BLUE, "7"), ("ML / NLP", 5, GREEN, "5"), ("DESIGN", 8, ORANGE, "8"),
+                  ("COFFEE", 10, YELLOW, "MAX"), ("SLEEP", 2, RED, "LOW")],
+           courses=["UNI COURSES: SOFTWARE ARCHITECTURE / PROJECT MANAGEMENT / DATA ANALYSIS", "DSA / OOP / WEB PROGRAMMING / DBMS"]),
+"tr": dict(stats=[("KOD", 7, TEAL, "7"), ("MİMARİ", 7, BLUE, "7"), ("ML / NLP", 5, GREEN, "5"), ("TASARIM", 8, ORANGE, "8"),
+                  ("KAHVE", 10, YELLOW, "MAKS"), ("UYKU", 2, RED, "DÜŞÜK")],
+           courses=["ÜNİ DERSLERİ: YAZILIM MİMARİSİ / PROJE YÖNETİMİ / VERİ ANALİZİ", "VERİ YAPILARI / OOP / WEB PROGRAMLAMA / DBMS"]),
+"ar": dict(stats=[("برمجة", 7, TEAL, "7"), ("معمارية", 7, BLUE, "7"), ("ذكاء اصطناعي", 5, GREEN, "5"), ("تصميم", 8, ORANGE, "8"),
+                  ("قهوة", 10, YELLOW, "أقصى"), ("نوم", 2, RED, "قليل")],
+           courses=["مقررات الجامعة: معمارية البرمجيات / إدارة المشاريع / تحليل البيانات", "هياكل البيانات / البرمجة كائنية التوجه / برمجة الويب / قواعد البيانات"]),
+}
+
+def skills(lang, d=None, name="skills"):
+    d = d or SK[lang]; R = lang == "ar"; st = ST[lang]
     CW, rh = W, 56
-    CH = rh * len(d["rows"]) + 28
+    SR = 44 if R else 36                      # stat row pitch
+    stat_h = 24 + SR * len(st["stats"]) + 8
+    chips_h = rh * len(d["rows"])
+    crs_h = 20 + 34 * len(st["courses"])
+    CH = stat_h + chips_h + crs_h + 14
     o = [frame(0, 0, CW, CH, NIGHT, PLUM)]
+    # ---- stat bars
+    for i, (lab, v, col, vt) in enumerate(st["stats"]):
+        y = 24 + i * SR
+        lx = CW - 28 if R else 28
+        o.append(T(lx, y + (-4 if R else 0), lab, 3, CREAM, "end" if R else "start", maxw=250))
+        for k in range(10):
+            sx = CW - 300 - 30 - k * 36 if R else 300 + k * 36
+            on = k < v
+            o.append(rect(sx, y, 30, 22, col if on else "#2d1b4e"))
+            if on:
+                o.append(rect(sx, y, 30, 6, "#ffffff44"))
+        vx = CW - 300 - 360 - 8 if R else 300 + 360 + 20
+        o.append(T(vx, y + (-4 if R else 0), vt, 3, col, "end" if R else "start"))
+    base = stat_h
+    o.append(rect(28, base - 4, CW - 56, 2, PURPLE))
+    # ---- chip rows
     for i, (lab, col, items) in enumerate(d["rows"]):
-        y = 18 + i * rh
-        if lab is not None:
-            if i:
-                o.append(rect(28, y - 8, CW - 56, 2, PURPLE))
-            # coloured marker + label
-            mk = CW - 28 - 14 if R else 28
-            o.append(rect(mk, y + 14, 14, 14, col))
-            lx = CW - 28 - 14 - 16 if R else 28 + 14 + 16
-            o.append(T(lx, y + 12, lab, 3, CREAM, "end" if R else "start", maxw=238))
-        # chips
+        y = base + 12 + i * rh
+        if i:
+            o.append(rect(28, y - 8, CW - 56, 2, PURPLE))
+        mk = CW - 28 - 14 if R else 28
+        o.append(rect(mk, y + 14, 14, 14, col))
+        lx = CW - 28 - 14 - 16 if R else 28 + 14 + 16
+        o.append(T(lx, y + 12, lab, 3, CREAM, "end" if R else "start", maxw=238))
         x = CW - 300 if R else 300
         for it in items:
             w = (txt(0, 0, it, 2, INK)[1] if AR_RE.search(it) else tw(it.upper(), 2)) + 24
@@ -375,7 +398,12 @@ def skills(lang):
             yb, hb = (y + 6, 36) if ar else (y + 9, 30)
             o.append(rect(bx, yb, w, hb, col) + rect(bx + 2, yb + 2, w - 4, hb - 4, INK) + T(bx + w // 2, yb + (8 if ar else 8), it, 2, col, "middle"))
             x = bx - 10 if R else x + w + 10
-    save(f"{OUT}/{lang}/skills.svg", CW, CH, "".join(o))
+    # ---- courses line (quiet)
+    cy = base + chips_h + 12
+    o.append(rect(28, cy - 6, CW - 56, 2, PURPLE))
+    for j, line in enumerate(st["courses"]):
+        o.append(T(CW - 28 if R else 28, cy + 8 + j * 34, line, 2, AMBER, "end" if R else "start"))
+    save(f"{OUT}/{lang}/{name}.svg", CW, CH, "".join(o))
 
 for lang in ("en", "tr", "ar"):
     skills(lang)
