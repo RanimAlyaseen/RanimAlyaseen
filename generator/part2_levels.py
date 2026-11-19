@@ -348,13 +348,13 @@ SK = {
 ST = {
 "en": dict(stats=[("CODE", 7, TEAL, "7"), ("ARCHITECTURE", 7, BLUE, "7"), ("ML / NLP", 5, GREEN, "5"), ("DESIGN", 8, ORANGE, "8"),
                   ("COFFEE", 10, YELLOW, "MAX"), ("SLEEP", 2, RED, "LOW")],
-           courses=["UNI COURSES: SOFTWARE ARCHITECTURE / PROJECT MANAGEMENT / DATA ANALYSIS", "DSA / OOP / WEB PROGRAMMING / DBMS"]),
+           courses=["WORKED ON PROJECTS FOR: SOFTWARE ARCHITECTURE / PROJECT MANAGEMENT / DATA ANALYSIS", "DSA / OOP / WEB PROGRAMMING / DBMS"]),
 "tr": dict(stats=[("KOD", 7, TEAL, "7"), ("MİMARİ", 7, BLUE, "7"), ("ML / NLP", 5, GREEN, "5"), ("TASARIM", 8, ORANGE, "8"),
                   ("KAHVE", 10, YELLOW, "MAKS"), ("UYKU", 2, RED, "DÜŞÜK")],
-           courses=["ÜNİ DERSLERİ: YAZILIM MİMARİSİ / PROJE YÖNETİMİ / VERİ ANALİZİ", "VERİ YAPILARI / OOP / WEB PROGRAMLAMA / DBMS"]),
+           courses=["PROJE YAPTIĞIM DERSLER: YAZILIM MİMARİSİ / PROJE YÖNETİMİ / VERİ ANALİZİ", "VERİ YAPILARI / OOP / WEB PROGRAMLAMA / DBMS"]),
 "ar": dict(stats=[("برمجة", 7, TEAL, "7"), ("معمارية", 7, BLUE, "7"), ("ذكاء اصطناعي", 5, GREEN, "5"), ("تصميم", 8, ORANGE, "8"),
                   ("قهوة", 10, YELLOW, "أقصى"), ("نوم", 2, RED, "قليل")],
-           courses=["مقررات الجامعة: معمارية البرمجيات / إدارة المشاريع / تحليل البيانات", "هياكل البيانات / البرمجة كائنية التوجه / برمجة الويب / قواعد البيانات"]),
+           courses=["عملت على مشاريع في: معمارية البرمجيات / إدارة المشاريع / تحليل البيانات", "هياكل البيانات / البرمجة كائنية التوجه / برمجة الويب / قواعد البيانات"]),
 }
 
 def skills(lang, d=None, name="skills"):
