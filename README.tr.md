@@ -6,7 +6,7 @@
 
 <img src="assets/tr/hero-tee.svg" alt="Ranim (RANİM): yazılım, yapay zeka ve NLP ile tasarım alanlarında çalışan yazılım mühendisi, masasında. Aşağıdaki sokakta bir piksel robot yürüyüp merhaba diyor." width="100%"/>
 
-<img src="assets/tr/sheet-tee.svg" width="100%" alt="Karakter kartı: İstinye Üniversitesi'nde yazılım mühendisliği öğrencisi, İstanbul. İngilizce, Arapça, Türkçe. 6 proje."/>
+<img src="assets/tr/sheet-stats.svg" width="100%" alt="Karakter kartı: İstinye Üniversitesi'nde yazılım mühendisliği öğrencisi, İstanbul. Diller: İngilizce, Arapça, Türkçe. Puanlar: kod 7, mimari 7, ML/NLP 5, tasarım 8, kahve maks, uyku düşük."/>
 
 <img src="assets/tr/b-levels.svg" width="100%" alt="Bölümler"/>
 
@@ -34,7 +34,7 @@
 
 <img src="assets/tr/b-skills.svg" width="100%" alt="Yetenekler"/>
 
-<img src="assets/tr/skills-tech.svg" width="100%" alt="Araçlar: JavaScript, Python, SQL, React, Node.js, PostgreSQL, Git. Yapay zeka ve ML: makine öğrenmesi, sinir ağları, NLP, LLM. Hobiler: grafik tasarım, video kurgu. Diller: İngilizce, Arapça, Türkçe."/>
+<img src="assets/tr/skills-chips.svg" width="100%" alt="Araçlar: JavaScript, Python, SQL, React, Node.js, PostgreSQL, Git. Yapay zeka ve ML: makine öğrenmesi, sinir ağları, NLP, LLM. Hobiler: grafik tasarım, video kurgu. Diller: İngilizce, Arapça, Türkçe."/>
 
 <img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="Katkı yılanı: GitHub etkinliğim, katkı grafiğini yiyen bir yılan olarak"/>
 

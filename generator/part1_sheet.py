@@ -35,6 +35,14 @@ D = {
             ("السنة", "الأخيرة في هندسة البرمجيات", TEAL), ("الجامعة", "جامعة إستينيه، إسطنبول", BLUE)],
             langs="اللغات", chips=["الإنجليزية", "العربية", "التركية"], cnt=[("6", "مشاريع"), ("3", "لغات")]),
 }
+STATS = {
+ "en": [("CODE", 7, TEAL, "7"), ("ARCHITECTURE", 7, BLUE, "7"), ("ML / NLP", 5, GREEN, "5"),
+        ("DESIGN", 8, ORANGE, "8"), ("COFFEE", 10, YELLOW, "MAX"), ("SLEEP", 2, RED, "LOW")],
+ "tr": [("KOD", 7, TEAL, "7"), ("MİMARİ", 7, BLUE, "7"), ("ML / NLP", 5, GREEN, "5"),
+        ("TASARIM", 8, ORANGE, "8"), ("KAHVE", 10, YELLOW, "MAKS"), ("UYKU", 2, RED, "DÜŞÜK")],
+ "ar": [("برمجة", 7, TEAL, "7"), ("معمارية", 7, BLUE, "7"), ("ذكاء اصطناعي", 5, GREEN, "5"),
+        ("تصميم", 8, ORANGE, "8"), ("قهوة", 10, YELLOW, "أقصى"), ("نوم", 2, RED, "قليل")],
+}
 HELLO = ["HELLO", "مرحبا", "MERHABA"]
 COLS = [TEAL, ORANGE, ROSE]
 
@@ -67,24 +75,32 @@ def sheet(lang):
             g, _ = txt(x0, y, k, 3, MUTED); o.append(g)
             g, _ = txt(x0 + 150, y, v, 3, c); o.append(g)
     o.append(rect(M(x0, 800), 190, 800, 4, PLUM))
-    g, _ = txt(W - x0 if R else x0, 214, d["langs"], 3, CREAM, anchor="end" if R else "start"); o.append(g)
-    # language chips
-    cx = x0
-    for name, col, hello in zip(d["chips"], COLS, HELLO):
-        g, w_ = txt(0, 0, name, 3, col)
-        w = w_ + 36
+    # languages: heading + small chips on one line
+    hy = 208
+    g, hw = txt(W - x0 if R else x0, hy, d["langs"], 3, CREAM, anchor="end" if R else "start"); o.append(g)
+    cx = x0 + hw + 30
+    for name, col in zip(d["chips"], COLS):
+        ar = bool(AR_RE.search(name))
+        w = (txt(0, 0, name, 2, col)[1] if ar else tw(name, 2)) + 22
         bx = M(cx, w)
-        o.append(frame(bx, 254, w, 48, INK, col))
-        g, _ = txt(bx + w // 2, 268 if not AR_RE.search(name) else 262, name, 3, col, anchor="middle"); o.append(g)
-        g, _ = txt(bx + w // 2, 322, hello, 2, CREAM, anchor="middle"); o.append(g)
-        cx += w + 18
-    # counters
-    cx0 = M(930, 240) if not R else 30
-    for i, ((num, lab), col) in enumerate(zip(d["cnt"], [GREEN, AMBER])):
-        y = 222 + i * 70
-        o.append(frame(cx0, y, 240, 56, INK, col))
-        o.append(ptext(cx0 + 18, y + 14, num, 4, col))
-        g, _ = txt(cx0 + 222, y + 21, lab, 2, CREAM, anchor="end"); o.append(g)
+        o.append(frame(bx, hy - 8, w, 34, INK, col))
+        g, _ = txt(bx + w // 2, hy + (-2 if ar else 2), name, 2, col, anchor="middle"); o.append(g)
+        cx += w + 14
+    # stat bars: two columns of three
+    st = STATS[lang]
+    for i, (lab, v, col, vt) in enumerate(st):
+        cxx = x0 + (i // 3) * 410
+        y = 268 + (i % 3) * 38
+        lx = M(cxx)
+        g, _ = txt(lx, y + (-4 if AR_RE.search(lab) else 2), lab, 2, CREAM, anchor="end" if R else "start"); o.append(g)
+        for k in range(10):
+            sx = M(cxx + 168 + k * 18, 16)
+            on = k < v
+            o.append(rect(sx, y, 16, 18, col if on else PURPLE))
+            if on:
+                o.append(rect(sx, y, 16, 5, "#ffffff44"))
+        vx = M(cxx + 168 + 190)
+        g, _ = txt(vx, y + (-4 if AR_RE.search(vt) else 2), vt, 2, col, anchor="end" if R else "start"); o.append(g)
     save(f"{OUT}/{lang}/sheet.svg", W, H, "".join(o))
 for l in ("en", "tr", "ar"):
     sheet(l)

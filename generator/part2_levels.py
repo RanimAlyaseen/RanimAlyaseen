@@ -369,8 +369,7 @@ ST = {
 def skills(lang, d=None, name="skills"):
     d = d or SK[lang]; R = lang == "ar"; st = ST[lang]
     CW, rh = W, 56
-    SR = 44 if R else 36                      # stat row pitch
-    stat_h = 24 + SR * len(st["stats"]) + 8
+    stat_h = 14
     def chip_w(it):
         return (txt(0, 0, it, 2, INK)[1] if AR_RE.search(it) else tw(it.upper(), 2)) + 24
     AV = CW - 300 - 28
@@ -404,23 +403,8 @@ def skills(lang, d=None, name="skills"):
     chips_h = sum(row_hs)
     CH = stat_h + chips_h + 14
     o = [frame(0, 0, CW, CH, NIGHT, PLUM)]
-    # ---- stat bars
-    for i, (lab, v, col, vt) in enumerate(st["stats"]):
-        y = 24 + i * SR
-        lx = CW - 28 if R else 28
-        o.append(T(lx, y + (-4 if R else 0), lab, 3, CREAM, "end" if R else "start", maxw=250))
-        for k in range(10):
-            sx = CW - 300 - 30 - k * 36 if R else 300 + k * 36
-            on = k < v
-            o.append(rect(sx, y, 30, 22, col if on else "#2d1b4e"))
-            if on:
-                o.append(rect(sx, y, 30, 6, "#ffffff44"))
-        vx = CW - 300 - 360 - 8 if R else 300 + 360 + 20
-        o.append(T(vx, y + (-4 if R else 0), vt, 3, col, "end" if R else "start"))
-    base = stat_h
-    o.append(rect(28, base - 4, CW - 56, 2, PURPLE))
     # ---- chip rows (wrap onto extra lines when needed)
-    yrow = base + 12
+    yrow = stat_h
     for i, (lab, col, items) in enumerate(d["rows"]):
         y = yrow
         if i:

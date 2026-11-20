@@ -6,7 +6,7 @@
 
 <img src="assets/en/hero-tee.svg" alt="Ranim: software engineer working in development, AI and NLP, and design, at her desk. A pixel robot walks the street below and says hello." width="100%"/>
 
-<img src="assets/en/sheet-tee.svg" width="100%" alt="Character sheet: software engineering student at Istinye University, Istanbul. English, Arabic, Turkish. 6 projects."/>
+<img src="assets/en/sheet-stats.svg" width="100%" alt="Character sheet: software engineering student at Istinye University, Istanbul. Languages: English, Arabic, Turkish. Stats: code 7, architecture 7, ML/NLP 5, design 8, coffee max, sleep low."/>
 
 <img src="assets/en/b-levels.svg" width="100%" alt="Levels"/>
 
@@ -34,7 +34,7 @@
 
 <img src="assets/en/b-skills.svg" width="100%" alt="Skills"/>
 
-<img src="assets/en/skills-tech.svg" width="100%" alt="Build with: JavaScript, Python, SQL, React, Node.js, PostgreSQL, Git. AI and ML: machine learning, neural networks, NLP, LLMs. Hobbies: graphic design, video editing. Languages: English, Arabic, Turkish."/>
+<img src="assets/en/skills-chips.svg" width="100%" alt="Build with: JavaScript, Python, SQL, React, Node.js, PostgreSQL, Git. AI and ML: machine learning, neural networks, NLP, LLMs. Hobbies: graphic design, video editing. Languages: English, Arabic, Turkish."/>
 
 <img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="Contribution snake: my GitHub activity as a snake eating the contribution graph"/>
 

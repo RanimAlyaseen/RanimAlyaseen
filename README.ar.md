@@ -6,7 +6,7 @@
 
 <img src="assets/ar/hero-tee.svg" alt="رنيم: هندسة برمجيات وذكاء اصطناعي ومعالجة اللغة وتصميم، على مكتبها. روبوت بكسل يتجول في الشارع أسفلها ويقول مرحباً." width="100%"/>
 
-<img src="assets/ar/sheet-tee.svg" width="100%" alt="بطاقة الشخصية: هندسة البرمجيات في جامعة إستينيه، إسطنبول. الإنجليزية والعربية والتركية. 6 مشاريع."/>
+<img src="assets/ar/sheet-stats.svg" width="100%" alt="بطاقة الشخصية: طالبة هندسة برمجيات في جامعة إستينيه، إسطنبول. اللغات: الإنجليزية والعربية والتركية. المهارات: برمجة 7، معمارية 7، ذكاء اصطناعي 5، تصميم 8، قهوة أقصى، نوم قليل."/>
 
 <img src="assets/ar/b-levels.svg" width="100%" alt="المراحل"/>
 
@@ -34,7 +34,7 @@
 
 <img src="assets/ar/b-skills.svg" width="100%" alt="المهارات"/>
 
-<img src="assets/ar/skills-tech.svg" width="100%" alt="أعمل بها: JavaScript وPython وSQL وReact وNode.js وPostgreSQL وGit. ذكاء اصطناعي: تعلم الآلة والشبكات العصبية وNLP وLLM. هوايات: التصميم الجرافيكي ومونتاج الفيديو. اللغات: الإنجليزية والعربية والتركية."/>
+<img src="assets/ar/skills-chips.svg" width="100%" alt="أعمل بها: JavaScript وPython وSQL وReact وNode.js وPostgreSQL وGit. ذكاء اصطناعي: تعلم الآلة والشبكات العصبية وNLP وLLM. هوايات: التصميم الجرافيكي ومونتاج الفيديو. اللغات: الإنجليزية والعربية والتركية."/>
 
 <img src="https://raw.githubusercontent.com/RanimAlyaseen/RanimAlyaseen/output/snake.svg" width="100%" alt="ثعبان المساهمات: نشاطي على GitHub على شكل ثعبان يأكل مخطط المساهمات"/>
 
