@@ -79,7 +79,7 @@ def build():
     # cropped tee: short sleeves + round neckline, purple hem, short bare midriff above the pink belt
     put(19, 5, "DDDD"); put(19, 9, "ssssss"); put(19, 15, "DDDD")
     put(20, 5, "DDDDDDDDDDDDDD")
-    put(21, 5, "DDEDDDDDDEDDDD")
+    put(21, 5, "DDDDDDDDDDDDDD")
     put(22, 5, "ss"); put(22, 7, "DDDDDDDDDD"); put(22, 17, "ss")
     put(23, 7, "ssssssssss")
     put(24, 7, "sssdssssss")
