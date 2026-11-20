@@ -6,7 +6,7 @@
 
 <img src="assets/tr/hero-tee.svg" alt="Ranim (RANİM): yazılım, yapay zeka ve NLP ile tasarım alanlarında çalışan yazılım mühendisi, masasında. Aşağıdaki sokakta bir piksel robot yürüyüp merhaba diyor." width="100%"/>
 
-<img src="assets/tr/sheet-stats.svg" width="100%" alt="Karakter kartı: İstinye Üniversitesi'nde yazılım mühendisliği öğrencisi, İstanbul. Diller: İngilizce, Arapça, Türkçe. Puanlar: kod 7, mimari 7, ML/NLP 5, tasarım 8, kahve maks, uyku düşük."/>
+<img src="assets/tr/sheet-grad.svg" width="100%" alt="Karakter kartı: yazılım mühendisi, mezuniyet beklenen Haziran 2027, İstinye Üniversitesi, İstanbul. Diller: İngilizce, Arapça, Türkçe. Puanlar: kod 7, mimari 7, ML/NLP 5, tasarım 8, kahve maks, uyku düşük."/>
 
 <img src="assets/tr/b-levels.svg" width="100%" alt="Bölümler"/>
 

@@ -26,13 +26,13 @@ for code, label, col in [("en", "ENGLISH", TEAL), ("ar", "العربية", ORANG
 # ------------------------------------------------------------ character sheet (3 languages)
 D = {
  "en": dict(name="RANIM", cap="CHARACTER SHEET", rows=[("CLASS", "SOFTWARE ENGINEER", AMBER), ("HOBBIES", "GRAPHIC DESIGN + VIDEO EDITING", ROSE),
-            ("YEAR", "SOFTWARE ENGINEERING, FINAL YEAR", TEAL), ("UNI", "ISTINYE UNIVERSITY, ISTANBUL", BLUE)],
+            ("GRADUATION", "EXPECTED JUNE 2027", TEAL), ("UNI", "ISTINYE UNIVERSITY, ISTANBUL", BLUE)],
             langs="LANGUAGES", chips=["ENGLISH", "ARABIC", "TURKISH"], cnt=[("6", "PROJECTS"), ("3", "LANGUAGES")]),
  "tr": dict(name="RANİM", cap="KARAKTER KARTI", rows=[("SINIF", "YAZILIM MÜHENDİSİ", AMBER), ("HOBİLER", "GRAFİK TASARIM + VİDEO KURGU", ROSE),
-            ("YIL", "YAZILIM MÜHENDİSLİĞİ, SON SINIF", TEAL), ("OKUL", "İSTİNYE ÜNİVERSİTESİ, İSTANBUL", BLUE)],
+            ("MEZUNİYET", "BEKLENEN: HAZİRAN 2027", TEAL), ("OKUL", "İSTİNYE ÜNİVERSİTESİ, İSTANBUL", BLUE)],
             langs="DİLLER", chips=["İNGİLİZCE", "ARAPÇA", "TÜRKÇE"], cnt=[("6", "PROJE"), ("3", "DİL")]),
  "ar": dict(name="رنيم", cap="بطاقة الشخصية", rows=[("التخصص", "هندسة البرمجيات", AMBER), ("هوايات", "التصميم الجرافيكي ومونتاج الفيديو", ROSE),
-            ("السنة", "الأخيرة في هندسة البرمجيات", TEAL), ("الجامعة", "جامعة إستينيه، إسطنبول", BLUE)],
+            ("التخرج", "متوقع في يونيو 2027", TEAL), ("الجامعة", "جامعة إستينيه، إسطنبول", BLUE)],
             langs="اللغات", chips=["الإنجليزية", "العربية", "التركية"], cnt=[("6", "مشاريع"), ("3", "لغات")]),
 }
 STATS = {
@@ -70,10 +70,10 @@ def sheet(lang):
         y = 36 + i * 36
         if R:
             g, kw = txt(W - x0, y, k, 3, MUTED, anchor="end"); o.append(g)
-            g, _ = txt(W - x0 - 150, y, v, 3, c, anchor="end"); o.append(g)
+            g, _ = txt(W - x0 - 210, y, v, 3, c, anchor="end"); o.append(g)
         else:
             g, _ = txt(x0, y, k, 3, MUTED); o.append(g)
-            g, _ = txt(x0 + 150, y, v, 3, c); o.append(g)
+            g, _ = txt(x0 + 210, y, v, 3, c); o.append(g)
     o.append(rect(M(x0, 800), 190, 800, 4, PLUM))
     # languages: heading + small chips on one line
     hy = 208

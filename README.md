@@ -6,7 +6,7 @@
 
 <img src="assets/en/hero-tee.svg" alt="Ranim: software engineer working in development, AI and NLP, and design, at her desk. A pixel robot walks the street below and says hello." width="100%"/>
 
-<img src="assets/en/sheet-stats.svg" width="100%" alt="Character sheet: software engineering student at Istinye University, Istanbul. Languages: English, Arabic, Turkish. Stats: code 7, architecture 7, ML/NLP 5, design 8, coffee max, sleep low."/>
+<img src="assets/en/sheet-grad.svg" width="100%" alt="Character sheet: software engineer, graduation expected June 2027, Istinye University, Istanbul. Languages: English, Arabic, Turkish. Stats: code 7, architecture 7, ML/NLP 5, design 8, coffee max, sleep low."/>
 
 <img src="assets/en/b-levels.svg" width="100%" alt="Levels"/>
 
