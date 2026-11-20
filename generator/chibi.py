@@ -2,7 +2,7 @@
 import math
 CHIBI_LEG = dict(k="#16111f", K="#43336a", s="#f7e1d3", d="#e6bfae", m="#c9808a", p="#ff6fb3",
                  e="#1b1530", v="#7a5ad0", w="#ffffff", B="#7b3fd0", C="#7b3fd0", c="#ff7bbd",
-                 D="#1d1829", E="#352c52", R="#ff3d94", T="#0e0a16", t="#ff7bbd", o="#120e1a", L="#9a5cf0")
+                 D="#2ec4b6", E="#352c52", R="#ff3d94", T="#0e0a16", t="#ff7bbd", o="#120e1a", L="#9a5cf0")
 def build():
     W, H = 24, 36
     g = [['.'] * W for _ in range(H)]
